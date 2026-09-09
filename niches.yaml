@@ -1,0 +1,303 @@
+# DACH Affiliate Niche Seeds
+# Generated from Awin, ADCELL, and industry categories
+# Version: 0.1
+# Date: 2026-09-09
+
+categories:
+  # HOME & ENERGY
+  home_energy:
+    name: "Home & Energy"
+    description: "Renewable energy, efficiency, and smart home solutions for residential properties"
+    niches:
+      - "Photovoltaik"
+      - "Stromspeicher / Batteriespeicher"
+      - "Wärmepumpe"
+      - "Wallbox / Ladestation"
+      - "Smart Home Systeme"
+      - "Balkonkraftwerk"
+      - "Gasvergleich"
+      - "Stromvergleich"
+      - "Energiesparen"
+      - "Isolierung / Dämmstoffe"
+
+  # FINANCE & INSURANCE
+  finance:
+    name: "Finance & Insurance"
+    description: "Insurance, banking, investments, and financial products"
+    niches:
+      - "Krankenversicherung"
+      - "Zahnversicherung"
+      - "Kfz-Versicherung"
+      - "Hausratversicherung"
+      - "Haftpflichtversicherung"
+      - "Berufsunfähigkeitsversicherung"
+      - "Kreditvergleich"
+      - "Baufinanzierung"
+      - "Tagesgeldvergleich"
+      - "Forex Trading"
+      - "Broker Vergleich"
+      - "Depot Vergleich"
+
+  # TELECOMMUNICATIONS
+  telecom:
+    name: "Telecommunications"
+    description: "Mobile plans, internet providers, and telecom services"
+    niches:
+      - "Mobilfunkvertrag"
+      - "DSL Anbieter"
+      - "Kabelinternet"
+      - "Glasfaser Anbieter"
+      - "Telefontarif"
+      - "Auslandstelefonie"
+      - "VPN Anbieter"
+      - "DNS Sicherheit"
+
+  # SOFTWARE & SAAS
+  software:
+    name: "Software & SaaS"
+    description: "Business software, productivity tools, and cloud services"
+    niches:
+      - "Projektmanagementsoftware"
+      - "CRM Systeme"
+      - "Buchhaltungssoftware"
+      - "E-Mail Marketing Tools"
+      - "Webhosting"
+      - "Website Builder"
+      - "VPN Software"
+      - "Password Manager"
+      - "Antivirus Software"
+      - "Videokonferenz Software"
+      - "Cloud Speicher"
+      - "Grafik Design Software"
+      - "AI Tools"
+      - "Chatbot Builder"
+
+  # EDUCATION & LEARNING
+  education:
+    name: "Education & Learning"
+    description: "Online courses, certifications, and educational platforms"
+    niches:
+      - "Online Kurse Programmierung"
+      - "Sprachkurse"
+      - "Yoga Kurse"
+      - "Fitness Kurse"
+      - "Zeichnen Kurse"
+      - "Fotografie Kurse"
+      - "Business Kurse"
+      - "SEO Kurse"
+      - "Affiliate Marketing Kurse"
+
+  # TRAVEL & HOSPITALITY
+  travel:
+    name: "Travel & Hospitality"
+    description: "Hotels, flights, travel insurance, and tourism services"
+    niches:
+      - "Hotelvergleich"
+      - "Flugbuchung"
+      - "Mietwagenverleih"
+      - "Reiseversicherung"
+      - "Reisegepäck"
+      - "Reisekreditkarte"
+      - "Ferienwohnung Plattformen"
+
+  # HEALTH & WELLNESS
+  health:
+    name: "Health & Wellness"
+    description: "Fitness, nutrition, health products, and wellness services"
+    niches:
+      - "Fitnessgeräte"
+      - "Protein Pulver"
+      - "Supplements"
+      - "Fitnessstudio"
+      - "Fitness Tracker"
+      - "Smartwatch"
+      - "Matratzen Test"
+      - "Schlafkissen"
+      - "Luftreiniger"
+      - "Wasserfiltration"
+
+  # HOME & GARDEN
+  home_garden:
+    name: "Home & Garden"
+    description: "Furniture, garden tools, and home improvement products"
+    niches:
+      - "Gartengeräte"
+      - "Rasenmäher"
+      - "Gartenmöbel"
+      - "Poolzubehör"
+      - "Terrassendächer"
+      - "Gewächshaus"
+      - "Bodentiefe Fenster"
+
+  # CONSUMER ELECTRONICS
+  electronics:
+    name: "Consumer Electronics"
+    description: "Smartphones, laptops, cameras, and tech gadgets"
+    niches:
+      - "Smartphone Vergleich"
+      - "Laptop Test"
+      - "Kamera Test"
+      - "Tablet Vergleich"
+      - "Monitor Vergleich"
+      - "Drucker Test"
+      - "Router Test"
+      - "Gaming Headset"
+      - "Beamer Test"
+      - "Smart Speaker"
+
+  # AUTOMOTIVE
+  automotive:
+    name: "Automotive"
+    description: "Car accessories, maintenance, and automotive services"
+    niches:
+      - "Autoreifen"
+      - "Autobatterie"
+      - "Carsharing Anbieter"
+      - "Autovermietung"
+      - "Auto Versicherung"
+      - "Elektroauto Vergleich"
+      - "Dashcam Test"
+      - "Autoradio"
+
+  # BEAUTY & PERSONAL CARE
+  beauty:
+    name: "Beauty & Personal Care"
+    description: "Cosmetics, skincare, haircare, and personal care products"
+    niches:
+      - "Zahnbleaching"
+      - "Haarverlängerung"
+      - "Rasierapparat Test"
+      - "Gesichtsreiniger"
+      - "Feuchtigkeitscreme"
+      - "Anti-Aging Produkte"
+
+  # SPORTS & OUTDOOR
+  sports:
+    name: "Sports & Outdoor"
+    description: "Sports equipment, outdoor gear, and recreational activities"
+    niches:
+      - "Laufschuhe Test"
+      - "Fahrrad Vergleich"
+      - "Zelt Test"
+      - "Rucksack Test"
+      - "Skier"
+      - "Snowboard"
+      - "Taucher Ausbildung"
+      - "Yoga Matte"
+
+  # PETS
+  pets:
+    name: "Pets"
+    description: "Pet supplies, pet care, and pet services"
+    niches:
+      - "Hundefutter"
+      - "Katzenfutter"
+      - "Katzenstreu"
+      - "Hundekäfig"
+      - "Hundebett"
+      - "Tierversicherung"
+      - "Aquarium Filter"
+
+  # HOME SECURITY
+  security:
+    name: "Home Security"
+    description: "Security systems, surveillance, and safety products"
+    niches:
+      - "Überwachungskamera"
+      - "Türklingel mit Kamera"
+      - "Alarmanlage"
+      - "Schloss Upgrade"
+      - "Fensterriegel"
+      - "Bewegungsmelder"
+
+  # MEDIA & STREAMING
+  media:
+    name: "Media & Streaming"
+    description: "Streaming services, audio equipment, and entertainment"
+    niches:
+      - "Musikstreaming Dienste"
+      - "Videostreaming Vergleich"
+      - "Bluetooth Lautsprecher"
+      - "Kopfhörer Test"
+      - "Soundbar Test"
+      - "Vinyl Schallplatte"
+      - "Podcast Equipment"
+
+  # DATING & SOCIAL
+  dating:
+    name: "Dating & Social"
+    description: "Dating apps, social platforms, and community services"
+    niches:
+      - "Dating App Vergleich"
+      - "Singles Reisen"
+      - "Partnervermittlung"
+
+  # FOOD & DRINKS
+  food:
+    name: "Food & Drinks"
+    description: "Food delivery, restaurants, and specialty foods"
+    niches:
+      - "Essenslieferdienst"
+      - "Kaffeemaschine Test"
+      - "Espresso Test"
+      - "Küchenmaschine"
+      - "Pfeffermühle"
+
+  # GAMING
+  gaming:
+    name: "Gaming"
+    description: "Gaming hardware, consoles, and gaming services"
+    niches:
+      - "Gaming Monitor"
+      - "Gaming Laptop"
+      - "Gaming Stuhl"
+      - "Spielekonsole Vergleich"
+      - "Gaming Headset"
+      - "Mouse Pad"
+
+  # B2B / PROFESSIONAL SERVICES
+  b2b:
+    name: "B2B & Professional Services"
+    description: "Business services, professional tools, and corporate solutions"
+    niches:
+      - "Büroeinrichtung"
+      - "Geschäftskreditkarte"
+      - "Geschäftsversicherung"
+      - "Webdesign Agentur"
+      - "SEO Agentur"
+      - "Büroraumvermietung"
+      - "Konferenzraum"
+
+  # AUTOMOTIVE & TRANSPORT
+  transport:
+    name: "Transport & Logistics"
+    description: "Transport services, logistics, and courier services"
+    niches:
+      - "Paketversand"
+      - "Möbeltransport"
+      - "Umzugsunternehmen"
+      - "Lagervermietung"
+
+  # FASHION & CLOTHING
+  fashion:
+    name: "Fashion & Clothing"
+    description: "Clothing, shoes, and fashion accessories"
+    niches:
+      - "Herrenanzug"
+      - "Damenbekleidung"
+      - "Arbeitsschuhe"
+      - "Outdoor Bekleidung"
+      - "Modeschmuck"
+      - "Uhren"
+      - "Sonnenbrille"
+
+  # CRAFTS & DIY
+  crafts:
+    name: "Crafts & DIY"
+    description: "DIY supplies, tools, and craft materials"
+    niches:
+      - "3D Drucker"
+      - "Nähmachine"
+      - "Bohrmaschine"
+      - "Werkzeugkoffer"
+      - "Holzbearbeitung"

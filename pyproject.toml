@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "affiliate-intelligence"
+version = "0.1.0"
+description = "Data-driven German affiliate niche discovery MVP"
+authors = [{name = "Song Lin", email = "famlinwohnungen@gmail.com"}]
+requires-python = ">=3.12"
+
+dependencies = [
+    "pydantic>=2.0",
+    "sqlalchemy>=2.0",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "black>=23.0",
+    "ruff>=0.1",
+    "mypy>=1.0",
+]
+
+google = [
+    "google-ads>=22.0",
+]
+
+api = [
+    "fastapi>=0.104",
+    "uvicorn>=0.24",
+]
+
+dashboard = [
+    "streamlit>=1.28",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+
+[tool.black]
+line-length = 100
+target-version = ["py312"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false
