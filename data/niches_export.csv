@@ -1,0 +1,167 @@
+niche_id,name,parent_category,description,language,country,status,created_at
+automotive_autoreifen,Autoreifen,Automotive,"Car accessories, maintenance, and automotive services",de,DE,candidate,2026-09-09T14:20:03.442652
+automotive_autobatterie,Autobatterie,Automotive,"Car accessories, maintenance, and automotive services",de,DE,candidate,2026-09-09T14:20:03.442662
+automotive_carsharing-anbieter,Carsharing Anbieter,Automotive,"Car accessories, maintenance, and automotive services",de,DE,candidate,2026-09-09T14:20:03.442672
+automotive_autovermietung,Autovermietung,Automotive,"Car accessories, maintenance, and automotive services",de,DE,candidate,2026-09-09T14:20:03.442683
+automotive_auto-versicherung,Auto Versicherung,Automotive,"Car accessories, maintenance, and automotive services",de,DE,candidate,2026-09-09T14:20:03.442691
+automotive_elektroauto-vergleich,Elektroauto Vergleich,Automotive,"Car accessories, maintenance, and automotive services",de,DE,candidate,2026-09-09T14:20:03.442699
+automotive_dashcam-test,Dashcam Test,Automotive,"Car accessories, maintenance, and automotive services",de,DE,candidate,2026-09-09T14:20:03.442707
+automotive_autoradio,Autoradio,Automotive,"Car accessories, maintenance, and automotive services",de,DE,candidate,2026-09-09T14:20:03.442715
+b2b_buroeinrichtung,Büroeinrichtung,B2B & Professional Services,"Business services, professional tools, and corporate solutions",de,DE,candidate,2026-09-09T14:20:03.443160
+b2b_geschaftskreditkarte,Geschäftskreditkarte,B2B & Professional Services,"Business services, professional tools, and corporate solutions",de,DE,candidate,2026-09-09T14:20:03.443169
+b2b_geschaftsversicherung,Geschäftsversicherung,B2B & Professional Services,"Business services, professional tools, and corporate solutions",de,DE,candidate,2026-09-09T14:20:03.443177
+b2b_webdesign-agentur,Webdesign Agentur,B2B & Professional Services,"Business services, professional tools, and corporate solutions",de,DE,candidate,2026-09-09T14:20:03.443185
+b2b_seo-agentur,SEO Agentur,B2B & Professional Services,"Business services, professional tools, and corporate solutions",de,DE,candidate,2026-09-09T14:20:03.443193
+b2b_buroraumvermietung,Büroraumvermietung,B2B & Professional Services,"Business services, professional tools, and corporate solutions",de,DE,candidate,2026-09-09T14:20:03.443201
+b2b_konferenzraum,Konferenzraum,B2B & Professional Services,"Business services, professional tools, and corporate solutions",de,DE,candidate,2026-09-09T14:20:03.443216
+beauty_zahnbleaching,Zahnbleaching,Beauty & Personal Care,"Cosmetics, skincare, haircare, and personal care products",de,DE,candidate,2026-09-09T14:20:03.442723
+beauty_haarverlangerung,Haarverlängerung,Beauty & Personal Care,"Cosmetics, skincare, haircare, and personal care products",de,DE,candidate,2026-09-09T14:20:03.442731
+beauty_rasierapparat-test,Rasierapparat Test,Beauty & Personal Care,"Cosmetics, skincare, haircare, and personal care products",de,DE,candidate,2026-09-09T14:20:03.442742
+beauty_gesichtsreiniger,Gesichtsreiniger,Beauty & Personal Care,"Cosmetics, skincare, haircare, and personal care products",de,DE,candidate,2026-09-09T14:20:03.442750
+beauty_feuchtigkeitscreme,Feuchtigkeitscreme,Beauty & Personal Care,"Cosmetics, skincare, haircare, and personal care products",de,DE,candidate,2026-09-09T14:20:03.442757
+beauty_anti-aging-produkte,Anti-Aging Produkte,Beauty & Personal Care,"Cosmetics, skincare, haircare, and personal care products",de,DE,candidate,2026-09-09T14:20:03.442769
+electronics_smartphone-vergleich,Smartphone Vergleich,Consumer Electronics,"Smartphones, laptops, cameras, and tech gadgets",de,DE,candidate,2026-09-09T14:20:03.442569
+electronics_laptop-test,Laptop Test,Consumer Electronics,"Smartphones, laptops, cameras, and tech gadgets",de,DE,candidate,2026-09-09T14:20:03.442577
+electronics_kamera-test,Kamera Test,Consumer Electronics,"Smartphones, laptops, cameras, and tech gadgets",de,DE,candidate,2026-09-09T14:20:03.442584
+electronics_tablet-vergleich,Tablet Vergleich,Consumer Electronics,"Smartphones, laptops, cameras, and tech gadgets",de,DE,candidate,2026-09-09T14:20:03.442595
+electronics_monitor-vergleich,Monitor Vergleich,Consumer Electronics,"Smartphones, laptops, cameras, and tech gadgets",de,DE,candidate,2026-09-09T14:20:03.442606
+electronics_drucker-test,Drucker Test,Consumer Electronics,"Smartphones, laptops, cameras, and tech gadgets",de,DE,candidate,2026-09-09T14:20:03.442614
+electronics_router-test,Router Test,Consumer Electronics,"Smartphones, laptops, cameras, and tech gadgets",de,DE,candidate,2026-09-09T14:20:03.442622
+electronics_gaming-headset,Gaming Headset,Consumer Electronics,"Smartphones, laptops, cameras, and tech gadgets",de,DE,candidate,2026-09-09T14:20:03.442629
+electronics_beamer-test,Beamer Test,Consumer Electronics,"Smartphones, laptops, cameras, and tech gadgets",de,DE,candidate,2026-09-09T14:20:03.442637
+electronics_smart-speaker,Smart Speaker,Consumer Electronics,"Smartphones, laptops, cameras, and tech gadgets",de,DE,candidate,2026-09-09T14:20:03.442644
+crafts_3d-drucker,3D Drucker,Crafts & DIY,"DIY supplies, tools, and craft materials",de,DE,candidate,2026-09-09T14:20:03.443327
+crafts_nahmachine,Nähmachine,Crafts & DIY,"DIY supplies, tools, and craft materials",de,DE,candidate,2026-09-09T14:20:03.443336
+crafts_bohrmaschine,Bohrmaschine,Crafts & DIY,"DIY supplies, tools, and craft materials",de,DE,candidate,2026-09-09T14:20:03.443343
+crafts_werkzeugkoffer,Werkzeugkoffer,Crafts & DIY,"DIY supplies, tools, and craft materials",de,DE,candidate,2026-09-09T14:20:03.443351
+crafts_holzbearbeitung,Holzbearbeitung,Crafts & DIY,"DIY supplies, tools, and craft materials",de,DE,candidate,2026-09-09T14:20:03.443358
+dating_dating-app-vergleich,Dating App Vergleich,Dating & Social,"Dating apps, social platforms, and community services",de,DE,candidate,2026-09-09T14:20:03.443030
+dating_singles-reisen,Singles Reisen,Dating & Social,"Dating apps, social platforms, and community services",de,DE,candidate,2026-09-09T14:20:03.443041
+dating_partnervermittlung,Partnervermittlung,Dating & Social,"Dating apps, social platforms, and community services",de,DE,candidate,2026-09-09T14:20:03.443049
+education_online-kurse-programmierung,Online Kurse Programmierung,Education & Learning,"Online courses, certifications, and educational platforms",de,DE,candidate,2026-09-09T14:20:03.442275
+education_sprachkurse,Sprachkurse,Education & Learning,"Online courses, certifications, and educational platforms",de,DE,candidate,2026-09-09T14:20:03.442283
+education_yoga-kurse,Yoga Kurse,Education & Learning,"Online courses, certifications, and educational platforms",de,DE,candidate,2026-09-09T14:20:03.442291
+education_fitness-kurse,Fitness Kurse,Education & Learning,"Online courses, certifications, and educational platforms",de,DE,candidate,2026-09-09T14:20:03.442299
+education_zeichnen-kurse,Zeichnen Kurse,Education & Learning,"Online courses, certifications, and educational platforms",de,DE,candidate,2026-09-09T14:20:03.442306
+education_fotografie-kurse,Fotografie Kurse,Education & Learning,"Online courses, certifications, and educational platforms",de,DE,candidate,2026-09-09T14:20:03.442314
+education_business-kurse,Business Kurse,Education & Learning,"Online courses, certifications, and educational platforms",de,DE,candidate,2026-09-09T14:20:03.442326
+education_seo-kurse,SEO Kurse,Education & Learning,"Online courses, certifications, and educational platforms",de,DE,candidate,2026-09-09T14:20:03.442335
+education_affiliate-marketing-kurse,Affiliate Marketing Kurse,Education & Learning,"Online courses, certifications, and educational platforms",de,DE,candidate,2026-09-09T14:20:03.442346
+fashion_herrenanzug,Herrenanzug,Fashion & Clothing,"Clothing, shoes, and fashion accessories",de,DE,candidate,2026-09-09T14:20:03.443266
+fashion_damenbekleidung,Damenbekleidung,Fashion & Clothing,"Clothing, shoes, and fashion accessories",de,DE,candidate,2026-09-09T14:20:03.443274
+fashion_arbeitsschuhe,Arbeitsschuhe,Fashion & Clothing,"Clothing, shoes, and fashion accessories",de,DE,candidate,2026-09-09T14:20:03.443281
+fashion_outdoor-bekleidung,Outdoor Bekleidung,Fashion & Clothing,"Clothing, shoes, and fashion accessories",de,DE,candidate,2026-09-09T14:20:03.443289
+fashion_modeschmuck,Modeschmuck,Fashion & Clothing,"Clothing, shoes, and fashion accessories",de,DE,candidate,2026-09-09T14:20:03.443296
+fashion_uhren,Uhren,Fashion & Clothing,"Clothing, shoes, and fashion accessories",de,DE,candidate,2026-09-09T14:20:03.443306
+fashion_sonnenbrille,Sonnenbrille,Fashion & Clothing,"Clothing, shoes, and fashion accessories",de,DE,candidate,2026-09-09T14:20:03.443319
+finance_krankenversicherung,Krankenversicherung,Finance & Insurance,"Insurance, banking, investments, and financial products",de,DE,candidate,2026-09-09T14:20:03.441954
+finance_zahnversicherung,Zahnversicherung,Finance & Insurance,"Insurance, banking, investments, and financial products",de,DE,candidate,2026-09-09T14:20:03.441962
+finance_kfz-versicherung,Kfz-Versicherung,Finance & Insurance,"Insurance, banking, investments, and financial products",de,DE,candidate,2026-09-09T14:20:03.441974
+finance_hausratversicherung,Hausratversicherung,Finance & Insurance,"Insurance, banking, investments, and financial products",de,DE,candidate,2026-09-09T14:20:03.441982
+finance_haftpflichtversicherung,Haftpflichtversicherung,Finance & Insurance,"Insurance, banking, investments, and financial products",de,DE,candidate,2026-09-09T14:20:03.441990
+finance_berufsunfahigkeitsversicherung,Berufsunfähigkeitsversicherung,Finance & Insurance,"Insurance, banking, investments, and financial products",de,DE,candidate,2026-09-09T14:20:03.442000
+finance_kreditvergleich,Kreditvergleich,Finance & Insurance,"Insurance, banking, investments, and financial products",de,DE,candidate,2026-09-09T14:20:03.442008
+finance_baufinanzierung,Baufinanzierung,Finance & Insurance,"Insurance, banking, investments, and financial products",de,DE,candidate,2026-09-09T14:20:03.442015
+finance_tagesgeldvergleich,Tagesgeldvergleich,Finance & Insurance,"Insurance, banking, investments, and financial products",de,DE,candidate,2026-09-09T14:20:03.442023
+finance_forex-trading,Forex Trading,Finance & Insurance,"Insurance, banking, investments, and financial products",de,DE,candidate,2026-09-09T14:20:03.442034
+finance_broker-vergleich,Broker Vergleich,Finance & Insurance,"Insurance, banking, investments, and financial products",de,DE,candidate,2026-09-09T14:20:03.442044
+finance_depot-vergleich,Depot Vergleich,Finance & Insurance,"Insurance, banking, investments, and financial products",de,DE,candidate,2026-09-09T14:20:03.442053
+food_essenslieferdienst,Essenslieferdienst,Food & Drinks,"Food delivery, restaurants, and specialty foods",de,DE,candidate,2026-09-09T14:20:03.443057
+food_kaffeemaschine-test,Kaffeemaschine Test,Food & Drinks,"Food delivery, restaurants, and specialty foods",de,DE,candidate,2026-09-09T14:20:03.443067
+food_espresso-test,Espresso Test,Food & Drinks,"Food delivery, restaurants, and specialty foods",de,DE,candidate,2026-09-09T14:20:03.443075
+food_kuchenmaschine,Küchenmaschine,Food & Drinks,"Food delivery, restaurants, and specialty foods",de,DE,candidate,2026-09-09T14:20:03.443084
+food_pfeffermuhle,Pfeffermühle,Food & Drinks,"Food delivery, restaurants, and specialty foods",de,DE,candidate,2026-09-09T14:20:03.443095
+gaming_gaming-monitor,Gaming Monitor,Gaming,"Gaming hardware, consoles, and gaming services",de,DE,candidate,2026-09-09T14:20:03.443104
+gaming_gaming-laptop,Gaming Laptop,Gaming,"Gaming hardware, consoles, and gaming services",de,DE,candidate,2026-09-09T14:20:03.443112
+gaming_gaming-stuhl,Gaming Stuhl,Gaming,"Gaming hardware, consoles, and gaming services",de,DE,candidate,2026-09-09T14:20:03.443119
+gaming_spielekonsole-vergleich,Spielekonsole Vergleich,Gaming,"Gaming hardware, consoles, and gaming services",de,DE,candidate,2026-09-09T14:20:03.443130
+gaming_gaming-headset,Gaming Headset,Gaming,"Gaming hardware, consoles, and gaming services",de,DE,candidate,2026-09-09T14:20:03.443138
+gaming_mouse-pad,Mouse Pad,Gaming,"Gaming hardware, consoles, and gaming services",de,DE,candidate,2026-09-09T14:20:03.443148
+health_fitnessgerate,Fitnessgeräte,Health & Wellness,"Fitness, nutrition, health products, and wellness services",de,DE,candidate,2026-09-09T14:20:03.442418
+health_protein-pulver,Protein Pulver,Health & Wellness,"Fitness, nutrition, health products, and wellness services",de,DE,candidate,2026-09-09T14:20:03.442426
+health_supplements,Supplements,Health & Wellness,"Fitness, nutrition, health products, and wellness services",de,DE,candidate,2026-09-09T14:20:03.442433
+health_fitnessstudio,Fitnessstudio,Health & Wellness,"Fitness, nutrition, health products, and wellness services",de,DE,candidate,2026-09-09T14:20:03.442440
+health_fitness-tracker,Fitness Tracker,Health & Wellness,"Fitness, nutrition, health products, and wellness services",de,DE,candidate,2026-09-09T14:20:03.442448
+health_smartwatch,Smartwatch,Health & Wellness,"Fitness, nutrition, health products, and wellness services",de,DE,candidate,2026-09-09T14:20:03.442459
+health_matratzen-test,Matratzen Test,Health & Wellness,"Fitness, nutrition, health products, and wellness services",de,DE,candidate,2026-09-09T14:20:03.442467
+health_schlafkissen,Schlafkissen,Health & Wellness,"Fitness, nutrition, health products, and wellness services",de,DE,candidate,2026-09-09T14:20:03.442474
+health_luftreiniger,Luftreiniger,Health & Wellness,"Fitness, nutrition, health products, and wellness services",de,DE,candidate,2026-09-09T14:20:03.442482
+health_wasserfiltration,Wasserfiltration,Health & Wellness,"Fitness, nutrition, health products, and wellness services",de,DE,candidate,2026-09-09T14:20:03.442489
+home_energy_photovoltaik,Photovoltaik,Home & Energy,"Renewable energy, efficiency, and smart home solutions for residential properties",de,DE,candidate,2026-09-09T14:20:03.441343
+home_energy_stromspeicher-batteriespeicher,Stromspeicher / Batteriespeicher,Home & Energy,"Renewable energy, efficiency, and smart home solutions for residential properties",de,DE,candidate,2026-09-09T14:20:03.441400
+home_energy_warmepumpe,Wärmepumpe,Home & Energy,"Renewable energy, efficiency, and smart home solutions for residential properties",de,DE,candidate,2026-09-09T14:20:03.441846
+home_energy_wallbox-ladestation,Wallbox / Ladestation,Home & Energy,"Renewable energy, efficiency, and smart home solutions for residential properties",de,DE,candidate,2026-09-09T14:20:03.441874
+home_energy_smart-home-systeme,Smart Home Systeme,Home & Energy,"Renewable energy, efficiency, and smart home solutions for residential properties",de,DE,candidate,2026-09-09T14:20:03.441892
+home_energy_balkonkraftwerk,Balkonkraftwerk,Home & Energy,"Renewable energy, efficiency, and smart home solutions for residential properties",de,DE,candidate,2026-09-09T14:20:03.441903
+home_energy_gasvergleich,Gasvergleich,Home & Energy,"Renewable energy, efficiency, and smart home solutions for residential properties",de,DE,candidate,2026-09-09T14:20:03.441912
+home_energy_stromvergleich,Stromvergleich,Home & Energy,"Renewable energy, efficiency, and smart home solutions for residential properties",de,DE,candidate,2026-09-09T14:20:03.441919
+home_energy_energiesparen,Energiesparen,Home & Energy,"Renewable energy, efficiency, and smart home solutions for residential properties",de,DE,candidate,2026-09-09T14:20:03.441928
+home_energy_isolierung-dammstoffe,Isolierung / Dämmstoffe,Home & Energy,"Renewable energy, efficiency, and smart home solutions for residential properties",de,DE,candidate,2026-09-09T14:20:03.441940
+home_garden_gartengerate,Gartengeräte,Home & Garden,"Furniture, garden tools, and home improvement products",de,DE,candidate,2026-09-09T14:20:03.442504
+home_garden_rasenmaher,Rasenmäher,Home & Garden,"Furniture, garden tools, and home improvement products",de,DE,candidate,2026-09-09T14:20:03.442513
+home_garden_gartenmobel,Gartenmöbel,Home & Garden,"Furniture, garden tools, and home improvement products",de,DE,candidate,2026-09-09T14:20:03.442522
+home_garden_poolzubehor,Poolzubehör,Home & Garden,"Furniture, garden tools, and home improvement products",de,DE,candidate,2026-09-09T14:20:03.442531
+home_garden_terrassendacher,Terrassendächer,Home & Garden,"Furniture, garden tools, and home improvement products",de,DE,candidate,2026-09-09T14:20:03.442542
+home_garden_gewachshaus,Gewächshaus,Home & Garden,"Furniture, garden tools, and home improvement products",de,DE,candidate,2026-09-09T14:20:03.442551
+home_garden_bodentiefe-fenster,Bodentiefe Fenster,Home & Garden,"Furniture, garden tools, and home improvement products",de,DE,candidate,2026-09-09T14:20:03.442559
+security_uberwachungskamera,Überwachungskamera,Home Security,"Security systems, surveillance, and safety products",de,DE,candidate,2026-09-09T14:20:03.442911
+security_turklingel-mit-kamera,Türklingel mit Kamera,Home Security,"Security systems, surveillance, and safety products",de,DE,candidate,2026-09-09T14:20:03.442921
+security_alarmanlage,Alarmanlage,Home Security,"Security systems, surveillance, and safety products",de,DE,candidate,2026-09-09T14:20:03.442928
+security_schloss-upgrade,Schloss Upgrade,Home Security,"Security systems, surveillance, and safety products",de,DE,candidate,2026-09-09T14:20:03.442936
+security_fensterriegel,Fensterriegel,Home Security,"Security systems, surveillance, and safety products",de,DE,candidate,2026-09-09T14:20:03.442948
+security_bewegungsmelder,Bewegungsmelder,Home Security,"Security systems, surveillance, and safety products",de,DE,candidate,2026-09-09T14:20:03.442956
+media_musikstreaming-dienste,Musikstreaming Dienste,Media & Streaming,"Streaming services, audio equipment, and entertainment",de,DE,candidate,2026-09-09T14:20:03.442965
+media_videostreaming-vergleich,Videostreaming Vergleich,Media & Streaming,"Streaming services, audio equipment, and entertainment",de,DE,candidate,2026-09-09T14:20:03.442973
+media_bluetooth-lautsprecher,Bluetooth Lautsprecher,Media & Streaming,"Streaming services, audio equipment, and entertainment",de,DE,candidate,2026-09-09T14:20:03.442984
+media_kopfhorer-test,Kopfhörer Test,Media & Streaming,"Streaming services, audio equipment, and entertainment",de,DE,candidate,2026-09-09T14:20:03.442994
+media_soundbar-test,Soundbar Test,Media & Streaming,"Streaming services, audio equipment, and entertainment",de,DE,candidate,2026-09-09T14:20:03.443001
+media_vinyl-schallplatte,Vinyl Schallplatte,Media & Streaming,"Streaming services, audio equipment, and entertainment",de,DE,candidate,2026-09-09T14:20:03.443009
+media_podcast-equipment,Podcast Equipment,Media & Streaming,"Streaming services, audio equipment, and entertainment",de,DE,candidate,2026-09-09T14:20:03.443020
+pets_hundefutter,Hundefutter,Pets,"Pet supplies, pet care, and pet services",de,DE,candidate,2026-09-09T14:20:03.442850
+pets_katzenfutter,Katzenfutter,Pets,"Pet supplies, pet care, and pet services",de,DE,candidate,2026-09-09T14:20:03.442860
+pets_katzenstreu,Katzenstreu,Pets,"Pet supplies, pet care, and pet services",de,DE,candidate,2026-09-09T14:20:03.442868
+pets_hundekafig,Hundekäfig,Pets,"Pet supplies, pet care, and pet services",de,DE,candidate,2026-09-09T14:20:03.442879
+pets_hundebett,Hundebett,Pets,"Pet supplies, pet care, and pet services",de,DE,candidate,2026-09-09T14:20:03.442887
+pets_tierversicherung,Tierversicherung,Pets,"Pet supplies, pet care, and pet services",de,DE,candidate,2026-09-09T14:20:03.442894
+pets_aquarium-filter,Aquarium Filter,Pets,"Pet supplies, pet care, and pet services",de,DE,candidate,2026-09-09T14:20:03.442902
+software_projektmanagementsoftware,Projektmanagementsoftware,Software & SaaS,"Business software, productivity tools, and cloud services",de,DE,candidate,2026-09-09T14:20:03.442134
+software_crm-systeme,CRM Systeme,Software & SaaS,"Business software, productivity tools, and cloud services",de,DE,candidate,2026-09-09T14:20:03.442143
+software_buchhaltungssoftware,Buchhaltungssoftware,Software & SaaS,"Business software, productivity tools, and cloud services",de,DE,candidate,2026-09-09T14:20:03.442151
+software_e-mail-marketing-tools,E-Mail Marketing Tools,Software & SaaS,"Business software, productivity tools, and cloud services",de,DE,candidate,2026-09-09T14:20:03.442160
+software_webhosting,Webhosting,Software & SaaS,"Business software, productivity tools, and cloud services",de,DE,candidate,2026-09-09T14:20:03.442167
+software_website-builder,Website Builder,Software & SaaS,"Business software, productivity tools, and cloud services",de,DE,candidate,2026-09-09T14:20:03.442178
+software_vpn-software,VPN Software,Software & SaaS,"Business software, productivity tools, and cloud services",de,DE,candidate,2026-09-09T14:20:03.442186
+software_password-manager,Password Manager,Software & SaaS,"Business software, productivity tools, and cloud services",de,DE,candidate,2026-09-09T14:20:03.442193
+software_antivirus-software,Antivirus Software,Software & SaaS,"Business software, productivity tools, and cloud services",de,DE,candidate,2026-09-09T14:20:03.442201
+software_videokonferenz-software,Videokonferenz Software,Software & SaaS,"Business software, productivity tools, and cloud services",de,DE,candidate,2026-09-09T14:20:03.442223
+software_cloud-speicher,Cloud Speicher,Software & SaaS,"Business software, productivity tools, and cloud services",de,DE,candidate,2026-09-09T14:20:03.442237
+software_grafik-design-software,Grafik Design Software,Software & SaaS,"Business software, productivity tools, and cloud services",de,DE,candidate,2026-09-09T14:20:03.442246
+software_ai-tools,AI Tools,Software & SaaS,"Business software, productivity tools, and cloud services",de,DE,candidate,2026-09-09T14:20:03.442254
+software_chatbot-builder,Chatbot Builder,Software & SaaS,"Business software, productivity tools, and cloud services",de,DE,candidate,2026-09-09T14:20:03.442266
+sports_laufschuhe-test,Laufschuhe Test,Sports & Outdoor,"Sports equipment, outdoor gear, and recreational activities",de,DE,candidate,2026-09-09T14:20:03.442777
+sports_fahrrad-vergleich,Fahrrad Vergleich,Sports & Outdoor,"Sports equipment, outdoor gear, and recreational activities",de,DE,candidate,2026-09-09T14:20:03.442785
+sports_zelt-test,Zelt Test,Sports & Outdoor,"Sports equipment, outdoor gear, and recreational activities",de,DE,candidate,2026-09-09T14:20:03.442793
+sports_rucksack-test,Rucksack Test,Sports & Outdoor,"Sports equipment, outdoor gear, and recreational activities",de,DE,candidate,2026-09-09T14:20:03.442800
+sports_skier,Skier,Sports & Outdoor,"Sports equipment, outdoor gear, and recreational activities",de,DE,candidate,2026-09-09T14:20:03.442816
+sports_snowboard,Snowboard,Sports & Outdoor,"Sports equipment, outdoor gear, and recreational activities",de,DE,candidate,2026-09-09T14:20:03.442826
+sports_taucher-ausbildung,Taucher Ausbildung,Sports & Outdoor,"Sports equipment, outdoor gear, and recreational activities",de,DE,candidate,2026-09-09T14:20:03.442834
+sports_yoga-matte,Yoga Matte,Sports & Outdoor,"Sports equipment, outdoor gear, and recreational activities",de,DE,candidate,2026-09-09T14:20:03.442842
+telecom_mobilfunkvertrag,Mobilfunkvertrag,Telecommunications,"Mobile plans, internet providers, and telecom services",de,DE,candidate,2026-09-09T14:20:03.442061
+telecom_dsl-anbieter,DSL Anbieter,Telecommunications,"Mobile plans, internet providers, and telecom services",de,DE,candidate,2026-09-09T14:20:03.442073
+telecom_kabelinternet,Kabelinternet,Telecommunications,"Mobile plans, internet providers, and telecom services",de,DE,candidate,2026-09-09T14:20:03.442080
+telecom_glasfaser-anbieter,Glasfaser Anbieter,Telecommunications,"Mobile plans, internet providers, and telecom services",de,DE,candidate,2026-09-09T14:20:03.442088
+telecom_telefontarif,Telefontarif,Telecommunications,"Mobile plans, internet providers, and telecom services",de,DE,candidate,2026-09-09T14:20:03.442096
+telecom_auslandstelefonie,Auslandstelefonie,Telecommunications,"Mobile plans, internet providers, and telecom services",de,DE,candidate,2026-09-09T14:20:03.442107
+telecom_vpn-anbieter,VPN Anbieter,Telecommunications,"Mobile plans, internet providers, and telecom services",de,DE,candidate,2026-09-09T14:20:03.442114
+telecom_dns-sicherheit,DNS Sicherheit,Telecommunications,"Mobile plans, internet providers, and telecom services",de,DE,candidate,2026-09-09T14:20:03.442122
+transport_paketversand,Paketversand,Transport & Logistics,"Transport services, logistics, and courier services",de,DE,candidate,2026-09-09T14:20:03.443228
+transport_mobeltransport,Möbeltransport,Transport & Logistics,"Transport services, logistics, and courier services",de,DE,candidate,2026-09-09T14:20:03.443240
+transport_umzugsunternehmen,Umzugsunternehmen,Transport & Logistics,"Transport services, logistics, and courier services",de,DE,candidate,2026-09-09T14:20:03.443250
+transport_lagervermietung,Lagervermietung,Transport & Logistics,"Transport services, logistics, and courier services",de,DE,candidate,2026-09-09T14:20:03.443258
+travel_hotelvergleich,Hotelvergleich,Travel & Hospitality,"Hotels, flights, travel insurance, and tourism services",de,DE,candidate,2026-09-09T14:20:03.442355
+travel_flugbuchung,Flugbuchung,Travel & Hospitality,"Hotels, flights, travel insurance, and tourism services",de,DE,candidate,2026-09-09T14:20:03.442362
+travel_mietwagenverleih,Mietwagenverleih,Travel & Hospitality,"Hotels, flights, travel insurance, and tourism services",de,DE,candidate,2026-09-09T14:20:03.442370
+travel_reiseversicherung,Reiseversicherung,Travel & Hospitality,"Hotels, flights, travel insurance, and tourism services",de,DE,candidate,2026-09-09T14:20:03.442377
+travel_reisegepack,Reisegepäck,Travel & Hospitality,"Hotels, flights, travel insurance, and tourism services",de,DE,candidate,2026-09-09T14:20:03.442389
+travel_reisekreditkarte,Reisekreditkarte,Travel & Hospitality,"Hotels, flights, travel insurance, and tourism services",de,DE,candidate,2026-09-09T14:20:03.442397
+travel_ferienwohnung-plattformen,Ferienwohnung Plattformen,Travel & Hospitality,"Hotels, flights, travel insurance, and tourism services",de,DE,candidate,2026-09-09T14:20:03.442406

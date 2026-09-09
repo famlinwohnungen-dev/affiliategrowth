@@ -1,0 +1,2824 @@
+[
+  {
+    "name": "Photovoltaik",
+    "parent_category": "Home & Energy",
+    "description": "Renewable energy, efficiency, and smart home solutions for residential properties",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "photovoltaik"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "home_energy_photovoltaik",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.441343",
+    "updated_at": "2026-09-09T14:20:03.441349"
+  },
+  {
+    "name": "Stromspeicher / Batteriespeicher",
+    "parent_category": "Home & Energy",
+    "description": "Renewable energy, efficiency, and smart home solutions for residential properties",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "stromspeicher / batteriespeicher"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "home_energy_stromspeicher-batteriespeicher",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.441400",
+    "updated_at": "2026-09-09T14:20:03.441401"
+  },
+  {
+    "name": "Wärmepumpe",
+    "parent_category": "Home & Energy",
+    "description": "Renewable energy, efficiency, and smart home solutions for residential properties",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "wärmepumpe"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "home_energy_warmepumpe",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.441846",
+    "updated_at": "2026-09-09T14:20:03.441849"
+  },
+  {
+    "name": "Wallbox / Ladestation",
+    "parent_category": "Home & Energy",
+    "description": "Renewable energy, efficiency, and smart home solutions for residential properties",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "wallbox / ladestation"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "home_energy_wallbox-ladestation",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.441874",
+    "updated_at": "2026-09-09T14:20:03.441875"
+  },
+  {
+    "name": "Smart Home Systeme",
+    "parent_category": "Home & Energy",
+    "description": "Renewable energy, efficiency, and smart home solutions for residential properties",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "smart home systeme"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "home_energy_smart-home-systeme",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.441892",
+    "updated_at": "2026-09-09T14:20:03.441893"
+  },
+  {
+    "name": "Balkonkraftwerk",
+    "parent_category": "Home & Energy",
+    "description": "Renewable energy, efficiency, and smart home solutions for residential properties",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "balkonkraftwerk"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "home_energy_balkonkraftwerk",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.441903",
+    "updated_at": "2026-09-09T14:20:03.441904"
+  },
+  {
+    "name": "Gasvergleich",
+    "parent_category": "Home & Energy",
+    "description": "Renewable energy, efficiency, and smart home solutions for residential properties",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "gasvergleich"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "home_energy_gasvergleich",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.441912",
+    "updated_at": "2026-09-09T14:20:03.441913"
+  },
+  {
+    "name": "Stromvergleich",
+    "parent_category": "Home & Energy",
+    "description": "Renewable energy, efficiency, and smart home solutions for residential properties",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "stromvergleich"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "home_energy_stromvergleich",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.441919",
+    "updated_at": "2026-09-09T14:20:03.441921"
+  },
+  {
+    "name": "Energiesparen",
+    "parent_category": "Home & Energy",
+    "description": "Renewable energy, efficiency, and smart home solutions for residential properties",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "energiesparen"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "home_energy_energiesparen",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.441928",
+    "updated_at": "2026-09-09T14:20:03.441929"
+  },
+  {
+    "name": "Isolierung / Dämmstoffe",
+    "parent_category": "Home & Energy",
+    "description": "Renewable energy, efficiency, and smart home solutions for residential properties",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "isolierung / dämmstoffe"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "home_energy_isolierung-dammstoffe",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.441940",
+    "updated_at": "2026-09-09T14:20:03.441941"
+  },
+  {
+    "name": "Krankenversicherung",
+    "parent_category": "Finance & Insurance",
+    "description": "Insurance, banking, investments, and financial products",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "krankenversicherung"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "finance_krankenversicherung",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.441954",
+    "updated_at": "2026-09-09T14:20:03.441955"
+  },
+  {
+    "name": "Zahnversicherung",
+    "parent_category": "Finance & Insurance",
+    "description": "Insurance, banking, investments, and financial products",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "zahnversicherung"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "finance_zahnversicherung",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.441962",
+    "updated_at": "2026-09-09T14:20:03.441963"
+  },
+  {
+    "name": "Kfz-Versicherung",
+    "parent_category": "Finance & Insurance",
+    "description": "Insurance, banking, investments, and financial products",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "kfz-versicherung"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "finance_kfz-versicherung",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.441974",
+    "updated_at": "2026-09-09T14:20:03.441975"
+  },
+  {
+    "name": "Hausratversicherung",
+    "parent_category": "Finance & Insurance",
+    "description": "Insurance, banking, investments, and financial products",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "hausratversicherung"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "finance_hausratversicherung",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.441982",
+    "updated_at": "2026-09-09T14:20:03.441983"
+  },
+  {
+    "name": "Haftpflichtversicherung",
+    "parent_category": "Finance & Insurance",
+    "description": "Insurance, banking, investments, and financial products",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "haftpflichtversicherung"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "finance_haftpflichtversicherung",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.441990",
+    "updated_at": "2026-09-09T14:20:03.441991"
+  },
+  {
+    "name": "Berufsunfähigkeitsversicherung",
+    "parent_category": "Finance & Insurance",
+    "description": "Insurance, banking, investments, and financial products",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "berufsunfähigkeitsversicherung"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "finance_berufsunfahigkeitsversicherung",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442000",
+    "updated_at": "2026-09-09T14:20:03.442001"
+  },
+  {
+    "name": "Kreditvergleich",
+    "parent_category": "Finance & Insurance",
+    "description": "Insurance, banking, investments, and financial products",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "kreditvergleich"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "finance_kreditvergleich",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442008",
+    "updated_at": "2026-09-09T14:20:03.442009"
+  },
+  {
+    "name": "Baufinanzierung",
+    "parent_category": "Finance & Insurance",
+    "description": "Insurance, banking, investments, and financial products",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "baufinanzierung"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "finance_baufinanzierung",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442015",
+    "updated_at": "2026-09-09T14:20:03.442016"
+  },
+  {
+    "name": "Tagesgeldvergleich",
+    "parent_category": "Finance & Insurance",
+    "description": "Insurance, banking, investments, and financial products",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "tagesgeldvergleich"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "finance_tagesgeldvergleich",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442023",
+    "updated_at": "2026-09-09T14:20:03.442024"
+  },
+  {
+    "name": "Forex Trading",
+    "parent_category": "Finance & Insurance",
+    "description": "Insurance, banking, investments, and financial products",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "forex trading"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "finance_forex-trading",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442034",
+    "updated_at": "2026-09-09T14:20:03.442035"
+  },
+  {
+    "name": "Broker Vergleich",
+    "parent_category": "Finance & Insurance",
+    "description": "Insurance, banking, investments, and financial products",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "broker vergleich"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "finance_broker-vergleich",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442044",
+    "updated_at": "2026-09-09T14:20:03.442045"
+  },
+  {
+    "name": "Depot Vergleich",
+    "parent_category": "Finance & Insurance",
+    "description": "Insurance, banking, investments, and financial products",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "depot vergleich"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "finance_depot-vergleich",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442053",
+    "updated_at": "2026-09-09T14:20:03.442054"
+  },
+  {
+    "name": "Mobilfunkvertrag",
+    "parent_category": "Telecommunications",
+    "description": "Mobile plans, internet providers, and telecom services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "mobilfunkvertrag"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "telecom_mobilfunkvertrag",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442061",
+    "updated_at": "2026-09-09T14:20:03.442062"
+  },
+  {
+    "name": "DSL Anbieter",
+    "parent_category": "Telecommunications",
+    "description": "Mobile plans, internet providers, and telecom services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "dsl anbieter"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "telecom_dsl-anbieter",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442073",
+    "updated_at": "2026-09-09T14:20:03.442074"
+  },
+  {
+    "name": "Kabelinternet",
+    "parent_category": "Telecommunications",
+    "description": "Mobile plans, internet providers, and telecom services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "kabelinternet"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "telecom_kabelinternet",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442080",
+    "updated_at": "2026-09-09T14:20:03.442081"
+  },
+  {
+    "name": "Glasfaser Anbieter",
+    "parent_category": "Telecommunications",
+    "description": "Mobile plans, internet providers, and telecom services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "glasfaser anbieter"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "telecom_glasfaser-anbieter",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442088",
+    "updated_at": "2026-09-09T14:20:03.442089"
+  },
+  {
+    "name": "Telefontarif",
+    "parent_category": "Telecommunications",
+    "description": "Mobile plans, internet providers, and telecom services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "telefontarif"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "telecom_telefontarif",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442096",
+    "updated_at": "2026-09-09T14:20:03.442097"
+  },
+  {
+    "name": "Auslandstelefonie",
+    "parent_category": "Telecommunications",
+    "description": "Mobile plans, internet providers, and telecom services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "auslandstelefonie"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "telecom_auslandstelefonie",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442107",
+    "updated_at": "2026-09-09T14:20:03.442108"
+  },
+  {
+    "name": "VPN Anbieter",
+    "parent_category": "Telecommunications",
+    "description": "Mobile plans, internet providers, and telecom services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "vpn anbieter"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "telecom_vpn-anbieter",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442114",
+    "updated_at": "2026-09-09T14:20:03.442116"
+  },
+  {
+    "name": "DNS Sicherheit",
+    "parent_category": "Telecommunications",
+    "description": "Mobile plans, internet providers, and telecom services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "dns sicherheit"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "telecom_dns-sicherheit",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442122",
+    "updated_at": "2026-09-09T14:20:03.442123"
+  },
+  {
+    "name": "Projektmanagementsoftware",
+    "parent_category": "Software & SaaS",
+    "description": "Business software, productivity tools, and cloud services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "projektmanagementsoftware"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "software_projektmanagementsoftware",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442134",
+    "updated_at": "2026-09-09T14:20:03.442135"
+  },
+  {
+    "name": "CRM Systeme",
+    "parent_category": "Software & SaaS",
+    "description": "Business software, productivity tools, and cloud services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "crm systeme"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "software_crm-systeme",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442143",
+    "updated_at": "2026-09-09T14:20:03.442144"
+  },
+  {
+    "name": "Buchhaltungssoftware",
+    "parent_category": "Software & SaaS",
+    "description": "Business software, productivity tools, and cloud services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "buchhaltungssoftware"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "software_buchhaltungssoftware",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442151",
+    "updated_at": "2026-09-09T14:20:03.442152"
+  },
+  {
+    "name": "E-Mail Marketing Tools",
+    "parent_category": "Software & SaaS",
+    "description": "Business software, productivity tools, and cloud services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "e-mail marketing tools"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "software_e-mail-marketing-tools",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442160",
+    "updated_at": "2026-09-09T14:20:03.442161"
+  },
+  {
+    "name": "Webhosting",
+    "parent_category": "Software & SaaS",
+    "description": "Business software, productivity tools, and cloud services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "webhosting"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "software_webhosting",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442167",
+    "updated_at": "2026-09-09T14:20:03.442168"
+  },
+  {
+    "name": "Website Builder",
+    "parent_category": "Software & SaaS",
+    "description": "Business software, productivity tools, and cloud services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "website builder"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "software_website-builder",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442178",
+    "updated_at": "2026-09-09T14:20:03.442179"
+  },
+  {
+    "name": "VPN Software",
+    "parent_category": "Software & SaaS",
+    "description": "Business software, productivity tools, and cloud services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "vpn software"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "software_vpn-software",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442186",
+    "updated_at": "2026-09-09T14:20:03.442187"
+  },
+  {
+    "name": "Password Manager",
+    "parent_category": "Software & SaaS",
+    "description": "Business software, productivity tools, and cloud services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "password manager"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "software_password-manager",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442193",
+    "updated_at": "2026-09-09T14:20:03.442194"
+  },
+  {
+    "name": "Antivirus Software",
+    "parent_category": "Software & SaaS",
+    "description": "Business software, productivity tools, and cloud services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "antivirus software"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "software_antivirus-software",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442201",
+    "updated_at": "2026-09-09T14:20:03.442202"
+  },
+  {
+    "name": "Videokonferenz Software",
+    "parent_category": "Software & SaaS",
+    "description": "Business software, productivity tools, and cloud services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "videokonferenz software"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "software_videokonferenz-software",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442223",
+    "updated_at": "2026-09-09T14:20:03.442224"
+  },
+  {
+    "name": "Cloud Speicher",
+    "parent_category": "Software & SaaS",
+    "description": "Business software, productivity tools, and cloud services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "cloud speicher"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "software_cloud-speicher",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442237",
+    "updated_at": "2026-09-09T14:20:03.442238"
+  },
+  {
+    "name": "Grafik Design Software",
+    "parent_category": "Software & SaaS",
+    "description": "Business software, productivity tools, and cloud services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "grafik design software"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "software_grafik-design-software",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442246",
+    "updated_at": "2026-09-09T14:20:03.442247"
+  },
+  {
+    "name": "AI Tools",
+    "parent_category": "Software & SaaS",
+    "description": "Business software, productivity tools, and cloud services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "ai tools"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "software_ai-tools",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442254",
+    "updated_at": "2026-09-09T14:20:03.442255"
+  },
+  {
+    "name": "Chatbot Builder",
+    "parent_category": "Software & SaaS",
+    "description": "Business software, productivity tools, and cloud services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "chatbot builder"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "software_chatbot-builder",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442266",
+    "updated_at": "2026-09-09T14:20:03.442267"
+  },
+  {
+    "name": "Online Kurse Programmierung",
+    "parent_category": "Education & Learning",
+    "description": "Online courses, certifications, and educational platforms",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "online kurse programmierung"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "education_online-kurse-programmierung",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442275",
+    "updated_at": "2026-09-09T14:20:03.442276"
+  },
+  {
+    "name": "Sprachkurse",
+    "parent_category": "Education & Learning",
+    "description": "Online courses, certifications, and educational platforms",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "sprachkurse"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "education_sprachkurse",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442283",
+    "updated_at": "2026-09-09T14:20:03.442284"
+  },
+  {
+    "name": "Yoga Kurse",
+    "parent_category": "Education & Learning",
+    "description": "Online courses, certifications, and educational platforms",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "yoga kurse"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "education_yoga-kurse",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442291",
+    "updated_at": "2026-09-09T14:20:03.442292"
+  },
+  {
+    "name": "Fitness Kurse",
+    "parent_category": "Education & Learning",
+    "description": "Online courses, certifications, and educational platforms",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "fitness kurse"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "education_fitness-kurse",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442299",
+    "updated_at": "2026-09-09T14:20:03.442300"
+  },
+  {
+    "name": "Zeichnen Kurse",
+    "parent_category": "Education & Learning",
+    "description": "Online courses, certifications, and educational platforms",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "zeichnen kurse"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "education_zeichnen-kurse",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442306",
+    "updated_at": "2026-09-09T14:20:03.442307"
+  },
+  {
+    "name": "Fotografie Kurse",
+    "parent_category": "Education & Learning",
+    "description": "Online courses, certifications, and educational platforms",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "fotografie kurse"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "education_fotografie-kurse",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442314",
+    "updated_at": "2026-09-09T14:20:03.442315"
+  },
+  {
+    "name": "Business Kurse",
+    "parent_category": "Education & Learning",
+    "description": "Online courses, certifications, and educational platforms",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "business kurse"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "education_business-kurse",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442326",
+    "updated_at": "2026-09-09T14:20:03.442327"
+  },
+  {
+    "name": "SEO Kurse",
+    "parent_category": "Education & Learning",
+    "description": "Online courses, certifications, and educational platforms",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "seo kurse"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "education_seo-kurse",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442335",
+    "updated_at": "2026-09-09T14:20:03.442336"
+  },
+  {
+    "name": "Affiliate Marketing Kurse",
+    "parent_category": "Education & Learning",
+    "description": "Online courses, certifications, and educational platforms",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "affiliate marketing kurse"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "education_affiliate-marketing-kurse",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442346",
+    "updated_at": "2026-09-09T14:20:03.442347"
+  },
+  {
+    "name": "Hotelvergleich",
+    "parent_category": "Travel & Hospitality",
+    "description": "Hotels, flights, travel insurance, and tourism services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "hotelvergleich"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "travel_hotelvergleich",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442355",
+    "updated_at": "2026-09-09T14:20:03.442356"
+  },
+  {
+    "name": "Flugbuchung",
+    "parent_category": "Travel & Hospitality",
+    "description": "Hotels, flights, travel insurance, and tourism services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "flugbuchung"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "travel_flugbuchung",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442362",
+    "updated_at": "2026-09-09T14:20:03.442363"
+  },
+  {
+    "name": "Mietwagenverleih",
+    "parent_category": "Travel & Hospitality",
+    "description": "Hotels, flights, travel insurance, and tourism services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "mietwagenverleih"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "travel_mietwagenverleih",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442370",
+    "updated_at": "2026-09-09T14:20:03.442371"
+  },
+  {
+    "name": "Reiseversicherung",
+    "parent_category": "Travel & Hospitality",
+    "description": "Hotels, flights, travel insurance, and tourism services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "reiseversicherung"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "travel_reiseversicherung",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442377",
+    "updated_at": "2026-09-09T14:20:03.442378"
+  },
+  {
+    "name": "Reisegepäck",
+    "parent_category": "Travel & Hospitality",
+    "description": "Hotels, flights, travel insurance, and tourism services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "reisegepäck"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "travel_reisegepack",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442389",
+    "updated_at": "2026-09-09T14:20:03.442390"
+  },
+  {
+    "name": "Reisekreditkarte",
+    "parent_category": "Travel & Hospitality",
+    "description": "Hotels, flights, travel insurance, and tourism services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "reisekreditkarte"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "travel_reisekreditkarte",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442397",
+    "updated_at": "2026-09-09T14:20:03.442398"
+  },
+  {
+    "name": "Ferienwohnung Plattformen",
+    "parent_category": "Travel & Hospitality",
+    "description": "Hotels, flights, travel insurance, and tourism services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "ferienwohnung plattformen"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "travel_ferienwohnung-plattformen",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442406",
+    "updated_at": "2026-09-09T14:20:03.442407"
+  },
+  {
+    "name": "Fitnessgeräte",
+    "parent_category": "Health & Wellness",
+    "description": "Fitness, nutrition, health products, and wellness services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "fitnessgeräte"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "health_fitnessgerate",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442418",
+    "updated_at": "2026-09-09T14:20:03.442419"
+  },
+  {
+    "name": "Protein Pulver",
+    "parent_category": "Health & Wellness",
+    "description": "Fitness, nutrition, health products, and wellness services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "protein pulver"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "health_protein-pulver",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442426",
+    "updated_at": "2026-09-09T14:20:03.442427"
+  },
+  {
+    "name": "Supplements",
+    "parent_category": "Health & Wellness",
+    "description": "Fitness, nutrition, health products, and wellness services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "supplements"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "health_supplements",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442433",
+    "updated_at": "2026-09-09T14:20:03.442434"
+  },
+  {
+    "name": "Fitnessstudio",
+    "parent_category": "Health & Wellness",
+    "description": "Fitness, nutrition, health products, and wellness services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "fitnessstudio"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "health_fitnessstudio",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442440",
+    "updated_at": "2026-09-09T14:20:03.442442"
+  },
+  {
+    "name": "Fitness Tracker",
+    "parent_category": "Health & Wellness",
+    "description": "Fitness, nutrition, health products, and wellness services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "fitness tracker"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "health_fitness-tracker",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442448",
+    "updated_at": "2026-09-09T14:20:03.442449"
+  },
+  {
+    "name": "Smartwatch",
+    "parent_category": "Health & Wellness",
+    "description": "Fitness, nutrition, health products, and wellness services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "smartwatch"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "health_smartwatch",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442459",
+    "updated_at": "2026-09-09T14:20:03.442460"
+  },
+  {
+    "name": "Matratzen Test",
+    "parent_category": "Health & Wellness",
+    "description": "Fitness, nutrition, health products, and wellness services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "matratzen test"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "health_matratzen-test",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442467",
+    "updated_at": "2026-09-09T14:20:03.442468"
+  },
+  {
+    "name": "Schlafkissen",
+    "parent_category": "Health & Wellness",
+    "description": "Fitness, nutrition, health products, and wellness services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "schlafkissen"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "health_schlafkissen",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442474",
+    "updated_at": "2026-09-09T14:20:03.442475"
+  },
+  {
+    "name": "Luftreiniger",
+    "parent_category": "Health & Wellness",
+    "description": "Fitness, nutrition, health products, and wellness services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "luftreiniger"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "health_luftreiniger",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442482",
+    "updated_at": "2026-09-09T14:20:03.442483"
+  },
+  {
+    "name": "Wasserfiltration",
+    "parent_category": "Health & Wellness",
+    "description": "Fitness, nutrition, health products, and wellness services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "wasserfiltration"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "health_wasserfiltration",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442489",
+    "updated_at": "2026-09-09T14:20:03.442490"
+  },
+  {
+    "name": "Gartengeräte",
+    "parent_category": "Home & Garden",
+    "description": "Furniture, garden tools, and home improvement products",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "gartengeräte"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "home_garden_gartengerate",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442504",
+    "updated_at": "2026-09-09T14:20:03.442505"
+  },
+  {
+    "name": "Rasenmäher",
+    "parent_category": "Home & Garden",
+    "description": "Furniture, garden tools, and home improvement products",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "rasenmäher"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "home_garden_rasenmaher",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442513",
+    "updated_at": "2026-09-09T14:20:03.442514"
+  },
+  {
+    "name": "Gartenmöbel",
+    "parent_category": "Home & Garden",
+    "description": "Furniture, garden tools, and home improvement products",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "gartenmöbel"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "home_garden_gartenmobel",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442522",
+    "updated_at": "2026-09-09T14:20:03.442523"
+  },
+  {
+    "name": "Poolzubehör",
+    "parent_category": "Home & Garden",
+    "description": "Furniture, garden tools, and home improvement products",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "poolzubehör"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "home_garden_poolzubehor",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442531",
+    "updated_at": "2026-09-09T14:20:03.442532"
+  },
+  {
+    "name": "Terrassendächer",
+    "parent_category": "Home & Garden",
+    "description": "Furniture, garden tools, and home improvement products",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "terrassendächer"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "home_garden_terrassendacher",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442542",
+    "updated_at": "2026-09-09T14:20:03.442543"
+  },
+  {
+    "name": "Gewächshaus",
+    "parent_category": "Home & Garden",
+    "description": "Furniture, garden tools, and home improvement products",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "gewächshaus"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "home_garden_gewachshaus",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442551",
+    "updated_at": "2026-09-09T14:20:03.442552"
+  },
+  {
+    "name": "Bodentiefe Fenster",
+    "parent_category": "Home & Garden",
+    "description": "Furniture, garden tools, and home improvement products",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "bodentiefe fenster"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "home_garden_bodentiefe-fenster",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442559",
+    "updated_at": "2026-09-09T14:20:03.442560"
+  },
+  {
+    "name": "Smartphone Vergleich",
+    "parent_category": "Consumer Electronics",
+    "description": "Smartphones, laptops, cameras, and tech gadgets",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "smartphone vergleich"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "electronics_smartphone-vergleich",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442569",
+    "updated_at": "2026-09-09T14:20:03.442570"
+  },
+  {
+    "name": "Laptop Test",
+    "parent_category": "Consumer Electronics",
+    "description": "Smartphones, laptops, cameras, and tech gadgets",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "laptop test"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "electronics_laptop-test",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442577",
+    "updated_at": "2026-09-09T14:20:03.442578"
+  },
+  {
+    "name": "Kamera Test",
+    "parent_category": "Consumer Electronics",
+    "description": "Smartphones, laptops, cameras, and tech gadgets",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "kamera test"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "electronics_kamera-test",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442584",
+    "updated_at": "2026-09-09T14:20:03.442585"
+  },
+  {
+    "name": "Tablet Vergleich",
+    "parent_category": "Consumer Electronics",
+    "description": "Smartphones, laptops, cameras, and tech gadgets",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "tablet vergleich"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "electronics_tablet-vergleich",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442595",
+    "updated_at": "2026-09-09T14:20:03.442597"
+  },
+  {
+    "name": "Monitor Vergleich",
+    "parent_category": "Consumer Electronics",
+    "description": "Smartphones, laptops, cameras, and tech gadgets",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "monitor vergleich"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "electronics_monitor-vergleich",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442606",
+    "updated_at": "2026-09-09T14:20:03.442607"
+  },
+  {
+    "name": "Drucker Test",
+    "parent_category": "Consumer Electronics",
+    "description": "Smartphones, laptops, cameras, and tech gadgets",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "drucker test"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "electronics_drucker-test",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442614",
+    "updated_at": "2026-09-09T14:20:03.442615"
+  },
+  {
+    "name": "Router Test",
+    "parent_category": "Consumer Electronics",
+    "description": "Smartphones, laptops, cameras, and tech gadgets",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "router test"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "electronics_router-test",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442622",
+    "updated_at": "2026-09-09T14:20:03.442623"
+  },
+  {
+    "name": "Gaming Headset",
+    "parent_category": "Consumer Electronics",
+    "description": "Smartphones, laptops, cameras, and tech gadgets",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "gaming headset"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "electronics_gaming-headset",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442629",
+    "updated_at": "2026-09-09T14:20:03.442630"
+  },
+  {
+    "name": "Beamer Test",
+    "parent_category": "Consumer Electronics",
+    "description": "Smartphones, laptops, cameras, and tech gadgets",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "beamer test"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "electronics_beamer-test",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442637",
+    "updated_at": "2026-09-09T14:20:03.442638"
+  },
+  {
+    "name": "Smart Speaker",
+    "parent_category": "Consumer Electronics",
+    "description": "Smartphones, laptops, cameras, and tech gadgets",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "smart speaker"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "electronics_smart-speaker",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442644",
+    "updated_at": "2026-09-09T14:20:03.442645"
+  },
+  {
+    "name": "Autoreifen",
+    "parent_category": "Automotive",
+    "description": "Car accessories, maintenance, and automotive services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "autoreifen"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "automotive_autoreifen",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442652",
+    "updated_at": "2026-09-09T14:20:03.442653"
+  },
+  {
+    "name": "Autobatterie",
+    "parent_category": "Automotive",
+    "description": "Car accessories, maintenance, and automotive services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "autobatterie"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "automotive_autobatterie",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442662",
+    "updated_at": "2026-09-09T14:20:03.442663"
+  },
+  {
+    "name": "Carsharing Anbieter",
+    "parent_category": "Automotive",
+    "description": "Car accessories, maintenance, and automotive services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "carsharing anbieter"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "automotive_carsharing-anbieter",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442672",
+    "updated_at": "2026-09-09T14:20:03.442674"
+  },
+  {
+    "name": "Autovermietung",
+    "parent_category": "Automotive",
+    "description": "Car accessories, maintenance, and automotive services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "autovermietung"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "automotive_autovermietung",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442683",
+    "updated_at": "2026-09-09T14:20:03.442684"
+  },
+  {
+    "name": "Auto Versicherung",
+    "parent_category": "Automotive",
+    "description": "Car accessories, maintenance, and automotive services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "auto versicherung"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "automotive_auto-versicherung",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442691",
+    "updated_at": "2026-09-09T14:20:03.442692"
+  },
+  {
+    "name": "Elektroauto Vergleich",
+    "parent_category": "Automotive",
+    "description": "Car accessories, maintenance, and automotive services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "elektroauto vergleich"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "automotive_elektroauto-vergleich",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442699",
+    "updated_at": "2026-09-09T14:20:03.442700"
+  },
+  {
+    "name": "Dashcam Test",
+    "parent_category": "Automotive",
+    "description": "Car accessories, maintenance, and automotive services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "dashcam test"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "automotive_dashcam-test",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442707",
+    "updated_at": "2026-09-09T14:20:03.442708"
+  },
+  {
+    "name": "Autoradio",
+    "parent_category": "Automotive",
+    "description": "Car accessories, maintenance, and automotive services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "autoradio"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "automotive_autoradio",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442715",
+    "updated_at": "2026-09-09T14:20:03.442716"
+  },
+  {
+    "name": "Zahnbleaching",
+    "parent_category": "Beauty & Personal Care",
+    "description": "Cosmetics, skincare, haircare, and personal care products",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "zahnbleaching"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "beauty_zahnbleaching",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442723",
+    "updated_at": "2026-09-09T14:20:03.442724"
+  },
+  {
+    "name": "Haarverlängerung",
+    "parent_category": "Beauty & Personal Care",
+    "description": "Cosmetics, skincare, haircare, and personal care products",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "haarverlängerung"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "beauty_haarverlangerung",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442731",
+    "updated_at": "2026-09-09T14:20:03.442732"
+  },
+  {
+    "name": "Rasierapparat Test",
+    "parent_category": "Beauty & Personal Care",
+    "description": "Cosmetics, skincare, haircare, and personal care products",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "rasierapparat test"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "beauty_rasierapparat-test",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442742",
+    "updated_at": "2026-09-09T14:20:03.442743"
+  },
+  {
+    "name": "Gesichtsreiniger",
+    "parent_category": "Beauty & Personal Care",
+    "description": "Cosmetics, skincare, haircare, and personal care products",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "gesichtsreiniger"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "beauty_gesichtsreiniger",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442750",
+    "updated_at": "2026-09-09T14:20:03.442751"
+  },
+  {
+    "name": "Feuchtigkeitscreme",
+    "parent_category": "Beauty & Personal Care",
+    "description": "Cosmetics, skincare, haircare, and personal care products",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "feuchtigkeitscreme"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "beauty_feuchtigkeitscreme",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442757",
+    "updated_at": "2026-09-09T14:20:03.442758"
+  },
+  {
+    "name": "Anti-Aging Produkte",
+    "parent_category": "Beauty & Personal Care",
+    "description": "Cosmetics, skincare, haircare, and personal care products",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "anti-aging produkte"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "beauty_anti-aging-produkte",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442769",
+    "updated_at": "2026-09-09T14:20:03.442770"
+  },
+  {
+    "name": "Laufschuhe Test",
+    "parent_category": "Sports & Outdoor",
+    "description": "Sports equipment, outdoor gear, and recreational activities",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "laufschuhe test"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "sports_laufschuhe-test",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442777",
+    "updated_at": "2026-09-09T14:20:03.442778"
+  },
+  {
+    "name": "Fahrrad Vergleich",
+    "parent_category": "Sports & Outdoor",
+    "description": "Sports equipment, outdoor gear, and recreational activities",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "fahrrad vergleich"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "sports_fahrrad-vergleich",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442785",
+    "updated_at": "2026-09-09T14:20:03.442786"
+  },
+  {
+    "name": "Zelt Test",
+    "parent_category": "Sports & Outdoor",
+    "description": "Sports equipment, outdoor gear, and recreational activities",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "zelt test"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "sports_zelt-test",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442793",
+    "updated_at": "2026-09-09T14:20:03.442794"
+  },
+  {
+    "name": "Rucksack Test",
+    "parent_category": "Sports & Outdoor",
+    "description": "Sports equipment, outdoor gear, and recreational activities",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "rucksack test"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "sports_rucksack-test",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442800",
+    "updated_at": "2026-09-09T14:20:03.442801"
+  },
+  {
+    "name": "Skier",
+    "parent_category": "Sports & Outdoor",
+    "description": "Sports equipment, outdoor gear, and recreational activities",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "skier"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "sports_skier",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442816",
+    "updated_at": "2026-09-09T14:20:03.442817"
+  },
+  {
+    "name": "Snowboard",
+    "parent_category": "Sports & Outdoor",
+    "description": "Sports equipment, outdoor gear, and recreational activities",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "snowboard"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "sports_snowboard",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442826",
+    "updated_at": "2026-09-09T14:20:03.442827"
+  },
+  {
+    "name": "Taucher Ausbildung",
+    "parent_category": "Sports & Outdoor",
+    "description": "Sports equipment, outdoor gear, and recreational activities",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "taucher ausbildung"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "sports_taucher-ausbildung",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442834",
+    "updated_at": "2026-09-09T14:20:03.442835"
+  },
+  {
+    "name": "Yoga Matte",
+    "parent_category": "Sports & Outdoor",
+    "description": "Sports equipment, outdoor gear, and recreational activities",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "yoga matte"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "sports_yoga-matte",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442842",
+    "updated_at": "2026-09-09T14:20:03.442843"
+  },
+  {
+    "name": "Hundefutter",
+    "parent_category": "Pets",
+    "description": "Pet supplies, pet care, and pet services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "hundefutter"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "pets_hundefutter",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442850",
+    "updated_at": "2026-09-09T14:20:03.442851"
+  },
+  {
+    "name": "Katzenfutter",
+    "parent_category": "Pets",
+    "description": "Pet supplies, pet care, and pet services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "katzenfutter"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "pets_katzenfutter",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442860",
+    "updated_at": "2026-09-09T14:20:03.442861"
+  },
+  {
+    "name": "Katzenstreu",
+    "parent_category": "Pets",
+    "description": "Pet supplies, pet care, and pet services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "katzenstreu"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "pets_katzenstreu",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442868",
+    "updated_at": "2026-09-09T14:20:03.442869"
+  },
+  {
+    "name": "Hundekäfig",
+    "parent_category": "Pets",
+    "description": "Pet supplies, pet care, and pet services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "hundekäfig"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "pets_hundekafig",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442879",
+    "updated_at": "2026-09-09T14:20:03.442880"
+  },
+  {
+    "name": "Hundebett",
+    "parent_category": "Pets",
+    "description": "Pet supplies, pet care, and pet services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "hundebett"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "pets_hundebett",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442887",
+    "updated_at": "2026-09-09T14:20:03.442888"
+  },
+  {
+    "name": "Tierversicherung",
+    "parent_category": "Pets",
+    "description": "Pet supplies, pet care, and pet services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "tierversicherung"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "pets_tierversicherung",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442894",
+    "updated_at": "2026-09-09T14:20:03.442895"
+  },
+  {
+    "name": "Aquarium Filter",
+    "parent_category": "Pets",
+    "description": "Pet supplies, pet care, and pet services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "aquarium filter"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "pets_aquarium-filter",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442902",
+    "updated_at": "2026-09-09T14:20:03.442903"
+  },
+  {
+    "name": "Überwachungskamera",
+    "parent_category": "Home Security",
+    "description": "Security systems, surveillance, and safety products",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "überwachungskamera"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "security_uberwachungskamera",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442911",
+    "updated_at": "2026-09-09T14:20:03.442912"
+  },
+  {
+    "name": "Türklingel mit Kamera",
+    "parent_category": "Home Security",
+    "description": "Security systems, surveillance, and safety products",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "türklingel mit kamera"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "security_turklingel-mit-kamera",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442921",
+    "updated_at": "2026-09-09T14:20:03.442922"
+  },
+  {
+    "name": "Alarmanlage",
+    "parent_category": "Home Security",
+    "description": "Security systems, surveillance, and safety products",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "alarmanlage"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "security_alarmanlage",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442928",
+    "updated_at": "2026-09-09T14:20:03.442929"
+  },
+  {
+    "name": "Schloss Upgrade",
+    "parent_category": "Home Security",
+    "description": "Security systems, surveillance, and safety products",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "schloss upgrade"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "security_schloss-upgrade",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442936",
+    "updated_at": "2026-09-09T14:20:03.442937"
+  },
+  {
+    "name": "Fensterriegel",
+    "parent_category": "Home Security",
+    "description": "Security systems, surveillance, and safety products",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "fensterriegel"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "security_fensterriegel",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442948",
+    "updated_at": "2026-09-09T14:20:03.442949"
+  },
+  {
+    "name": "Bewegungsmelder",
+    "parent_category": "Home Security",
+    "description": "Security systems, surveillance, and safety products",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "bewegungsmelder"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "security_bewegungsmelder",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442956",
+    "updated_at": "2026-09-09T14:20:03.442957"
+  },
+  {
+    "name": "Musikstreaming Dienste",
+    "parent_category": "Media & Streaming",
+    "description": "Streaming services, audio equipment, and entertainment",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "musikstreaming dienste"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "media_musikstreaming-dienste",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442965",
+    "updated_at": "2026-09-09T14:20:03.442966"
+  },
+  {
+    "name": "Videostreaming Vergleich",
+    "parent_category": "Media & Streaming",
+    "description": "Streaming services, audio equipment, and entertainment",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "videostreaming vergleich"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "media_videostreaming-vergleich",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442973",
+    "updated_at": "2026-09-09T14:20:03.442974"
+  },
+  {
+    "name": "Bluetooth Lautsprecher",
+    "parent_category": "Media & Streaming",
+    "description": "Streaming services, audio equipment, and entertainment",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "bluetooth lautsprecher"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "media_bluetooth-lautsprecher",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442984",
+    "updated_at": "2026-09-09T14:20:03.442985"
+  },
+  {
+    "name": "Kopfhörer Test",
+    "parent_category": "Media & Streaming",
+    "description": "Streaming services, audio equipment, and entertainment",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "kopfhörer test"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "media_kopfhorer-test",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.442994",
+    "updated_at": "2026-09-09T14:20:03.442995"
+  },
+  {
+    "name": "Soundbar Test",
+    "parent_category": "Media & Streaming",
+    "description": "Streaming services, audio equipment, and entertainment",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "soundbar test"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "media_soundbar-test",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.443001",
+    "updated_at": "2026-09-09T14:20:03.443002"
+  },
+  {
+    "name": "Vinyl Schallplatte",
+    "parent_category": "Media & Streaming",
+    "description": "Streaming services, audio equipment, and entertainment",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "vinyl schallplatte"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "media_vinyl-schallplatte",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.443009",
+    "updated_at": "2026-09-09T14:20:03.443010"
+  },
+  {
+    "name": "Podcast Equipment",
+    "parent_category": "Media & Streaming",
+    "description": "Streaming services, audio equipment, and entertainment",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "podcast equipment"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "media_podcast-equipment",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.443020",
+    "updated_at": "2026-09-09T14:20:03.443021"
+  },
+  {
+    "name": "Dating App Vergleich",
+    "parent_category": "Dating & Social",
+    "description": "Dating apps, social platforms, and community services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "dating app vergleich"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "dating_dating-app-vergleich",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.443030",
+    "updated_at": "2026-09-09T14:20:03.443031"
+  },
+  {
+    "name": "Singles Reisen",
+    "parent_category": "Dating & Social",
+    "description": "Dating apps, social platforms, and community services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "singles reisen"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "dating_singles-reisen",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.443041",
+    "updated_at": "2026-09-09T14:20:03.443042"
+  },
+  {
+    "name": "Partnervermittlung",
+    "parent_category": "Dating & Social",
+    "description": "Dating apps, social platforms, and community services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "partnervermittlung"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "dating_partnervermittlung",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.443049",
+    "updated_at": "2026-09-09T14:20:03.443050"
+  },
+  {
+    "name": "Essenslieferdienst",
+    "parent_category": "Food & Drinks",
+    "description": "Food delivery, restaurants, and specialty foods",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "essenslieferdienst"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "food_essenslieferdienst",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.443057",
+    "updated_at": "2026-09-09T14:20:03.443058"
+  },
+  {
+    "name": "Kaffeemaschine Test",
+    "parent_category": "Food & Drinks",
+    "description": "Food delivery, restaurants, and specialty foods",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "kaffeemaschine test"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "food_kaffeemaschine-test",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.443067",
+    "updated_at": "2026-09-09T14:20:03.443068"
+  },
+  {
+    "name": "Espresso Test",
+    "parent_category": "Food & Drinks",
+    "description": "Food delivery, restaurants, and specialty foods",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "espresso test"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "food_espresso-test",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.443075",
+    "updated_at": "2026-09-09T14:20:03.443076"
+  },
+  {
+    "name": "Küchenmaschine",
+    "parent_category": "Food & Drinks",
+    "description": "Food delivery, restaurants, and specialty foods",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "küchenmaschine"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "food_kuchenmaschine",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.443084",
+    "updated_at": "2026-09-09T14:20:03.443085"
+  },
+  {
+    "name": "Pfeffermühle",
+    "parent_category": "Food & Drinks",
+    "description": "Food delivery, restaurants, and specialty foods",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "pfeffermühle"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "food_pfeffermuhle",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.443095",
+    "updated_at": "2026-09-09T14:20:03.443096"
+  },
+  {
+    "name": "Gaming Monitor",
+    "parent_category": "Gaming",
+    "description": "Gaming hardware, consoles, and gaming services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "gaming monitor"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "gaming_gaming-monitor",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.443104",
+    "updated_at": "2026-09-09T14:20:03.443105"
+  },
+  {
+    "name": "Gaming Laptop",
+    "parent_category": "Gaming",
+    "description": "Gaming hardware, consoles, and gaming services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "gaming laptop"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "gaming_gaming-laptop",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.443112",
+    "updated_at": "2026-09-09T14:20:03.443113"
+  },
+  {
+    "name": "Gaming Stuhl",
+    "parent_category": "Gaming",
+    "description": "Gaming hardware, consoles, and gaming services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "gaming stuhl"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "gaming_gaming-stuhl",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.443119",
+    "updated_at": "2026-09-09T14:20:03.443120"
+  },
+  {
+    "name": "Spielekonsole Vergleich",
+    "parent_category": "Gaming",
+    "description": "Gaming hardware, consoles, and gaming services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "spielekonsole vergleich"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "gaming_spielekonsole-vergleich",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.443130",
+    "updated_at": "2026-09-09T14:20:03.443131"
+  },
+  {
+    "name": "Gaming Headset",
+    "parent_category": "Gaming",
+    "description": "Gaming hardware, consoles, and gaming services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "gaming headset"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "gaming_gaming-headset",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.443138",
+    "updated_at": "2026-09-09T14:20:03.443139"
+  },
+  {
+    "name": "Mouse Pad",
+    "parent_category": "Gaming",
+    "description": "Gaming hardware, consoles, and gaming services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "mouse pad"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "gaming_mouse-pad",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.443148",
+    "updated_at": "2026-09-09T14:20:03.443149"
+  },
+  {
+    "name": "Büroeinrichtung",
+    "parent_category": "B2B & Professional Services",
+    "description": "Business services, professional tools, and corporate solutions",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "büroeinrichtung"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "b2b_buroeinrichtung",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.443160",
+    "updated_at": "2026-09-09T14:20:03.443161"
+  },
+  {
+    "name": "Geschäftskreditkarte",
+    "parent_category": "B2B & Professional Services",
+    "description": "Business services, professional tools, and corporate solutions",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "geschäftskreditkarte"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "b2b_geschaftskreditkarte",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.443169",
+    "updated_at": "2026-09-09T14:20:03.443170"
+  },
+  {
+    "name": "Geschäftsversicherung",
+    "parent_category": "B2B & Professional Services",
+    "description": "Business services, professional tools, and corporate solutions",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "geschäftsversicherung"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "b2b_geschaftsversicherung",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.443177",
+    "updated_at": "2026-09-09T14:20:03.443178"
+  },
+  {
+    "name": "Webdesign Agentur",
+    "parent_category": "B2B & Professional Services",
+    "description": "Business services, professional tools, and corporate solutions",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "webdesign agentur"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "b2b_webdesign-agentur",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.443185",
+    "updated_at": "2026-09-09T14:20:03.443186"
+  },
+  {
+    "name": "SEO Agentur",
+    "parent_category": "B2B & Professional Services",
+    "description": "Business services, professional tools, and corporate solutions",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "seo agentur"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "b2b_seo-agentur",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.443193",
+    "updated_at": "2026-09-09T14:20:03.443194"
+  },
+  {
+    "name": "Büroraumvermietung",
+    "parent_category": "B2B & Professional Services",
+    "description": "Business services, professional tools, and corporate solutions",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "büroraumvermietung"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "b2b_buroraumvermietung",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.443201",
+    "updated_at": "2026-09-09T14:20:03.443202"
+  },
+  {
+    "name": "Konferenzraum",
+    "parent_category": "B2B & Professional Services",
+    "description": "Business services, professional tools, and corporate solutions",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "konferenzraum"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "b2b_konferenzraum",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.443216",
+    "updated_at": "2026-09-09T14:20:03.443217"
+  },
+  {
+    "name": "Paketversand",
+    "parent_category": "Transport & Logistics",
+    "description": "Transport services, logistics, and courier services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "paketversand"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "transport_paketversand",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.443228",
+    "updated_at": "2026-09-09T14:20:03.443230"
+  },
+  {
+    "name": "Möbeltransport",
+    "parent_category": "Transport & Logistics",
+    "description": "Transport services, logistics, and courier services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "möbeltransport"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "transport_mobeltransport",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.443240",
+    "updated_at": "2026-09-09T14:20:03.443241"
+  },
+  {
+    "name": "Umzugsunternehmen",
+    "parent_category": "Transport & Logistics",
+    "description": "Transport services, logistics, and courier services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "umzugsunternehmen"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "transport_umzugsunternehmen",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.443250",
+    "updated_at": "2026-09-09T14:20:03.443251"
+  },
+  {
+    "name": "Lagervermietung",
+    "parent_category": "Transport & Logistics",
+    "description": "Transport services, logistics, and courier services",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "lagervermietung"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "transport_lagervermietung",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.443258",
+    "updated_at": "2026-09-09T14:20:03.443259"
+  },
+  {
+    "name": "Herrenanzug",
+    "parent_category": "Fashion & Clothing",
+    "description": "Clothing, shoes, and fashion accessories",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "herrenanzug"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "fashion_herrenanzug",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.443266",
+    "updated_at": "2026-09-09T14:20:03.443267"
+  },
+  {
+    "name": "Damenbekleidung",
+    "parent_category": "Fashion & Clothing",
+    "description": "Clothing, shoes, and fashion accessories",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "damenbekleidung"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "fashion_damenbekleidung",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.443274",
+    "updated_at": "2026-09-09T14:20:03.443275"
+  },
+  {
+    "name": "Arbeitsschuhe",
+    "parent_category": "Fashion & Clothing",
+    "description": "Clothing, shoes, and fashion accessories",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "arbeitsschuhe"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "fashion_arbeitsschuhe",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.443281",
+    "updated_at": "2026-09-09T14:20:03.443282"
+  },
+  {
+    "name": "Outdoor Bekleidung",
+    "parent_category": "Fashion & Clothing",
+    "description": "Clothing, shoes, and fashion accessories",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "outdoor bekleidung"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "fashion_outdoor-bekleidung",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.443289",
+    "updated_at": "2026-09-09T14:20:03.443290"
+  },
+  {
+    "name": "Modeschmuck",
+    "parent_category": "Fashion & Clothing",
+    "description": "Clothing, shoes, and fashion accessories",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "modeschmuck"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "fashion_modeschmuck",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.443296",
+    "updated_at": "2026-09-09T14:20:03.443297"
+  },
+  {
+    "name": "Uhren",
+    "parent_category": "Fashion & Clothing",
+    "description": "Clothing, shoes, and fashion accessories",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "uhren"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "fashion_uhren",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.443306",
+    "updated_at": "2026-09-09T14:20:03.443307"
+  },
+  {
+    "name": "Sonnenbrille",
+    "parent_category": "Fashion & Clothing",
+    "description": "Clothing, shoes, and fashion accessories",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "sonnenbrille"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "fashion_sonnenbrille",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.443319",
+    "updated_at": "2026-09-09T14:20:03.443320"
+  },
+  {
+    "name": "3D Drucker",
+    "parent_category": "Crafts & DIY",
+    "description": "DIY supplies, tools, and craft materials",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "3d drucker"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "crafts_3d-drucker",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.443327",
+    "updated_at": "2026-09-09T14:20:03.443328"
+  },
+  {
+    "name": "Nähmachine",
+    "parent_category": "Crafts & DIY",
+    "description": "DIY supplies, tools, and craft materials",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "nähmachine"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "crafts_nahmachine",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.443336",
+    "updated_at": "2026-09-09T14:20:03.443337"
+  },
+  {
+    "name": "Bohrmaschine",
+    "parent_category": "Crafts & DIY",
+    "description": "DIY supplies, tools, and craft materials",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "bohrmaschine"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "crafts_bohrmaschine",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.443343",
+    "updated_at": "2026-09-09T14:20:03.443344"
+  },
+  {
+    "name": "Werkzeugkoffer",
+    "parent_category": "Crafts & DIY",
+    "description": "DIY supplies, tools, and craft materials",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "werkzeugkoffer"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "crafts_werkzeugkoffer",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.443351",
+    "updated_at": "2026-09-09T14:20:03.443352"
+  },
+  {
+    "name": "Holzbearbeitung",
+    "parent_category": "Crafts & DIY",
+    "description": "DIY supplies, tools, and craft materials",
+    "language": "de",
+    "country": "DE",
+    "seed_keywords": [
+      "holzbearbeitung"
+    ],
+    "candidate_source": "affiliate_categories",
+    "initial_affiliate_count": null,
+    "initial_search_signal": null,
+    "niche_id": "crafts_holzbearbeitung",
+    "status": "candidate",
+    "created_at": "2026-09-09T14:20:03.443358",
+    "updated_at": "2026-09-09T14:20:03.443359"
+  }
+]

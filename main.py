@@ -2,10 +2,15 @@
 """Main entry point for niche generation."""
 
 import sys
+import os
 from pathlib import Path
 
-# Add project root to path
-sys.path.insert(0, str(Path(__file__).parent))
+# Add project root to Python path
+project_root = str(Path(__file__).parent)
+if project_root not in sys.path:
+    sys.path.insert(0, project_root)
+
+os.chdir(project_root)
 
 from src.pipelines.niche_discovery import main as generate_niches
 
