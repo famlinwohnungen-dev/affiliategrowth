@@ -1,0 +1,80 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const artikel = (await getCollection("artikel", ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.published.valueOf() - a.data.published.valueOf(),
+);
+---
+
+<BaseLayout
+  title="Alle Vergleiche"
+  description="Alle Virenschutz-Vergleiche und Ratgeber im Überblick."
+>
+  <div class="shell liste">
+    <header>
+      <p class="eyebrow">Übersicht</p>
+      <h1>Alle Vergleiche</h1>
+    </header>
+
+    {
+      artikel.length === 0 ? (
+        <p class="leer">Noch keine Artikel veröffentlicht.</p>
+      ) : (
+        <ul>
+          {artikel.map((a) => (
+            <li>
+              <a href={`/artikel/${a.id}/`}>
+                <h2>{a.data.title}</h2>
+                <p>{a.data.description}</p>
+              </a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </div>
+</BaseLayout>
+
+<style>
+  .liste {
+    padding-block: 3rem 2rem;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    overflow: hidden;
+    max-width: none;
+  }
+  li a {
+    display: block;
+    background: var(--surface);
+    padding: 1.3rem 1.5rem;
+    text-decoration: none;
+    color: inherit;
+  }
+  li a:hover {
+    background: var(--surface-alt);
+  }
+  li h2 {
+    margin: 0 0 0.3rem;
+    font-size: 1.12rem;
+    color: var(--accent);
+  }
+  li p {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 0.93rem;
+  }
+  .leer {
+    color: var(--ink-faint);
+    margin-top: 2rem;
+  }
+</style>

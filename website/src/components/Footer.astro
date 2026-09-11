@@ -1,0 +1,61 @@
+---
+import { SITE } from "../config.js";
+const jahr = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="shell inner">
+    <p class="hinweis">
+      <strong>Werbehinweis:</strong> Diese Seite enthält Affiliate-Links. Wenn du
+      über einen dieser Links ein Produkt kaufst, erhalten wir eine Provision.
+      Für dich ändert sich der Preis dadurch nicht. Die Bewertungen entstehen
+      unabhängig davon.
+    </p>
+    <nav aria-label="Rechtliches">
+      <a href="/impressum/">Impressum</a>
+      <a href="/datenschutz/">Datenschutz</a>
+    </nav>
+    <p class="copy">© {jahr} {SITE.name}</p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: 1px solid var(--rule);
+    margin-top: 5rem;
+    background: var(--surface);
+  }
+  .inner {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-block: 2rem 2.5rem;
+  }
+  .hinweis {
+    font-size: 0.87rem;
+    color: var(--ink-soft);
+    margin: 0;
+    max-width: 62ch;
+  }
+  .hinweis strong {
+    color: var(--ink);
+  }
+  nav {
+    display: flex;
+    gap: 1.25rem;
+    font-family: Archivo, sans-serif;
+    font-size: 0.87rem;
+  }
+  nav a {
+    text-decoration: none;
+    color: var(--ink-soft);
+  }
+  nav a:hover {
+    color: var(--accent);
+  }
+  .copy {
+    font-size: 0.82rem;
+    color: var(--ink-faint);
+    margin: 0;
+  }
+</style>

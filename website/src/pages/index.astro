@@ -1,0 +1,103 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { SITE } from "../config.js";
+
+const artikel = (await getCollection("artikel", ({ data }) => !data.draft))
+  .sort((a, b) => b.data.published.valueOf() - a.data.published.valueOf())
+  .slice(0, 6);
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: SITE.name,
+    url: SITE.url,
+    description: SITE.description,
+    inLanguage: SITE.language,
+  },
+];
+---
+
+<BaseLayout title={SITE.name} description={SITE.description} schema={schema}>
+  <section class="shell hero">
+    <p class="eyebrow">{SITE.tagline}</p>
+    <h1>Welcher Virenschutz lohnt sich wirklich?</h1>
+    <p class="lead">
+      Direkte Vergleiche von ESET, Bitdefender, Kaspersky und G DATA — mit Fokus
+      auf das, was im Alltag zählt: Schutzwirkung, Systemlast, Preis pro Gerät
+      und was beim Verlängern passiert.
+    </p>
+  </section>
+
+  <section class="shell">
+    <h2>Aktuelle Vergleiche</h2>
+    {
+      artikel.length === 0 ? (
+        <p class="leer">
+          Noch keine Artikel veröffentlicht. Lege den ersten unter{" "}
+          <code>src/content/artikel/</code> an.
+        </p>
+      ) : (
+        <ul class="karten">
+          {artikel.map((a) => (
+            <li>
+              <a href={`/artikel/${a.id}/`}>
+                <h3>{a.data.title}</h3>
+                <p>{a.data.description}</p>
+              </a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    padding-block: 4rem 1rem;
+  }
+  .lead {
+    font-size: 1.16rem;
+    color: var(--ink-soft);
+    max-width: 56ch;
+  }
+  .karten {
+    list-style: none;
+    padding: 0;
+    margin: 1.25rem 0 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    overflow: hidden;
+    max-width: none;
+  }
+  .karten a {
+    display: block;
+    height: 100%;
+    background: var(--surface);
+    padding: 1.3rem 1.4rem;
+    text-decoration: none;
+    color: inherit;
+  }
+  .karten a:hover {
+    background: var(--surface-alt);
+  }
+  .karten h3 {
+    margin: 0 0 0.35rem;
+    font-size: 1.02rem;
+    color: var(--accent);
+  }
+  .karten p {
+    margin: 0;
+    font-size: 0.91rem;
+    color: var(--ink-soft);
+  }
+  .leer {
+    color: var(--ink-faint);
+  }
+</style>

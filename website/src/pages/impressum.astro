@@ -1,0 +1,67 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Impressum"
+  description="Anbieterkennzeichnung nach § 5 DDG."
+  noindex={true}
+>
+  <div class="shell seite">
+    <h1>Impressum</h1>
+
+    <p class="todo">
+      <strong>Auszufüllen vor dem Livegang.</strong> Angaben nach § 5 DDG sind
+      für gewerbliche Websites aus Deutschland Pflicht. Fehlende oder
+      unvollständige Angaben sind abmahnfähig.
+    </p>
+
+    <h2>Angaben gemäß § 5 DDG</h2>
+    <p>
+      [Vorname Name]<br />
+      [Straße und Hausnummer]<br />
+      [PLZ Ort]
+    </p>
+
+    <h2>Kontakt</h2>
+    <p>
+      E-Mail: [kontakt@domain.de]<br />
+      Telefon: [optional]
+    </p>
+
+    <h2>Umsatzsteuer-ID</h2>
+    <p>
+      [USt-IdNr. nach § 27 a UStG, falls vorhanden — sonst diesen Abschnitt
+      entfernen]
+    </p>
+
+    <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+    <p>
+      [Vorname Name]<br />
+      [Anschrift wie oben]
+    </p>
+
+    <h2>Haftung für Links</h2>
+    <p>
+      Unser Angebot enthält Links zu externen Websites Dritter, auf deren
+      Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden
+      Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten
+      Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten
+      verantwortlich.
+    </p>
+  </div>
+</BaseLayout>
+
+<style>
+  .seite {
+    padding-block: 3rem 2rem;
+  }
+  .todo {
+    background: var(--warn-soft);
+    border-left: 3px solid var(--warn);
+    padding: 1rem 1.2rem;
+    border-radius: var(--radius);
+    font-size: 0.93rem;
+    max-width: var(--measure);
+  }
+</style>

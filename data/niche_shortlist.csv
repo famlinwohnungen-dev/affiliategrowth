@@ -1,0 +1,167 @@
+niche_id,niche_name,parent_category,opportunity_score,recommendation,winnability_score,winnability_recommendation,search_demand,commercial_intent,affiliate_quality,commercial_value,ease,volume,cpc_high,competition_index,program_count,trend_direction
+pets_hundefutter,Hundefutter,Pets,84.6,BUILD,58.2,RESEARCH,86.2,97.2,56.1,95.8,0.0,500000,14.14,100,15,stable
+home_energy_warmepumpe,Wärmepumpe,Home & Energy,81.1,BUILD,60.4,RESEARCH,92.1,82.1,57.2,80.0,14.0,500000,6.88,86,15,rising
+home_energy_stromvergleich,Stromvergleich,Home & Energy,78.4,BUILD,60.5,RESEARCH,80.5,87.0,57.2,89.7,18.0,500000,9.57,82,15,stable
+pets_katzenfutter,Katzenfutter,Pets,77.4,BUILD,50.5,BACKLOG,95.8,69.7,56.1,53.3,0.0,5000000,1.92,100,15,stable
+home_energy_photovoltaik,Photovoltaik,Home & Energy,75.3,BUILD,63.3,RESEARCH,84.3,75.4,57.2,79.4,32.0,500000,6.83,68,15,rising
+security_alarmanlage,Alarmanlage,Home Security,74.7,BUILD,50.0,BACKLOG,70.8,87.4,57.2,80.6,0.0,50000,6.98,100,15,stable
+finance_haftpflichtversicherung,Haftpflichtversicherung,Finance & Insurance,74.5,BUILD,59.9,RESEARCH,70.7,88.4,54.4,94.5,23.0,50000,12.79,77,15,stable
+finance_kreditvergleich,Kreditvergleich,Finance & Insurance,74.5,BUILD,58.0,RESEARCH,67.6,91.3,54.6,96.4,18.0,50000,14.67,82,15,stable
+automotive_auto-versicherung,Auto Versicherung,Automotive,74.4,BUILD,57.2,RESEARCH,74.7,82.7,57.4,83.0,18.0,50000,8.4,82,15,rising
+home_energy_balkonkraftwerk,Balkonkraftwerk,Home & Energy,74.1,BUILD,48.9,BACKLOG,76.4,80.3,57.2,69.7,0.0,500000,3.75,100,15,stable
+security_uberwachungskamera,Überwachungskamera,Home Security,73.9,BUILD,48.0,BACKLOG,84.4,71.6,57.2,56.4,0.0,500000,2.06,100,15,stable
+finance_baufinanzierung,Baufinanzierung,Finance & Insurance,73.8,BUILD,57.9,RESEARCH,70.3,86.9,54.4,90.6,20.0,50000,9.76,80,15,stable
+fashion_arbeitsschuhe,Arbeitsschuhe,Fashion & Clothing,73.5,BUILD,47.7,BACKLOG,83.8,71.2,57.4,55.8,0.0,500000,2.02,100,15,stable
+finance_berufsunfahigkeitsversicherung,Berufsunfähigkeitsversicherung,Finance & Insurance,72.4,BUILD,59.2,RESEARCH,69.9,83.8,54.4,89.1,26.0,50000,9.52,74,15,stable
+b2b_buroeinrichtung,Büroeinrichtung,B2B & Professional Services,72.3,BUILD,47.8,BACKLOG,69.8,82.7,56.6,73.3,0.0,50000,4.32,100,15,rising
+finance_hausratversicherung,Hausratversicherung,Finance & Insurance,72.2,BUILD,57.2,RESEARCH,65.9,87.5,54.4,92.1,21.0,50000,11.49,79,15,stable
+pets_hundebett,Hundebett,Pets,71.1,BUILD,45.5,BACKLOG,84.1,66.1,55.3,47.9,0.0,500000,1.63,100,15,stable
+finance_kfz-versicherung,Kfz-Versicherung,Finance & Insurance,71.0,BUILD,55.5,RESEARCH,65.6,83.2,57.6,84.8,20.0,500000,8.47,80,15,falling
+home_energy_gasvergleich,Gasvergleich,Home & Energy,70.3,BUILD,55.1,RESEARCH,68.3,78.9,57.2,78.8,21.0,50000,6.51,79,15,rising
+health_supplements,Supplements,Health & Wellness,69.8,RESEARCH,45.6,BACKLOG,65.6,79.5,58.9,68.5,0.0,50000,3.53,100,15,rising
+transport_umzugsunternehmen,Umzugsunternehmen,Transport & Logistics,69.7,RESEARCH,62.5,RESEARCH,72.6,74.6,54.2,82.4,40.0,50000,8.39,60,15,stable
+beauty_feuchtigkeitscreme,Feuchtigkeitscreme,Beauty & Personal Care,69.6,RESEARCH,45.1,BACKLOG,69.2,75.6,58.3,62.4,0.0,50000,2.48,100,15,rising
+crafts_3d-drucker,3D Drucker,Crafts & DIY,69.5,RESEARCH,43.8,BACKLOG,84.5,61.2,56.1,40.3,0.0,500000,1.36,100,15,rising
+telecom_mobilfunkvertrag,Mobilfunkvertrag,Telecommunications,69.2,RESEARCH,46.4,BACKLOG,52.0,93.9,54.0,90.6,0.0,5000,9.76,100,15,rising
+finance_tagesgeldvergleich,Tagesgeldvergleich,Finance & Insurance,69.1,RESEARCH,53.1,BACKLOG,73.3,72.1,54.4,67.9,20.0,50000,3.33,80,15,rising
+finance_krankenversicherung,Krankenversicherung,Finance & Insurance,69.0,RESEARCH,69.1,RESEARCH,68.5,76.5,55.1,93.9,56.0,50000,11.88,44,15,stable
+home_garden_gartenmobel,Gartenmöbel,Home & Garden,68.6,RESEARCH,43.1,BACKLOG,81.2,61.2,58.1,40.3,0.0,5000000,1.36,100,15,stable
+home_garden_rasenmaher,Rasenmäher,Home & Garden,68.5,RESEARCH,42.6,BACKLOG,86.3,55.9,57.8,32.1,0.0,5000000,1.1,100,15,rising
+fashion_sonnenbrille,Sonnenbrille,Fashion & Clothing,67.5,RESEARCH,42.8,BACKLOG,74.4,65.7,57.4,47.3,0.0,500000,1.62,100,15,stable
+home_garden_gewachshaus,Gewächshaus,Home & Garden,67.5,RESEARCH,41.9,BACKLOG,84.0,55.9,57.8,32.1,0.0,5000000,1.1,100,15,stable
+pets_tierversicherung,Tierversicherung,Pets,67.4,RESEARCH,52.8,BACKLOG,53.2,87.8,54.9,91.5,19.0,5000,11.13,81,15,rising
+travel_reiseversicherung,Reiseversicherung,Travel & Hospitality,67.1,RESEARCH,52.6,BACKLOG,66.0,73.0,57.2,70.3,22.0,50000,3.93,78,15,stable
+automotive_autovermietung,Autovermietung,Automotive,66.9,RESEARCH,63.9,RESEARCH,91.2,48.8,54.6,49.7,53.0,500000,1.73,47,15,rising
+health_matratzen-test,Matratzen Test,Health & Wellness,66.7,RESEARCH,43.1,BACKLOG,59.8,77.5,58.7,65.5,0.0,50000,2.98,100,15,falling
+software_buchhaltungssoftware,Buchhaltungssoftware,Software & SaaS,66.1,RESEARCH,45.3,BACKLOG,37.6,98.9,57.4,99.4,2.0,5000,32.13,98,15,rising
+pets_katzenstreu,Katzenstreu,Pets,66.0,RESEARCH,42.0,BACKLOG,67.5,70.1,54.9,53.9,0.0,50000,1.94,100,15,stable
+beauty_zahnbleaching,Zahnbleaching,Beauty & Personal Care,65.7,RESEARCH,42.1,BACKLOG,60.8,74.4,58.3,60.6,0.0,50000,2.43,100,15,falling
+health_protein-pulver,Protein Pulver,Health & Wellness,65.7,RESEARCH,41.3,BACKLOG,71.0,64.5,57.6,45.5,0.0,50000,1.56,100,15,rising
+media_bluetooth-lautsprecher,Bluetooth Lautsprecher,Media & Streaming,65.5,RESEARCH,40.3,BACKLOG,80.9,54.9,55.9,30.6,0.0,500000,1.09,100,15,stable
+gaming_gaming-stuhl,Gaming Stuhl,Gaming,65.4,RESEARCH,40.6,BACKLOG,76.1,60.0,54.6,38.5,0.0,500000,1.31,100,15,stable
+finance_forex-trading,Forex Trading,Finance & Insurance,65.3,RESEARCH,76.5,BUILD,67.6,68.5,54.4,95.2,81.0,50000,12.87,19,15,rising
+home_garden_terrassendacher,Terrassendächer,Home & Garden,65.1,RESEARCH,42.2,BACKLOG,52.7,81.1,57.8,70.9,0.0,50000,3.95,100,15,falling
+telecom_dsl-anbieter,DSL Anbieter,Telecommunications,65.1,RESEARCH,52.1,BACKLOG,49.9,84.8,55.9,88.5,22.0,5000,9.3,78,15,rising
+health_smartwatch,Smartwatch,Health & Wellness,64.8,RESEARCH,39.8,IGNORE,77.2,55.9,57.6,32.1,0.0,500000,1.1,100,15,stable
+security_turklingel-mit-kamera,Türklingel mit Kamera,Home Security,64.6,RESEARCH,40.7,BACKLOG,65.2,66.9,58.9,49.1,0.0,50000,1.68,100,15,stable
+b2b_seo-agentur,SEO Agentur,B2B & Professional Services,64.5,RESEARCH,56.2,RESEARCH,45.5,87.2,56.8,97.6,32.0,5000,21.27,68,15,stable
+crafts_werkzeugkoffer,Werkzeugkoffer,Crafts & DIY,64.5,RESEARCH,39.5,IGNORE,78.9,54.9,54.9,30.6,0.0,500000,1.09,100,15,stable
+transport_mobeltransport,Möbeltransport,Transport & Logistics,64.0,RESEARCH,47.7,BACKLOG,59.8,73.1,54.2,67.3,16.0,50000,3.16,84,15,falling
+automotive_autobatterie,Autobatterie,Automotive,63.8,RESEARCH,39.2,IGNORE,74.8,57.3,54.6,34.2,0.0,500000,1.15,100,15,stable
+beauty_gesichtsreiniger,Gesichtsreiniger,Beauty & Personal Care,63.8,RESEARCH,41.6,BACKLOG,45.0,85.4,58.3,77.6,0.0,5000,5.73,100,15,rising
+beauty_haarverlangerung,Haarverlängerung,Beauty & Personal Care,63.7,RESEARCH,40.3,BACKLOG,59.7,70.5,58.3,54.5,0.0,50000,1.96,100,15,falling
+fashion_modeschmuck,Modeschmuck,Fashion & Clothing,63.7,RESEARCH,38.6,IGNORE,79.8,50.8,57.4,24.2,0.0,500000,0.87,100,15,stable
+automotive_autoreifen,Autoreifen,Automotive,63.4,RESEARCH,40.8,BACKLOG,82.1,49.2,54.2,25.2,6.0,500000,0.9,94,15,stable
+finance_zahnversicherung,Zahnversicherung,Finance & Insurance,63.4,RESEARCH,55.7,RESEARCH,51.2,80.2,54.4,87.9,34.0,5000,9.11,66,15,rising
+health_luftreiniger,Luftreiniger,Health & Wellness,62.9,RESEARCH,38.3,IGNORE,75.0,53.5,57.6,28.5,0.0,500000,1.02,100,15,stable
+telecom_kabelinternet,Kabelinternet,Telecommunications,62.9,RESEARCH,50.2,BACKLOG,48.6,81.7,54.0,83.6,22.0,5000,8.41,78,15,rising
+health_fitnessstudio,Fitnessstudio,Health & Wellness,62.8,RESEARCH,73.1,BUILD,83.3,44.9,57.6,59.4,82.0,500000,2.31,18,15,stable
+software_password-manager,Password Manager,Software & SaaS,62.8,RESEARCH,75.2,BUILD,78.6,49.8,57.2,69.1,86.0,500000,3.69,14,15,rising
+electronics_laptop-test,Laptop Test,Consumer Electronics,62.3,RESEARCH,42.0,BACKLOG,55.4,71.9,57.0,60.0,6.0,50000,2.41,94,15,falling
+software_webhosting,Webhosting,Software & SaaS,62.0,RESEARCH,52.9,BACKLOG,45.9,80.4,57.2,86.1,30.0,5000,8.69,70,15,stable
+fashion_herrenanzug,Herrenanzug,Fashion & Clothing,61.9,RESEARCH,38.3,IGNORE,63.5,62.6,57.4,42.4,0.0,50000,1.39,100,15,stable
+sports_yoga-matte,Yoga Matte,Sports & Outdoor,61.9,RESEARCH,38.0,IGNORE,66.0,60.0,57.4,38.5,0.0,50000,1.31,100,15,stable
+b2b_webdesign-agentur,Webdesign Agentur,B2B & Professional Services,61.5,RESEARCH,61.4,RESEARCH,47.8,77.4,56.8,92.7,51.0,5000,11.5,49,15,stable
+crafts_bohrmaschine,Bohrmaschine,Crafts & DIY,61.5,RESEARCH,36.2,IGNORE,84.9,41.5,54.9,10.0,0.0,500000,0.37,100,15,stable
+gaming_gaming-laptop,Gaming Laptop,Gaming,61.5,RESEARCH,37.0,IGNORE,75.1,51.3,54.6,25.2,0.0,500000,0.9,100,15,rising
+fashion_outdoor-bekleidung,Outdoor Bekleidung,Fashion & Clothing,61.4,RESEARCH,38.6,IGNORE,53.4,70.8,58.7,55.2,0.0,50000,1.97,100,15,falling
+health_fitness-tracker,Fitness Tracker,Health & Wellness,61.3,RESEARCH,37.8,IGNORE,62.4,61.8,58.3,41.2,0.0,50000,1.37,100,15,rising
+software_crm-systeme,CRM Systeme,Software & SaaS,61.2,RESEARCH,56.1,RESEARCH,39.7,84.7,57.2,97.0,38.0,5000,14.99,62,15,rising
+finance_depot-vergleich,Depot Vergleich,Finance & Insurance,60.5,RESEARCH,51.4,BACKLOG,43.1,80.4,55.7,85.5,29.0,5000,8.63,71,15,stable
+home_energy_isolierung-dammstoffe,Isolierung / Dämmstoffe,Home & Energy,60.5,RESEARCH,38.4,IGNORE,45.8,76.8,57.2,64.2,0.0,50000,2.67,100,15,no_data
+food_kuchenmaschine,Küchenmaschine,Food & Drinks,60.1,RESEARCH,35.6,IGNORE,74.9,46.8,57.2,18.2,0.0,500000,0.73,100,15,stable
+fashion_uhren,Uhren,Fashion & Clothing,59.7,RESEARCH,35.1,IGNORE,76.0,44.5,57.4,14.5,0.0,500000,0.55,100,15,stable
+telecom_glasfaser-anbieter,Glasfaser Anbieter,Telecommunications,59.5,RESEARCH,47.9,BACKLOG,51.4,69.6,55.3,66.7,25.0,5000,3.04,75,15,rising
+health_fitnessgerate,Fitnessgeräte,Health & Wellness,59.3,RESEARCH,36.0,IGNORE,60.5,58.8,57.8,36.7,0.0,50000,1.28,100,15,falling
+electronics_drucker-test,Drucker Test,Consumer Electronics,59.2,RESEARCH,36.2,IGNORE,57.2,62.2,57.2,41.8,0.0,50000,1.38,100,15,falling
+gaming_gaming-monitor,Gaming Monitor,Gaming,59.1,RESEARCH,34.6,IGNORE,76.0,44.5,54.6,14.5,0.0,500000,0.55,100,15,rising
+b2b_konferenzraum,Konferenzraum,B2B & Professional Services,58.2,RESEARCH,57.7,RESEARCH,38.3,78.9,56.6,93.3,48.0,5000,11.81,52,15,falling
+automotive_autoradio,Autoradio,Automotive,58.1,RESEARCH,33.5,IGNORE,78.2,39.9,54.2,7.6,0.0,500000,0.31,100,15,stable
+software_cloud-speicher,Cloud Speicher,Software & SaaS,58.0,RESEARCH,51.5,BACKLOG,57.6,58.7,57.4,57.0,38.0,50000,2.12,62,15,falling
+gaming_mouse-pad,Mouse Pad,Gaming,57.9,RESEARCH,34.8,IGNORE,59.5,57.8,54.6,35.2,0.0,50000,1.22,100,15,rising
+telecom_telefontarif,Telefontarif,Telecommunications,57.7,RESEARCH,36.8,IGNORE,35.0,82.3,54.0,72.7,0.0,5000,4.21,100,15,rising
+home_garden_bodentiefe-fenster,Bodentiefe Fenster,Home & Garden,57.5,RESEARCH,35.3,IGNORE,48.4,66.5,57.8,48.5,0.0,5000,1.66,100,15,rising
+travel_reisekreditkarte,Reisekreditkarte,Travel & Hospitality,57.5,RESEARCH,44.8,BACKLOG,39.1,76.1,57.2,73.9,20.0,5000,4.36,80,15,rising
+finance_broker-vergleich,Broker Vergleich,Finance & Insurance,57.1,RESEARCH,47.7,BACKLOG,36.1,78.7,55.7,81.8,27.0,5000,8.08,73,15,falling
+software_ai-tools,AI Tools,Software & SaaS,57.1,RESEARCH,55.4,RESEARCH,47.0,67.0,57.2,74.5,47.0,5000,4.42,53,15,rising
+transport_paketversand,Paketversand,Transport & Logistics,56.9,RESEARCH,45.4,BACKLOG,47.6,67.6,54.2,63.0,24.0,5000,2.57,76,15,stable
+home_garden_gartengerate,Gartengeräte,Home & Garden,56.5,RESEARCH,32.3,IGNORE,71.8,40.5,57.8,8.5,0.0,500000,0.33,100,15,stable
+gaming_gaming-headset,Gaming Headset,Gaming,56.3,RESEARCH,33.4,IGNORE,59.2,54.3,54.6,29.7,0.0,50000,1.07,100,15,rising
+automotive_elektroauto-vergleich,Elektroauto Vergleich,Automotive,56.1,RESEARCH,34.4,IGNORE,44.3,68.3,55.1,51.2,0.0,5000,1.82,100,15,rising
+software_e-mail-marketing-tools,E-Mail Marketing Tools,Software & SaaS,55.3,RESEARCH,53.8,BACKLOG,25.5,83.8,57.8,98.2,43.0,5000,25.73,57,15,no_data
+media_soundbar-test,Soundbar Test,Media & Streaming,55.2,RESEARCH,32.9,IGNORE,50.9,58.8,56.6,36.7,0.0,50000,1.28,100,15,falling
+fashion_damenbekleidung,Damenbekleidung,Fashion & Clothing,55.1,RESEARCH,32.0,IGNORE,60.4,48.8,57.4,21.2,0.0,50000,0.8,100,15,falling
+food_pfeffermuhle,Pfeffermühle,Food & Drinks,54.9,BACKLOG,31.7,IGNORE,62.3,46.4,57.2,17.6,0.0,50000,0.71,100,15,stable
+health_schlafkissen,Schlafkissen,Health & Wellness,54.9,BACKLOG,33.6,IGNORE,39.6,68.9,57.6,52.1,0.0,5000,1.87,100,15,falling
+travel_hotelvergleich,Hotelvergleich,Travel & Hospitality,54.6,BACKLOG,44.1,BACKLOG,34.9,73.1,57.2,71.5,24.0,5000,4.02,76,15,rising
+media_vinyl-schallplatte,Vinyl Schallplatte,Media & Streaming,54.5,BACKLOG,35.7,IGNORE,67.0,41.4,55.9,15.8,11.0,50000,0.57,89,15,rising
+software_website-builder,Website Builder,Software & SaaS,54.4,BACKLOG,65.3,RESEARCH,43.9,63.5,57.4,84.2,75.0,5000,8.42,25,15,rising
+pets_aquarium-filter,Aquarium Filter,Pets,54.1,BACKLOG,30.6,IGNORE,66.8,40.9,54.9,9.1,0.0,50000,0.36,100,15,stable
+travel_flugbuchung,Flugbuchung,Travel & Hospitality,53.6,BACKLOG,42.0,BACKLOG,48.9,56.5,57.2,46.1,24.0,5000,1.57,76,15,rising
+education_sprachkurse,Sprachkurse,Education & Learning,53.3,BACKLOG,57.2,RESEARCH,41.6,64.3,54.6,76.4,58.0,5000,5.21,42,15,stable
+software_antivirus-software,Antivirus Software,Software & SaaS,53.1,BACKLOG,61.7,RESEARCH,36.2,67.9,57.2,87.3,68.0,5000,9.05,32,15,rising
+crafts_holzbearbeitung,Holzbearbeitung,Crafts & DIY,52.9,BACKLOG,49.1,BACKLOG,80.1,24.7,54.9,10.0,48.0,500000,0.37,52,15,stable
+security_bewegungsmelder,Bewegungsmelder,Home Security,52.4,BACKLOG,35.8,IGNORE,61.7,40.8,57.2,17.0,15.0,50000,0.64,85,15,stable
+pets_hundekafig,Hundekäfig,Pets,52.2,BACKLOG,29.3,IGNORE,59.3,43.7,54.9,13.3,0.0,50000,0.54,100,15,falling
+sports_snowboard,Snowboard,Sports & Outdoor,52.1,BACKLOG,34.5,IGNORE,63.5,37.9,57.4,11.5,13.0,500000,0.47,87,15,stable
+home_garden_poolzubehor,Poolzubehör,Home & Garden,51.9,BACKLOG,29.2,IGNORE,56.3,44.5,57.8,14.5,0.0,50000,0.55,100,15,rising
+automotive_dashcam-test,Dashcam Test,Automotive,51.6,BACKLOG,30.2,IGNORE,52.6,49.1,54.4,22.7,2.0,50000,0.85,98,15,falling
+education_fotografie-kurse,Fotografie Kurse,Education & Learning,51.5,BACKLOG,31.0,IGNORE,32.9,68.3,55.3,51.2,0.0,5000,1.82,100,15,rising
+b2b_geschaftskreditkarte,Geschäftskreditkarte,B2B & Professional Services,51.3,BACKLOG,46.0,BACKLOG,10.8,89.2,56.6,100.0,31.0,500,115.92,69,15,no_data
+travel_reisegepack,Reisegepäck,Travel & Hospitality,51.3,BACKLOG,29.6,IGNORE,45.7,53.9,57.2,29.1,0.0,5000,1.04,100,15,stable
+software_projektmanagementsoftware,Projektmanagementsoftware,Software & SaaS,50.4,BACKLOG,47.3,BACKLOG,10.8,86.6,57.2,98.8,36.0,500,29.87,64,15,no_data
+electronics_smartphone-vergleich,Smartphone Vergleich,Consumer Electronics,50.3,BACKLOG,34.9,IGNORE,38.0,59.0,57.2,43.9,13.0,5000,1.42,87,15,falling
+b2b_geschaftsversicherung,Geschäftsversicherung,B2B & Professional Services,49.8,BACKLOG,41.8,BACKLOG,17.5,78.7,56.6,81.2,26.0,500,8.07,74,15,rising
+beauty_rasierapparat-test,Rasierapparat Test,Beauty & Personal Care,49.4,BACKLOG,28.7,IGNORE,33.4,60.6,58.7,39.4,0.0,5000,1.32,100,15,rising
+health_wasserfiltration,Wasserfiltration,Health & Wellness,49.0,BACKLOG,29.0,IGNORE,26.0,67.7,57.6,50.3,0.0,5000,1.8,100,15,stable
+electronics_smart-speaker,Smart Speaker,Consumer Electronics,48.9,BACKLOG,27.7,IGNORE,40.5,52.9,57.4,27.6,0.0,5000,0.95,100,15,rising
+sports_laufschuhe-test,Laufschuhe Test,Sports & Outdoor,48.6,BACKLOG,27.5,IGNORE,40.0,52.9,57.4,27.6,0.0,5000,0.95,100,15,falling
+home_energy_smart-home-systeme,Smart Home Systeme,Home & Energy,47.9,BACKLOG,27.3,IGNORE,33.5,57.3,58.3,34.2,0.0,5000,1.15,100,15,falling
+education_business-kurse,Business Kurse,Education & Learning,47.8,BACKLOG,39.3,IGNORE,16.0,75.8,55.5,75.8,24.0,50,5.03,76,15,rising
+sports_rucksack-test,Rucksack Test,Sports & Outdoor,47.4,BACKLOG,26.1,IGNORE,42.1,47.6,57.4,19.4,0.0,5000,0.77,100,15,falling
+sports_skier,Skier,Sports & Outdoor,46.4,BACKLOG,44.4,BACKLOG,60.8,26.5,57.4,12.7,48.0,50000,0.52,52,15,rising
+electronics_beamer-test,Beamer Test,Consumer Electronics,46.0,BACKLOG,25.5,IGNORE,34.5,52.3,56.3,26.7,0.0,5000,0.92,100,15,falling
+food_kaffeemaschine-test,Kaffeemaschine Test,Food & Drinks,45.7,BACKLOG,25.0,IGNORE,36.4,49.2,57.2,21.8,0.0,5000,0.81,100,15,falling
+media_kopfhorer-test,Kopfhörer Test,Media & Streaming,45.7,BACKLOG,25.2,IGNORE,34.0,51.9,56.6,26.1,0.0,5000,0.91,100,15,falling
+home_energy_energiesparen,Energiesparen,Home & Energy,45.6,BACKLOG,61.8,RESEARCH,42.3,43.1,57.2,58.8,86.0,5000,2.28,14,15,stable
+food_essenslieferdienst,Essenslieferdienst,Food & Drinks,45.3,BACKLOG,32.4,IGNORE,11.4,73.4,57.2,66.1,13.0,500,3.01,87,15,stable
+home_energy_stromspeicher-batteriespeicher,Stromspeicher / Batteriespeicher,Home & Energy,45.0,BACKLOG,26.8,IGNORE,11.4,72.5,57.2,58.2,1.0,500,2.2,99,15,stable
+food_espresso-test,Espresso Test,Food & Drinks,44.7,BACKLOG,24.1,IGNORE,35.5,47.6,57.2,19.4,0.0,5000,0.77,100,15,falling
+software_videokonferenz-software,Videokonferenz Software,Software & SaaS,44.7,BACKLOG,41.9,BACKLOG,10.8,72.4,57.2,77.0,36.0,500,5.58,64,15,no_data
+electronics_tablet-vergleich,Tablet Vergleich,Consumer Electronics,44.1,BACKLOG,23.5,IGNORE,35.9,45.6,57.4,16.4,0.0,5000,0.62,100,15,falling
+education_zeichnen-kurse,Zeichnen Kurse,Education & Learning,43.2,BACKLOG,27.7,IGNORE,17.9,62.5,55.3,46.7,8.0,500,1.6,92,15,rising
+software_grafik-design-software,Grafik Design Software,Software & SaaS,42.5,BACKLOG,35.3,IGNORE,11.4,66.1,57.4,61.8,26.0,500,2.47,74,15,stable
+education_seo-kurse,SEO Kurse,Education & Learning,42.2,BACKLOG,47.7,BACKLOG,5.3,72.4,55.3,86.7,54.0,50,8.78,46,15,no_data
+security_fensterriegel,Fensterriegel,Home Security,41.7,BACKLOG,21.4,IGNORE,33.6,42.1,57.2,10.9,0.0,5000,0.42,100,15,rising
+home_energy_wallbox-ladestation,Wallbox / Ladestation,Home & Energy,41.0,BACKLOG,23.4,IGNORE,11.5,62.3,57.2,43.0,2.0,500,1.41,98,15,stable
+electronics_monitor-vergleich,Monitor Vergleich,Consumer Electronics,40.8,BACKLOG,39.1,IGNORE,40.9,33.0,56.3,20.6,44.0,5000,0.79,56,15,stable
+education_affiliate-marketing-kurse,Affiliate Marketing Kurse,Education & Learning,40.5,BACKLOG,46.1,BACKLOG,10.8,62.6,55.7,72.1,55.0,500,4.03,45,15,no_data
+travel_mietwagenverleih,Mietwagenverleih,Travel & Hospitality,40.3,BACKLOG,48.4,BACKLOG,17.6,54.7,57.2,63.6,62.0,500,2.63,38,15,rising
+transport_lagervermietung,Lagervermietung,Transport & Logistics,40.2,BACKLOG,40.7,BACKLOG,11.4,62.1,54.2,64.8,43.0,500,2.86,57,15,stable
+automotive_carsharing-anbieter,Carsharing Anbieter,Automotive,40.0,BACKLOG,44.5,BACKLOG,18.2,53.5,56.3,57.6,54.0,500,2.15,46,15,rising
+dating_singles-reisen,Singles Reisen,Dating & Social,40.0,BACKLOG,32.8,IGNORE,24.5,48.4,54.2,35.8,28.0,5000,1.23,72,15,falling
+electronics_router-test,Router Test,Consumer Electronics,39.9,IGNORE,40.6,BACKLOG,39.2,32.6,56.1,22.7,49.0,5000,0.85,51,15,falling
+sports_fahrrad-vergleich,Fahrrad Vergleich,Sports & Outdoor,39.1,IGNORE,36.3,IGNORE,32.2,36.4,58.3,23.6,40.0,500,0.86,60,15,rising
+education_yoga-kurse,Yoga Kurse,Education & Learning,38.9,IGNORE,54.3,BACKLOG,39.2,30.4,55.3,37.6,83.0,5000,1.29,17,15,falling
+media_podcast-equipment,Podcast Equipment,Media & Streaming,38.9,IGNORE,59.2,RESEARCH,38.5,30.7,56.1,43.9,94.0,5000,1.42,6,15,rising
+crafts_nahmachine,Nähmachine,Crafts & DIY,38.8,IGNORE,18.8,IGNORE,32.3,37.2,54.9,3.3,0.0,5000,0.0,100,15,rising
+education_fitness-kurse,Fitness Kurse,Education & Learning,38.7,IGNORE,53.8,BACKLOG,33.3,35.8,55.5,44.8,81.0,500,1.51,19,15,rising
+software_chatbot-builder,Chatbot Builder,Software & SaaS,38.0,IGNORE,52.7,BACKLOG,6.9,59.6,57.2,78.2,75.0,50,5.87,25,15,stable
+electronics_kamera-test,Kamera Test,Consumer Electronics,37.3,IGNORE,37.6,IGNORE,38.4,26.1,57.4,12.1,48.0,5000,0.48,52,15,falling
+telecom_dns-sicherheit,DNS Sicherheit,Telecommunications,36.7,IGNORE,50.7,BACKLOG,6.4,58.3,54.0,75.2,73.0,50,4.52,27,15,stable
+telecom_auslandstelefonie,Auslandstelefonie,Telecommunications,35.5,IGNORE,49.1,BACKLOG,12.5,49.2,54.0,61.2,73.0,50,2.44,27,15,rising
+media_musikstreaming-dienste,Musikstreaming Dienste,Media & Streaming,34.9,IGNORE,43.7,BACKLOG,11.7,47.6,55.9,52.7,62.0,500,1.88,38,15,stable
+sports_zelt-test,Zelt Test,Sports & Outdoor,33.5,IGNORE,15.0,IGNORE,15.0,39.9,57.4,7.6,0.0,500,0.31,100,15,falling
+gaming_spielekonsole-vergleich,Spielekonsole Vergleich,Gaming,31.6,IGNORE,34.0,IGNORE,11.4,40.2,54.6,33.3,47.0,500,1.13,53,15,stable
+education_online-kurse-programmierung,Online Kurse Programmierung,Education & Learning,26.5,IGNORE,15.2,IGNORE,5.3,32.3,57.2,3.3,14.0,50,0.0,86,15,no_data
+sports_taucher-ausbildung,Taucher Ausbildung,Sports & Outdoor,21.8,IGNORE,39.3,IGNORE,6.3,19.6,57.4,19.4,80.0,50,0.77,20,15,stable
+telecom_vpn-anbieter,VPN Anbieter,Telecommunications,21.7,IGNORE,16.4,IGNORE,24.6,2.2,54.9,3.3,0.0,0,0.0,0,15,rising
+dating_partnervermittlung,Partnervermittlung,Dating & Social,21.6,IGNORE,16.4,IGNORE,24.3,2.2,55.1,3.3,0.0,0,0.0,0,15,stable
+software_vpn-software,VPN Software,Software & SaaS,19.6,IGNORE,14.9,IGNORE,18.1,2.2,57.2,3.3,0.0,0,0.0,0,15,rising
+b2b_buroraumvermietung,Büroraumvermietung,B2B & Professional Services,18.4,IGNORE,32.2,IGNORE,5.3,12.3,56.6,3.3,71.0,50,0.0,29,15,no_data
+electronics_gaming-headset,Gaming Headset,Consumer Electronics,18.1,IGNORE,13.8,IGNORE,15.0,2.2,56.3,3.3,0.0,0,0.0,0,15,rising
+beauty_anti-aging-produkte,Anti-Aging Produkte,Beauty & Personal Care,14.2,IGNORE,10.8,IGNORE,2.4,2.2,61.9,3.3,0.0,0,0.0,0,15,stable
+security_schloss-upgrade,Schloss Upgrade,Home Security,13.2,IGNORE,10.1,IGNORE,2.3,2.2,57.2,3.3,0.0,0,0.0,0,15,stable
+travel_ferienwohnung-plattformen,Ferienwohnung Plattformen,Travel & Hospitality,13.0,IGNORE,9.9,IGNORE,1.7,2.2,57.2,3.3,0.0,0,0.0,0,15,no_data
+dating_dating-app-vergleich,Dating App Vergleich,Dating & Social,12.8,IGNORE,9.7,IGNORE,2.7,2.2,54.0,3.3,0.0,0,0.0,0,15,stable
+media_videostreaming-vergleich,Videostreaming Vergleich,Media & Streaming,12.7,IGNORE,9.7,IGNORE,1.7,2.2,55.9,3.3,0.0,0,0.0,0,15,no_data

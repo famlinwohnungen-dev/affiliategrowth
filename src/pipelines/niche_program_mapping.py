@@ -86,6 +86,7 @@ def map_niches_to_programmes(
     niches_csv: str = "data/niches_export.csv",
     min_relevance: int = SECTOR_SCORE,
     top_n: int = 15,
+    country: str = "DE",
 ) -> int:
     engine = create_engine(f"sqlite:///{db_path}", echo=False)
     Session = sessionmaker(bind=engine)
@@ -94,10 +95,10 @@ def map_niches_to_programmes(
     niches = load_niches(niches_csv)
     print(f"Loaded {len(niches)} niches from {niches_csv}")
 
-    # Preload active programmes once, grouped by relevant sector set, to
-    # avoid one query per niche across 21k+ rows.
-    programmes = session.query(AffiliateProgram).filter_by(is_active=1).all()
-    print(f"Loaded {len(programmes)} active programmes")
+    # Only programmes targeting the site's own market are useful - a German
+    # reader can't buy from a UK or US merchant. This cuts 21k+ rows to ~2.6k.
+    programmes = session.query(AffiliateProgram).filter_by(is_active=1, country=country).all()
+    print(f"Loaded {len(programmes)} active programmes for country={country}")
 
     session.query(NicheProgramMapping).delete()
 

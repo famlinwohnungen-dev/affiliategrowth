@@ -40,10 +40,25 @@ def fetch_keyword_demand(
     geo: str = "DE",
     request_delay: float = 15.0,
     limit: int = None,
+    only_missing: bool = False,
 ) -> int:
     niches = load_niches(niches_csv)
+
+    if only_missing:
+        session = session_factory()
+        done = {
+            row[0]
+            for row in session.query(KeywordDemand.niche_id).filter_by(source="google_trends").all()
+        }
+        session.close()
+        niches = [n for n in niches if n["niche_id"] not in done]
+
     if limit:
         niches = niches[:limit]
+
+    if not niches:
+        print("✓ Nothing to fetch - all niches already have demand data")
+        return 0
 
     print("\n" + "=" * 60)
     print("PHASE 3: KEYWORD DEMAND DISCOVERY (Google Trends)")
@@ -148,10 +163,17 @@ def main():
     parser = argparse.ArgumentParser(description="Fetch Google Trends keyword demand for niches")
     parser.add_argument("--limit", type=int, default=None, help="Limit number of niches (for testing)")
     parser.add_argument("--delay", type=float, default=15.0, help="Seconds between Trends requests")
+    parser.add_argument(
+        "--only-missing",
+        action="store_true",
+        help="Only fetch niches with no stored demand data yet (retry after rate-limiting)",
+    )
     args = parser.parse_args()
 
     Session = init_database()
-    stored = fetch_keyword_demand(Session, limit=args.limit, request_delay=args.delay)
+    stored = fetch_keyword_demand(
+        Session, limit=args.limit, request_delay=args.delay, only_missing=args.only_missing
+    )
 
     if stored > 0:
         generate_report(Session)

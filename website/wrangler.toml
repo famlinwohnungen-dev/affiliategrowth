@@ -1,0 +1,18 @@
+# Cloudflare Pages — Konfiguration für Deploys von der Kommandozeile.
+#
+# Wird nur von `wrangler pages deploy` gelesen. Wer stattdessen das Git-Repo
+# im Cloudflare-Dashboard verbindet, braucht diese Datei nicht (dort
+# Build-Befehl `npm run build`, Ausgabeverzeichnis `dist`, Root `website`).
+#
+# ACHTUNG `wrangler pages project create`: Dieser Befehl funktioniert ab
+# wrangler 4.x nicht mehr mit einer Pages-Konfiguration — er erwartet einen
+# Worker-Entrypoint und bricht mit "missing worker entrypoint or assets
+# directory" ab. Das Projekt wird stattdessen einmalig über die REST-API
+# angelegt (siehe README). Das Deployen selbst funktioniert mit dieser Datei.
+
+name = "schutzlotse"
+pages_build_output_dir = "./dist"
+
+# Rein statische Seite ohne Functions — `compatibility_date` ist hier nicht
+# erforderlich und wird bewusst weggelassen, damit wrangler die Konfiguration
+# nicht als Worker-Projekt interpretiert.

@@ -1,0 +1,109 @@
+---
+import { MERCHANTS } from "../config.js";
+import AffiliateButton from "./AffiliateButton.astro";
+
+interface Zeile {
+  merkmal: string;
+  werte: (string | boolean)[];
+}
+
+interface Props {
+  merchants: string[];
+  zeilen: Zeile[];
+  /** Merchant key that gets the recommendation marker. */
+  empfehlung?: string;
+}
+
+const { merchants, zeilen, empfehlung } = Astro.props;
+const spalten = merchants.map((k) => ({ key: k, ...MERCHANTS[k as keyof typeof MERCHANTS] }));
+
+const zelle = (v: string | boolean) =>
+  typeof v === "boolean" ? (v ? "ja" : "nein") : v;
+---
+
+<div class="scroller">
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">Merkmal</th>
+        {
+          spalten.map((s) => (
+            <th scope="col" class:list={[s.key === empfehlung && "tipp"]}>
+              {s.name}
+              {s.key === empfehlung && <span class="marker">Empfehlung</span>}
+            </th>
+          ))
+        }
+      </tr>
+    </thead>
+    <tbody>
+      {
+        zeilen.map((z) => (
+          <tr>
+            <th scope="row">{z.merkmal}</th>
+            {z.werte.map((w, i) => (
+              <td
+                class:list={[
+                  "num",
+                  typeof w === "boolean" && (w ? "ja" : "nein"),
+                  spalten[i]?.key === empfehlung && "tipp-spalte",
+                ]}
+              >
+                {zelle(w)}
+              </td>
+            ))}
+          </tr>
+        ))
+      }
+      <tr class="cta-zeile">
+        <th scope="row">Zum Anbieter</th>
+        {
+          spalten.map((s) => (
+            <td class:list={[s.key === empfehlung && "tipp-spalte"]}>
+              <AffiliateButton
+                merchant={s.key}
+                variant={s.key === empfehlung ? "primary" : "quiet"}
+                label={s.name}
+              />
+            </td>
+          ))
+        }
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<style>
+  th[scope="row"] {
+    font-family: Archivo, sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: var(--ink);
+    text-transform: none;
+    letter-spacing: 0;
+    white-space: normal;
+    border-bottom: 1px solid var(--rule);
+  }
+  th.tipp {
+    color: var(--accent);
+  }
+  .marker {
+    display: block;
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
+    margin-top: 0.15rem;
+  }
+  .tipp-spalte {
+    background: var(--accent-soft);
+  }
+  .ja {
+    color: var(--accent);
+  }
+  .nein {
+    color: var(--ink-faint);
+  }
+  .cta-zeile td {
+    text-align: right;
+    padding-block: 1rem;
+  }
+</style>

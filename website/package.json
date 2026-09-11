@@ -1,0 +1,24 @@
+{
+  "name": "schutzlotse-website",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "deploy": "npm run build && wrangler pages deploy --project-name schutzlotse --branch main --commit-dirty=true"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@astrojs/mdx": "^8.0.1",
+    "@astrojs/sitemap": "^3.7.4",
+    "astro": "^7.3.2"
+  },
+  "private": true,
+  "devDependencies": {
+    "wrangler": "4.131.1"
+  }
+}

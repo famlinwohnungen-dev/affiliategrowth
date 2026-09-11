@@ -1,0 +1,46 @@
+---
+import { SITE } from "../config.js";
+---
+
+<header class="site-header">
+  <div class="shell bar">
+    <a href="/" class="brand ui">{SITE.name}</a>
+    <nav aria-label="Hauptnavigation">
+      <a href="/artikel/">Vergleiche</a>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    border-bottom: 1px solid var(--rule);
+    background: var(--surface);
+  }
+  .bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding-block: 1rem;
+  }
+  .brand {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--ink);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+  }
+  nav {
+    display: flex;
+    gap: 1.25rem;
+    font-family: Archivo, sans-serif;
+    font-size: 0.9rem;
+  }
+  nav a {
+    text-decoration: none;
+    color: var(--ink-soft);
+  }
+  nav a:hover {
+    color: var(--accent);
+  }
+</style>

@@ -1,0 +1,16 @@
+# Cloudflare Pages liest diese Datei beim Deploy.
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: DENY
+  Permissions-Policy: geolocation=(), camera=(), microphone=(), interest-cohort=()
+
+# Schriften sind unveränderlich benannt und dürfen dauerhaft gecacht werden.
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Weiterleitungen nie cachen - sonst zeigt der Browser beim Wechsel auf
+# echte Awin-Tracking-Links noch die alte Zieladresse.
+/go/*
+  Cache-Control: no-store

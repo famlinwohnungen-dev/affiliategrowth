@@ -1,0 +1,63 @@
+---
+import { MERCHANTS } from "../config.js";
+
+interface Props {
+  merchant: keyof typeof MERCHANTS | string;
+  label?: string;
+  variant?: "primary" | "quiet";
+}
+
+const { merchant, label, variant = "primary" } = Astro.props;
+const m = MERCHANTS[merchant as keyof typeof MERCHANTS];
+
+if (!m) throw new Error(`AffiliateButton: unknown merchant "${merchant}"`);
+
+// Links route through /go/ so tracking URLs live in one place and clicks stay
+// measurable. rel="sponsored nofollow" is required by Google for paid links.
+const href = `/go/${merchant}/`;
+---
+
+<a class:list={["aff", variant]} href={href} rel="sponsored nofollow noopener" target="_blank">
+  <span>{label ?? `Zu ${m.name}`}</span>
+  <svg aria-hidden="true" viewBox="0 0 16 16" width="13" height="13">
+    <path
+      d="M5 3h8v8M13 3L3.5 12.5"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.6"
+      stroke-linecap="round"
+    ></path>
+  </svg>
+</a>
+
+<style>
+  .aff {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-family: Archivo, sans-serif;
+    font-size: 0.92rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: var(--radius);
+    padding: 0.6rem 1rem;
+    transition: background-color 0.15s ease;
+  }
+  .primary {
+    background: var(--accent);
+    color: #fff;
+  }
+  .primary:hover {
+    background: var(--accent-hover);
+    color: #fff;
+  }
+  .quiet {
+    border: 1px solid var(--rule);
+    color: var(--ink);
+    background: var(--surface);
+  }
+  .quiet:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+</style>

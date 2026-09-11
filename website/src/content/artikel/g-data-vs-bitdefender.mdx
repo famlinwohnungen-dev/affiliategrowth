@@ -1,0 +1,82 @@
+---
+title: "G DATA vs. Bitdefender: Welcher Virenschutz überzeugt 2026?"
+description: "Zwei starke Kandidaten, zwei sehr unterschiedliche Philosophien. Der direkte Vergleich zu Schutzwirkung, Systemlast, Preis und Support."
+keyword: "g data vs bitdefender"
+published: 2026-09-11
+type: vergleich
+merchants: ["gdata", "bitdefender"]
+empfehlung: "bitdefender"
+faq:
+  - frage: "Ist G DATA wirklich ein deutsches Unternehmen?"
+    antwort: "Ja. G DATA CyberDefense hat seinen Sitz in Bochum und entwickelt dort auch. Für Nutzer, denen Datenverarbeitung innerhalb Deutschlands wichtig ist, ist das ein echtes Argument."
+  - frage: "Bremst Bitdefender langsame Rechner aus?"
+    antwort: "In der Praxis kaum. Bitdefender lagert einen großen Teil der Analyse in die Cloud aus, wodurch die lokale Systemlast gering bleibt. Auf älteren Notebooks ist das spürbar angenehmer als bei Lösungen mit zwei lokalen Scan-Engines."
+  - frage: "Verlängern sich die Lizenzen automatisch?"
+    antwort: "Bei beiden Anbietern ja, sofern man dem nicht widerspricht. Wichtig: Der Verlängerungspreis liegt regelmäßig deutlich über dem Neukundenpreis. Kündigen und neu kaufen ist oft günstiger."
+---
+
+import VergleichsTabelle from "../../components/VergleichsTabelle.astro";
+import AffiliateButton from "../../components/AffiliateButton.astro";
+
+**Kurz vorweg:** Wer vor allem geringe Systemlast und den besten Preis pro Gerät
+sucht, fährt mit Bitdefender besser. Wer Wert auf einen deutschen Anbieter mit
+Support in derselben Zeitzone legt, bekommt bei G DATA genau das — zahlt dafür
+aber etwas mehr Leistung des Rechners.
+
+<VergleichsTabelle
+  merchants={["gdata", "bitdefender"]}
+  empfehlung="bitdefender"
+  zeilen={[
+    { merkmal: "Firmensitz", werte: ["Bochum, Deutschland", "Bukarest, Rumänien"] },
+    { merkmal: "Support auf Deutsch", werte: [true, true] },
+    { merkmal: "Systemlast", werte: ["spürbar", "gering"] },
+    { merkmal: "VPN enthalten", werte: ["nein", "ja (200 MB/Tag)"] },
+    { merkmal: "Passwort-Manager", werte: [true, true] },
+    { merkmal: "Geräte in der Standardlizenz", werte: ["3", "5"] },
+  ]}
+/>
+
+## Schutzwirkung
+
+Beide Produkte erreichen bei den unabhängigen Tests von AV-TEST regelmäßig
+Spitzenwerte. Das ist der wichtigste und zugleich am wenigsten
+differenzierende Punkt: Die Erkennungsraten der etablierten Anbieter liegen so
+dicht beieinander, dass sie für eine Kaufentscheidung praktisch keine Rolle
+mehr spielen. Wer ausschließlich auf Erkennungsraten schaut, vergleicht die
+falsche Kennzahl.
+
+Interessanter ist, *wie* die beiden dorthin kommen. G DATA setzt traditionell
+auf zwei parallel laufende Scan-Engines — gründlich, aber ressourcenhungrig.
+Bitdefender verlagert einen Großteil der Analyse in die Cloud, was den lokalen
+Rechner entlastet, aber eine bestehende Internetverbindung voraussetzt.
+
+## Systemlast im Alltag
+
+Hier trennen sich die beiden am deutlichsten. Auf einem aktuellen Rechner mit
+SSD und 16 GB RAM fällt der Unterschied kaum auf. Auf einem vier Jahre alten
+Notebook merkt man den Doppel-Engine-Ansatz von G DATA dagegen — vor allem
+beim ersten vollständigen Scan und beim Systemstart.
+
+## Preis und die Verlängerungsfalle
+
+Beide Anbieter arbeiten mit attraktiven Erstjahrespreisen, die sich im zweiten
+Jahr deutlich erhöhen. Das ist branchenüblich und kein Argument gegen einen der
+beiden — aber ein Grund, sich den Verlängerungstermin in den Kalender zu
+schreiben. In vielen Fällen ist es günstiger, zu kündigen und als Neukunde
+erneut abzuschließen.
+
+## Fazit
+
+Für die meisten Privatnutzer und kleinen Büros ist **Bitdefender** die
+sinnvollere Wahl: geringere Systemlast, mehr Geräte in der Standardlizenz und
+ein VPN-Kontingent, das für gelegentliche Nutzung in öffentlichen Netzen
+ausreicht.
+
+**G DATA** bleibt die bessere Wahl, wenn der Firmensitz in Deutschland für dich
+ein entscheidendes Kriterium ist — etwa weil du die Software beruflich
+einsetzt und Datenverarbeitung innerhalb der EU dokumentieren musst.
+
+<div style="display:flex; gap:.75rem; flex-wrap:wrap; margin-top:1.5rem">
+  <AffiliateButton merchant="bitdefender" label="Bitdefender ansehen" />
+  <AffiliateButton merchant="gdata" label="G DATA ansehen" variant="quiet" />
+</div>

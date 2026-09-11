@@ -5,168 +5,168 @@ Niches with at least one matched programme: 165
 
 | Niche | Matched Programmes | Avg Relevance |
 |---|---|---|
-| Gaming Headset | 30 | 72 |
-| Überwachungskamera | 15 | 72 |
-| Zelt Test | 15 | 76 |
-| Zeichnen Kurse | 15 | 73 |
-| Zahnversicherung | 15 | 69 |
-| Zahnbleaching | 15 | 84 |
-| Yoga Matte | 15 | 76 |
-| Yoga Kurse | 15 | 74 |
-| Wärmepumpe | 15 | 75 |
-| Werkzeugkoffer | 15 | 69 |
-| Website Builder | 15 | 75 |
+| Gaming Headset | 30 | 64 |
+| Überwachungskamera | 15 | 68 |
+| Zelt Test | 15 | 69 |
+| Zeichnen Kurse | 15 | 63 |
+| Zahnversicherung | 15 | 61 |
+| Zahnbleaching | 15 | 71 |
+| Yoga Matte | 15 | 69 |
+| Yoga Kurse | 15 | 63 |
+| Wärmepumpe | 15 | 68 |
+| Werkzeugkoffer | 15 | 62 |
+| Website Builder | 15 | 69 |
 | Webhosting | 15 | 68 |
-| Webdesign Agentur | 15 | 70 |
-| Wasserfiltration | 15 | 76 |
-| Wallbox / Ladestation | 15 | 75 |
-| Vinyl Schallplatte | 15 | 69 |
-| Videostreaming Vergleich | 15 | 69 |
+| Webdesign Agentur | 15 | 67 |
+| Wasserfiltration | 15 | 69 |
+| Wallbox / Ladestation | 15 | 68 |
+| Vinyl Schallplatte | 15 | 65 |
+| Videostreaming Vergleich | 15 | 65 |
 | Videokonferenz Software | 15 | 68 |
 | VPN Software | 15 | 68 |
-| VPN Anbieter | 15 | 64 |
-| Umzugsunternehmen | 15 | 65 |
-| Uhren | 15 | 76 |
-| Türklingel mit Kamera | 15 | 77 |
-| Tierversicherung | 15 | 68 |
-| Terrassendächer | 15 | 76 |
-| Telefontarif | 15 | 61 |
-| Taucher Ausbildung | 15 | 76 |
-| Tagesgeldvergleich | 15 | 69 |
-| Tablet Vergleich | 15 | 77 |
-| Supplements | 15 | 84 |
-| Stromvergleich | 15 | 75 |
-| Stromspeicher / Batteriespeicher | 15 | 75 |
-| Sprachkurse | 15 | 73 |
-| Spielekonsole Vergleich | 15 | 68 |
-| Soundbar Test | 15 | 71 |
-| Sonnenbrille | 15 | 76 |
-| Snowboard | 15 | 76 |
-| Smartwatch | 15 | 76 |
-| Smartphone Vergleich | 15 | 76 |
-| Smart Speaker | 15 | 78 |
-| Smart Home Systeme | 15 | 79 |
-| Skier | 15 | 76 |
-| Singles Reisen | 15 | 63 |
-| Schloss Upgrade | 15 | 73 |
-| Schlafkissen | 15 | 76 |
-| SEO Kurse | 15 | 73 |
-| SEO Agentur | 15 | 70 |
-| Rucksack Test | 15 | 76 |
-| Router Test | 15 | 76 |
-| Reiseversicherung | 15 | 69 |
-| Reisekreditkarte | 15 | 69 |
-| Reisegepäck | 15 | 69 |
-| Rasierapparat Test | 15 | 84 |
-| Rasenmäher | 15 | 76 |
-| Protein Pulver | 15 | 77 |
+| VPN Anbieter | 15 | 62 |
+| Umzugsunternehmen | 15 | 61 |
+| Uhren | 15 | 69 |
+| Türklingel mit Kamera | 15 | 72 |
+| Tierversicherung | 15 | 62 |
+| Terrassendächer | 15 | 70 |
+| Telefontarif | 15 | 60 |
+| Taucher Ausbildung | 15 | 69 |
+| Tagesgeldvergleich | 15 | 61 |
+| Tablet Vergleich | 15 | 69 |
+| Supplements | 15 | 72 |
+| Stromvergleich | 15 | 68 |
+| Stromspeicher / Batteriespeicher | 15 | 68 |
+| Sprachkurse | 15 | 62 |
+| Spielekonsole Vergleich | 15 | 62 |
+| Soundbar Test | 15 | 66 |
+| Sonnenbrille | 15 | 69 |
+| Snowboard | 15 | 69 |
+| Smartwatch | 15 | 69 |
+| Smartphone Vergleich | 15 | 68 |
+| Smart Speaker | 15 | 69 |
+| Smart Home Systeme | 15 | 71 |
+| Skier | 15 | 69 |
+| Singles Reisen | 15 | 61 |
+| Schloss Upgrade | 15 | 68 |
+| Schlafkissen | 15 | 69 |
+| SEO Kurse | 15 | 63 |
+| SEO Agentur | 15 | 67 |
+| Rucksack Test | 15 | 69 |
+| Router Test | 15 | 65 |
+| Reiseversicherung | 15 | 68 |
+| Reisekreditkarte | 15 | 68 |
+| Reisegepäck | 15 | 68 |
+| Rasierapparat Test | 15 | 72 |
+| Rasenmäher | 15 | 70 |
+| Protein Pulver | 15 | 69 |
 | Projektmanagementsoftware | 15 | 68 |
-| Poolzubehör | 15 | 76 |
-| Podcast Equipment | 15 | 69 |
-| Photovoltaik | 15 | 75 |
-| Pfeffermühle | 15 | 69 |
-| Password Manager | 15 | 69 |
-| Partnervermittlung | 15 | 65 |
-| Paketversand | 15 | 65 |
-| Outdoor Bekleidung | 15 | 76 |
-| Online Kurse Programmierung | 15 | 78 |
-| Nähmachine | 15 | 69 |
-| Möbeltransport | 15 | 65 |
-| Musikstreaming Dienste | 15 | 69 |
-| Mouse Pad | 15 | 68 |
-| Monitor Vergleich | 15 | 77 |
-| Modeschmuck | 15 | 76 |
-| Mobilfunkvertrag | 15 | 61 |
-| Mietwagenverleih | 15 | 69 |
-| Matratzen Test | 15 | 81 |
-| Luftreiniger | 15 | 76 |
-| Laufschuhe Test | 15 | 76 |
-| Laptop Test | 15 | 76 |
-| Lagervermietung | 15 | 65 |
-| Küchenmaschine | 15 | 69 |
-| Kreditvergleich | 15 | 69 |
-| Krankenversicherung | 15 | 69 |
-| Kopfhörer Test | 15 | 71 |
-| Konferenzraum | 15 | 70 |
-| Kfz-Versicherung | 15 | 70 |
-| Katzenstreu | 15 | 68 |
-| Katzenfutter | 15 | 68 |
-| Kamera Test | 15 | 76 |
-| Kaffeemaschine Test | 15 | 71 |
-| Kabelinternet | 15 | 61 |
-| Isolierung / Dämmstoffe | 15 | 75 |
-| Hundekäfig | 15 | 68 |
-| Hundefutter | 15 | 68 |
-| Hundebett | 15 | 68 |
-| Hotelvergleich | 15 | 69 |
-| Holzbearbeitung | 15 | 69 |
-| Herrenanzug | 15 | 76 |
-| Hausratversicherung | 15 | 69 |
-| Haftpflichtversicherung | 15 | 69 |
-| Haarverlängerung | 15 | 84 |
-| Grafik Design Software | 15 | 71 |
-| Glasfaser Anbieter | 15 | 64 |
-| Gewächshaus | 15 | 76 |
-| Gesichtsreiniger | 15 | 84 |
-| Geschäftsversicherung | 15 | 70 |
-| Geschäftskreditkarte | 15 | 70 |
-| Gasvergleich | 15 | 75 |
-| Gartenmöbel | 15 | 77 |
-| Gartengeräte | 15 | 76 |
-| Gaming Stuhl | 15 | 68 |
-| Gaming Monitor | 15 | 68 |
-| Gaming Laptop | 15 | 68 |
-| Fotografie Kurse | 15 | 73 |
-| Forex Trading | 15 | 69 |
-| Flugbuchung | 15 | 69 |
-| Fitnessstudio | 15 | 76 |
-| Fitnessgeräte | 15 | 76 |
-| Fitness Tracker | 15 | 79 |
-| Fitness Kurse | 15 | 74 |
-| Feuchtigkeitscreme | 15 | 84 |
-| Ferienwohnung Plattformen | 15 | 69 |
-| Fensterriegel | 15 | 72 |
-| Fahrrad Vergleich | 15 | 76 |
-| Essenslieferdienst | 15 | 69 |
-| Espresso Test | 15 | 71 |
-| Energiesparen | 15 | 75 |
-| Elektroauto Vergleich | 15 | 68 |
-| E-Mail Marketing Tools | 15 | 77 |
-| Drucker Test | 15 | 76 |
-| Depot Vergleich | 15 | 69 |
-| Dating App Vergleich | 15 | 62 |
-| Dashcam Test | 15 | 68 |
-| Damenbekleidung | 15 | 76 |
-| DSL Anbieter | 15 | 68 |
-| DNS Sicherheit | 15 | 61 |
-| Cloud Speicher | 15 | 70 |
-| Chatbot Builder | 15 | 69 |
-| Carsharing Anbieter | 15 | 68 |
+| Poolzubehör | 15 | 70 |
+| Podcast Equipment | 15 | 65 |
+| Photovoltaik | 15 | 68 |
+| Pfeffermühle | 15 | 68 |
+| Password Manager | 15 | 68 |
+| Partnervermittlung | 15 | 63 |
+| Paketversand | 15 | 61 |
+| Outdoor Bekleidung | 15 | 72 |
+| Online Kurse Programmierung | 15 | 68 |
+| Nähmachine | 15 | 62 |
+| Möbeltransport | 15 | 61 |
+| Musikstreaming Dienste | 15 | 65 |
+| Mouse Pad | 15 | 62 |
+| Monitor Vergleich | 15 | 66 |
+| Modeschmuck | 15 | 69 |
+| Mobilfunkvertrag | 15 | 60 |
+| Mietwagenverleih | 15 | 68 |
+| Matratzen Test | 15 | 72 |
+| Luftreiniger | 15 | 69 |
+| Laufschuhe Test | 15 | 69 |
+| Laptop Test | 15 | 67 |
+| Lagervermietung | 15 | 61 |
+| Küchenmaschine | 15 | 68 |
+| Kreditvergleich | 15 | 62 |
+| Krankenversicherung | 15 | 63 |
+| Kopfhörer Test | 15 | 66 |
+| Konferenzraum | 15 | 66 |
+| Kfz-Versicherung | 15 | 69 |
+| Katzenstreu | 15 | 62 |
+| Katzenfutter | 15 | 65 |
+| Kamera Test | 15 | 69 |
+| Kaffeemaschine Test | 15 | 68 |
+| Kabelinternet | 15 | 60 |
+| Isolierung / Dämmstoffe | 15 | 68 |
+| Hundekäfig | 15 | 62 |
+| Hundefutter | 15 | 65 |
+| Hundebett | 15 | 63 |
+| Hotelvergleich | 15 | 68 |
+| Holzbearbeitung | 15 | 62 |
+| Herrenanzug | 15 | 69 |
+| Hausratversicherung | 15 | 61 |
+| Haftpflichtversicherung | 15 | 61 |
+| Haarverlängerung | 15 | 71 |
+| Grafik Design Software | 15 | 69 |
+| Glasfaser Anbieter | 15 | 63 |
+| Gewächshaus | 15 | 70 |
+| Gesichtsreiniger | 15 | 71 |
+| Geschäftsversicherung | 15 | 66 |
+| Geschäftskreditkarte | 15 | 66 |
+| Gasvergleich | 15 | 68 |
+| Gartenmöbel | 15 | 70 |
+| Gartengeräte | 15 | 70 |
+| Gaming Stuhl | 15 | 62 |
+| Gaming Monitor | 15 | 62 |
+| Gaming Laptop | 15 | 62 |
+| Fotografie Kurse | 15 | 63 |
+| Forex Trading | 15 | 61 |
+| Flugbuchung | 15 | 68 |
+| Fitnessstudio | 15 | 69 |
+| Fitnessgeräte | 15 | 70 |
+| Fitness Tracker | 15 | 71 |
+| Fitness Kurse | 15 | 64 |
+| Feuchtigkeitscreme | 15 | 71 |
+| Ferienwohnung Plattformen | 15 | 68 |
+| Fensterriegel | 15 | 68 |
+| Fahrrad Vergleich | 15 | 71 |
+| Essenslieferdienst | 15 | 68 |
+| Espresso Test | 15 | 68 |
+| Energiesparen | 15 | 68 |
+| Elektroauto Vergleich | 15 | 63 |
+| E-Mail Marketing Tools | 15 | 70 |
+| Drucker Test | 15 | 68 |
+| Depot Vergleich | 15 | 64 |
+| Dating App Vergleich | 15 | 60 |
+| Dashcam Test | 15 | 61 |
+| Damenbekleidung | 15 | 69 |
+| DSL Anbieter | 15 | 65 |
+| DNS Sicherheit | 15 | 60 |
+| Cloud Speicher | 15 | 69 |
+| Chatbot Builder | 15 | 68 |
+| Carsharing Anbieter | 15 | 66 |
 | CRM Systeme | 15 | 68 |
-| Büroraumvermietung | 15 | 70 |
-| Büroeinrichtung | 15 | 70 |
-| Business Kurse | 15 | 75 |
+| Büroraumvermietung | 15 | 66 |
+| Büroeinrichtung | 15 | 66 |
+| Business Kurse | 15 | 64 |
 | Buchhaltungssoftware | 15 | 69 |
-| Broker Vergleich | 15 | 71 |
-| Bohrmaschine | 15 | 69 |
-| Bodentiefe Fenster | 15 | 76 |
-| Bluetooth Lautsprecher | 15 | 69 |
-| Bewegungsmelder | 15 | 72 |
-| Berufsunfähigkeitsversicherung | 15 | 69 |
-| Beamer Test | 15 | 76 |
-| Baufinanzierung | 15 | 69 |
-| Balkonkraftwerk | 15 | 75 |
-| Autovermietung | 15 | 68 |
-| Autoreifen | 15 | 68 |
-| Autoradio | 15 | 68 |
-| Autobatterie | 15 | 68 |
-| Auto Versicherung | 15 | 76 |
-| Auslandstelefonie | 15 | 61 |
-| Arbeitsschuhe | 15 | 76 |
-| Aquarium Filter | 15 | 68 |
+| Broker Vergleich | 15 | 64 |
+| Bohrmaschine | 15 | 62 |
+| Bodentiefe Fenster | 15 | 70 |
+| Bluetooth Lautsprecher | 15 | 65 |
+| Bewegungsmelder | 15 | 68 |
+| Berufsunfähigkeitsversicherung | 15 | 61 |
+| Beamer Test | 15 | 66 |
+| Baufinanzierung | 15 | 61 |
+| Balkonkraftwerk | 15 | 68 |
+| Autovermietung | 15 | 62 |
+| Autoreifen | 15 | 61 |
+| Autoradio | 15 | 61 |
+| Autobatterie | 15 | 62 |
+| Auto Versicherung | 15 | 69 |
+| Auslandstelefonie | 15 | 60 |
+| Arbeitsschuhe | 15 | 69 |
+| Aquarium Filter | 15 | 62 |
 | Antivirus Software | 15 | 68 |
-| Anti-Aging Produkte | 15 | 86 |
-| Alarmanlage | 15 | 72 |
-| Affiliate Marketing Kurse | 15 | 77 |
-| AI Tools | 15 | 69 |
-| 3D Drucker | 15 | 69 |
+| Anti-Aging Produkte | 15 | 80 |
+| Alarmanlage | 15 | 68 |
+| Affiliate Marketing Kurse | 15 | 64 |
+| AI Tools | 15 | 68 |
+| 3D Drucker | 15 | 65 |
