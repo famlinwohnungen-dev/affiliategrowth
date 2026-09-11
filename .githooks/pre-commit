@@ -1,0 +1,92 @@
+#!/usr/bin/env bash
+#
+# Blockiert Commits, die nach Zugangsdaten aussehen.
+#
+# Anlass: In diesem öffentlichen Repository lag ein gültiger Awin-API-Token
+# (PHASE_2_SETUP.md, Commits a6bacd4 / ec6b552 / 22e3f52). Einmal gepusht ist
+# ein Token dauerhaft kompromittiert und muss neu erzeugt werden — dieser Hook
+# soll verhindern, dass das noch einmal passiert.
+#
+# Aktivieren (einmalig pro Klon):
+#   git config core.hooksPath .githooks
+#
+# Bewusst umgehen, wenn ein Treffer ein Fehlalarm ist:
+#   git commit --no-verify
+
+set -uo pipefail
+
+# Nur hinzugefügte Zeilen prüfen. Dateien, die per Definition nur Platzhalter
+# enthalten, werden ausgenommen.
+# awk statt grep: manche Systeme haben ugrep als `grep`, das '^+++' als
+# ungültiges Muster ablehnt — der Hook prüfte dann still einen leeren String.
+added="$(git diff --cached -U0 --diff-filter=ACM \
+  -- . ':(exclude).env.example' ':(exclude).githooks/pre-commit' \
+  | awk '/^\+/ && !/^\+\+\+/ { print substr($0, 2) }')"
+
+[ -z "$added" ] && exit 0
+
+# Werte, die eindeutig Platzhalter sind, nie als Fund melden.
+PLATZHALTER='(^$|YOUR_|<[^>]*>|\{\{|\$\{|xxx+|changeme|placeholder|beispiel|example|dein |deine |os\.getenv|process\.env|getenv\(|\.\.\.)'
+
+treffer=""
+
+pruefe() {
+  local muster="$1" beschreibung="$2"
+  local gefunden
+  gefunden="$(printf '%s\n' "$added" | grep -nEi -e "$muster" | grep -vEi "$PLATZHALTER" || true)"
+  if [ -n "$gefunden" ]; then
+    treffer+=$'\n'"  ✗ ${beschreibung}"$'\n'"$(printf '%s\n' "$gefunden" | sed 's/^/      /' | head -5)"
+  fi
+}
+
+# 1. Bekannte Token-Präfixe — eindeutig, kaum Fehlalarme.
+pruefe 'cfat_[A-Za-z0-9]{20,}'                 'Cloudflare API-Token (cfat_…)'
+pruefe '(ghp|gho|ghu|ghs)_[A-Za-z0-9]{30,}'    'GitHub Token'
+pruefe 'github_pat_[A-Za-z0-9_]{30,}'          'GitHub Fine-grained Token'
+pruefe 'sk-[A-Za-z0-9]{20,}'                   'OpenAI/Anthropic-artiger Key'
+pruefe 'AKIA[0-9A-Z]{16}'                      'AWS Access Key ID'
+pruefe 'AIza[0-9A-Za-z_-]{30,}'                'Google API Key'
+pruefe 'xox[baprs]-[0-9A-Za-z-]{10,}'          'Slack Token'
+
+# 2. Private Keys.
+pruefe '-----BEGIN [A-Z ]*PRIVATE KEY-----' 'Privater Schlüssel'
+
+# 3. Variablenzuweisung mit echt aussehendem Wert.
+#    Fängt den Awin-Fall: TOKEN=<UUID>
+pruefe '(TOKEN|SECRET|PASSWORD|PASSWD|API_?KEY|ACCESS_?KEY|PRIVATE_?KEY|CREDENTIAL)[A-Z_]*[[:space:]]*[=:][[:space:]]*["'"'"']?[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}' \
+  'UUID als Token/Secret zugewiesen'
+
+#    Lange Hex-Strings (z. B. R2 Secret Access Key, 64 Zeichen).
+pruefe '(TOKEN|SECRET|PASSWORD|API_?KEY|ACCESS_?KEY)[A-Z_]*[[:space:]]*[=:][[:space:]]*["'"'"']?[0-9a-f]{32,}' \
+  'Langer Hex-Wert als Token/Secret zugewiesen'
+
+#    Sonstige lange Zufallswerte.
+pruefe '(TOKEN|SECRET|PASSWORD|PASSWD|API_?KEY|ACCESS_?KEY|CREDENTIAL)[A-Z_]*[[:space:]]*[=:][[:space:]]*["'"'"']?[A-Za-z0-9_.+/-]{24,}["'"'"']?[[:space:]]*$' \
+  'Langer Wert als Token/Secret zugewiesen'
+
+# 4. .env-Dateien dürfen nie eingecheckt werden.
+if git diff --cached --name-only --diff-filter=ACM | grep -qE '(^|/)\.env($|\.)' \
+   && ! git diff --cached --name-only | grep -qE '(^|/)\.env\.example$'; then
+  treffer+=$'\n'"  ✗ Eine .env-Datei ist zum Commit vorgemerkt"
+fi
+
+if [ -n "$treffer" ]; then
+  cat >&2 <<EOF
+
+╭─────────────────────────────────────────────────────────────╮
+│  COMMIT BLOCKIERT — mögliche Zugangsdaten gefunden          │
+╰─────────────────────────────────────────────────────────────╯
+$treffer
+
+  Dieses Repository ist öffentlich. Ein gepushter Token ist dauerhaft
+  kompromittiert und muss beim Anbieter neu erzeugt werden — ihn später
+  wieder zu entfernen genügt nicht.
+
+  Echte Werte gehören nach .env (steht in .gitignore).
+  Fehlalarm?  git commit --no-verify
+
+EOF
+  exit 1
+fi
+
+exit 0

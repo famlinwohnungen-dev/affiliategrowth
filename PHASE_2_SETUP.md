@@ -26,8 +26,19 @@ phase2_pipeline.py          # Main Phase 2 pipeline (fetch, store, report)
 ### 1. Add to `.env` file (in ~/Dev/affiliategrowth/)
 
 ```env
-AWIN_TOKEN=a4e1e9d8-8c82-4bda-95e0-8679e2edf92f
-AWIN_PUBLISHER_ID=3083037
+AWIN_TOKEN=<dein Awin API-Token>
+AWIN_PUBLISHER_ID=<deine Publisher-ID>
+```
+
+> **Niemals echte Zugangsdaten in dieses Repository schreiben.** Es ist
+> öffentlich. Tokens gehören ausschließlich in `.env`, das über `.gitignore`
+> ausgeschlossen ist. Ein hier einmal committeter Token ist dauerhaft
+> kompromittiert und muss bei Awin neu erzeugt werden.
+
+Ein Pre-Commit-Hook prüft darauf. Einmalig pro Klon aktivieren:
+
+```bash
+git config core.hooksPath .githooks
 ```
 
 ### 2. Install additional dependencies
