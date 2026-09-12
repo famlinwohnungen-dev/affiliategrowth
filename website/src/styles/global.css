@@ -141,7 +141,9 @@ table {
 }
 th {
   font-family: Archivo, sans-serif;
-  font-size: 0.69rem;
+  /* Nicht unter 0.75rem (12 px): Darunter sind Tabellenköpfe auf dem Telefon
+     kaum noch lesbar. Auf dem Schreibtisch wirkt es trotzdem nicht klobig. */
+  font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.09em;
   text-transform: uppercase;
@@ -166,7 +168,7 @@ tbody tr:last-child td {
 
 .eyebrow {
   font-family: Archivo, sans-serif;
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.13em;
   text-transform: uppercase;

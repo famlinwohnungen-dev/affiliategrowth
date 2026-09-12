@@ -28,11 +28,16 @@ import Logo from "./Logo.astro";
     align-items: center;
     justify-content: space-between;
     gap: 1.5rem;
-    padding-block: 0.9rem;
+    /* Klein, weil Logo und Navigationslinks ihre eigene Höhe mitbringen —
+       sonst wüchse die Kopfzeile auf über 70 px. */
+    padding-block: 0.3rem;
   }
   .brand {
     text-decoration: none;
     display: inline-flex;
+    align-items: center;
+    /* 26 px Bildmarke + 2x9 px = 44 px Tippfläche. */
+    padding-block: 0.56rem;
   }
   nav {
     display: flex;
@@ -42,6 +47,10 @@ import Logo from "./Logo.astro";
     font-weight: 500;
   }
   nav a {
+    display: inline-flex;
+    align-items: center;
+    /* 44 px Mindesthöhe für Tippziele (WCAG 2.5.8). */
+    min-height: 2.75rem;
     text-decoration: none;
     color: var(--ink-soft);
   }

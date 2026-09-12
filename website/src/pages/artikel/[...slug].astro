@@ -144,7 +144,8 @@ const datum = new Intl.DateTimeFormat("de-DE", {
   }
   details {
     border-bottom: 1px solid var(--rule);
-    padding: 0.9rem 0;
+    /* Klein, weil summary die Tippfläche selbst mitbringt. */
+    padding: 0.3rem 0;
     max-width: var(--measure);
   }
   summary {
@@ -152,6 +153,28 @@ const datum = new Intl.DateTimeFormat("de-DE", {
     font-weight: 600;
     font-size: 0.98rem;
     cursor: pointer;
+    /* 44 px Mindesthöhe — eine Aufklapp-Frage ist ein Tippziel wie jedes andere. */
+    min-height: 2.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  /* display:flex nimmt summary den Standard-Marker; hier wieder ergänzen. */
+  summary::before {
+    content: "";
+    flex: none;
+    width: 0;
+    height: 0;
+    border-left: 5px solid currentColor;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    transition: transform 0.15s ease;
+  }
+  details[open] summary::before {
+    transform: rotate(90deg);
+  }
+  summary::-webkit-details-marker {
+    display: none;
   }
   details p {
     margin: 0.6rem 0 0;
