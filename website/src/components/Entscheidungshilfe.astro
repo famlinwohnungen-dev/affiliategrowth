@@ -1,0 +1,288 @@
+---
+import { getCollection } from "astro:content";
+
+/**
+ * Entscheidungshilfe für die Startseite.
+ *
+ * Drei Fragen, ein Ergebnis. Kein Quiz um des Quiz willen: Die Startseite
+ * hat genau eine Aufgabe — Leser in den passenden Artikel bringen. Zwei
+ * allgemeine Kacheln tun das schlechter als drei konkrete Fragen.
+ *
+ * Bewusst OHNE Affiliate-Link. Das Ergebnis führt in einen Artikel, verdient
+ * wird dort nach der Argumentation (siehe Kommentar in pages/index.astro).
+ *
+ * Das Ergebnis nennt kein Produkt, sondern das Kriterium, auf das es in
+ * dieser Lage ankommt. Eine Produktempfehlung nach drei Klicks wäre nicht
+ * belegbar — und genau die Sorte Behauptung, die diese Seite nicht macht.
+ *
+ * Kein Framework, kein Netzwerkaufruf: Die Regeln werden beim Bauen als JSON
+ * eingebettet, die Auswertung passiert im Browser in wenigen Zeilen.
+ */
+
+const veroeffentlicht = new Set(
+  (await getCollection("artikel", ({ data }) => !data.draft)).map((a) => a.id),
+);
+
+/** Zielartikel, solange er noch nicht steht: Rückfall auf eine Seite, die es
+ *  gibt. Sonst zeigt die Entscheidungshilfe ins Leere — der Fehler, der uns
+ *  schon einmal alle Affiliate-Links gekostet hat. */
+const ziel = (slug: string, ersatz: string) =>
+  veroeffentlicht.has(slug) ? `/artikel/${slug}/` : ersatz;
+
+const fragen = [
+  {
+    id: "geraete",
+    text: "Wie viele Geräte willst du schützen?",
+    optionen: [
+      { wert: "ein", text: "Nur eines" },
+      { wert: "wenige", text: "Zwei bis fünf" },
+      { wert: "viele", text: "Mehr als fünf" },
+    ],
+  },
+  {
+    id: "systeme",
+    text: "Welche Systeme laufen darauf?",
+    optionen: [
+      { wert: "windows", text: "Nur Windows" },
+      { wert: "gemischt", text: "Gemischt, auch Mac oder Android" },
+    ],
+  },
+  {
+    id: "anlass",
+    text: "Was ist der Anlass?",
+    optionen: [
+      { wert: "verlaengerung", text: "Meine Lizenz läuft bald aus" },
+      { wert: "neu", text: "Neuer Rechner" },
+      { wert: "erstmals", text: "Bisher kein bezahlter Schutz" },
+    ],
+  },
+];
+
+/**
+ * Erste zutreffende Regel gewinnt — deshalb steht der Verlängerungsfall oben:
+ * Er ist der teuerste Fehler und schlägt jedes andere Kriterium.
+ */
+const regeln = [
+  {
+    wenn: { anlass: "verlaengerung" },
+    titel: "Achte zuerst auf den Verlängerungspreis.",
+    text:
+      "Bei allen vier Anbietern liegt der Verlängerungspreis regelmäßig deutlich über dem Neukundenpreis. Kündigen und neu kaufen ist oft günstiger als weiterlaufen zu lassen — das entscheidet mehr Geld als jede Erkennungsrate.",
+    ziel: ziel("g-data-vs-bitdefender", "/artikel/"),
+    linktext: "Vergleich mit Preisen nach dem ersten Jahr",
+  },
+  {
+    wenn: { systeme: "gemischt" },
+    titel: "Du brauchst eine Lizenz über mehrere Plattformen.",
+    text:
+      "Sobald Mac oder Android dazukommen, zählt nicht mehr die Schutzwirkung unter Windows, sondern ob eine einzige Lizenz alle Geräte abdeckt — und wie viel die zusätzlichen Plätze kosten. Genau darin unterscheiden sich die Anbieter deutlich.",
+    ziel: "/anbieter/",
+    linktext: "Die Anbieter im Überblick",
+  },
+  {
+    wenn: { geraete: "viele" },
+    titel: "Rechne den Preis pro Gerät, nicht pro Lizenz.",
+    text:
+      "Ab etwa fünf Geräten kippt das Verhältnis: Familien- und Mehrplatzlizenzen sind pro Gerät oft nur halb so teuer wie Einzellizenzen, unterscheiden sich zwischen den Anbietern aber erheblich im Zuschnitt.",
+    ziel: "/anbieter/",
+    linktext: "Die Anbieter im Überblick",
+  },
+  {
+    wenn: { geraete: "ein", systeme: "windows" },
+    titel: "Für dich zählt die Systemlast, nicht der Funktionsumfang.",
+    text:
+      "Ein einzelner Windows-Rechner braucht keine Suite mit VPN, Kindersicherung und Passwort-Manager. Was du merkst, ist, wie stark das Programm den Rechner ausbremst — und ob es dich in Ruhe arbeiten lässt.",
+    ziel: ziel("g-data-vs-bitdefender", "/artikel/"),
+    linktext: "Vergleich zu Systemlast und Bedienung",
+  },
+  {
+    wenn: {},
+    titel: "Vergleiche Ausstattung und Preis, nicht die Erkennungsrate.",
+    text:
+      "In deiner Lage trennt die Schutzwirkung die Anbieter nicht. Was bleibt, sind Funktionsumfang, Bedienung und was das Ganze im zweiten Jahr kostet.",
+    ziel: "/artikel/",
+    linktext: "Zu den Vergleichen",
+  },
+];
+---
+
+<section class="hilfe" aria-labelledby="hilfe-titel">
+  <h2 id="hilfe-titel">Welcher Vergleich passt zu dir?</h2>
+  <p class="unter">Drei Fragen, danach der passende Artikel.</p>
+
+  <form id="hilfe-form">
+    {
+      fragen.map((f) => (
+        <fieldset>
+          <legend>{f.text}</legend>
+          <div class="wahl">
+            {f.optionen.map((o) => (
+              <label>
+                <input type="radio" name={f.id} value={o.wert} />
+                <span>{o.text}</span>
+              </label>
+            ))}
+          </div>
+        </fieldset>
+      ))
+    }
+  </form>
+
+  {/* aria-live: Das Ergebnis erscheint ohne Seitenwechsel, Screenreader
+      müssen davon erfahren. */}
+  <div id="hilfe-ergebnis" class="ergebnis" aria-live="polite" hidden>
+    <h3></h3>
+    <p></p>
+    <a class="weiter" href="/artikel/"
+      ><span></span>
+      <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true">
+        <path
+          d="M3 8h9M8.5 4.5 12 8l-3.5 3.5"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"></path>
+      </svg>
+    </a>
+  </div>
+
+  <noscript>
+    <p class="ohne-js">
+      Die Entscheidungshilfe braucht JavaScript. <a href="/artikel/">Alle Vergleiche</a>
+      führen zum selben Ziel.
+    </p>
+  </noscript>
+</section>
+
+<script is:inline define:vars={{ regeln }}>
+  (() => {
+    const form = document.getElementById("hilfe-form");
+    const box = document.getElementById("hilfe-ergebnis");
+    if (!form || !box) return;
+
+    const titel = box.querySelector("h3");
+    const text = box.querySelector("p");
+    const link = box.querySelector("a.weiter");
+    const linktext = link.querySelector("span");
+
+    form.addEventListener("change", () => {
+      const daten = Object.fromEntries(new FormData(form));
+      // Erst antworten, wenn alle drei Fragen beantwortet sind — ein Ergebnis
+      // nach dem ersten Klick wäre geraten, nicht abgeleitet.
+      if (Object.keys(daten).length < 3) return;
+
+      const treffer = regeln.find((r) =>
+        Object.entries(r.wenn).every(([k, v]) => daten[k] === v),
+      );
+      if (!treffer) return;
+
+      titel.textContent = treffer.titel;
+      text.textContent = treffer.text;
+      link.href = treffer.ziel;
+      linktext.textContent = treffer.linktext;
+      box.hidden = false;
+    });
+  })();
+</script>
+
+<style>
+  .hilfe {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    padding: 1.5rem 1.4rem 1.6rem;
+  }
+  .hilfe h2 {
+    margin: 0;
+    font-size: 1.22rem;
+  }
+  .unter {
+    margin: 0.3rem 0 1.4rem;
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+  }
+
+  fieldset {
+    border: 0;
+    padding: 0;
+    margin: 0 0 1.35rem;
+  }
+  legend {
+    padding: 0;
+    margin-bottom: 0.6rem;
+    font-family: Archivo, sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  .wahl {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  /* Radiobuttons als Schaltflächen: das native input bleibt für Tastatur und
+     Screenreader erhalten, es wird nur nicht gezeichnet. */
+  .wahl label {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    padding: 0.4rem 0.95rem;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    background: var(--surface-alt);
+    font-size: 0.9rem;
+    line-height: 1.3;
+    cursor: pointer;
+  }
+  .wahl input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+  }
+  .wahl label:hover {
+    border-color: var(--accent);
+  }
+  .wahl label:has(input:checked) {
+    background: var(--accent-soft);
+    border-color: var(--accent);
+    color: var(--accent);
+    font-weight: 600;
+  }
+  .wahl label:has(input:focus-visible) {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .ergebnis {
+    border-top: 1px solid var(--rule);
+    padding-top: 1.25rem;
+  }
+  .ergebnis h3 {
+    margin: 0 0 0.45rem;
+    font-size: 1.05rem;
+    line-height: 1.3;
+  }
+  .ergebnis p {
+    margin: 0 0 0.9rem;
+    font-size: 0.94rem;
+    color: var(--ink-soft);
+    max-width: 54ch;
+  }
+  .weiter {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    min-height: 2.75rem;
+    font-family: Archivo, sans-serif;
+    font-weight: 600;
+    font-size: 0.92rem;
+    text-decoration: none;
+  }
+  .ohne-js {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+  }
+</style>

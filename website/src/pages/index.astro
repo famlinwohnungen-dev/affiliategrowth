@@ -2,6 +2,7 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import ErkennungsGrafik from "../components/ErkennungsGrafik.astro";
+import Entscheidungshilfe from "../components/Entscheidungshilfe.astro";
 import { SITE } from "../config.js";
 
 const artikel = (await getCollection("artikel", ({ data }) => !data.draft)).sort(
@@ -13,28 +14,14 @@ const artikel = (await getCollection("artikel", ({ data }) => !data.draft)).sort
 // der Argumentation — nicht davor. Eine Startseite voller Partnerlinks ohne
 // Inhalt ist zudem genau das, was Google als "thin affiliate page" abwertet.
 
-const einstiege = [
-  {
-    frage: "Ich will zwei Produkte direkt vergleichen",
-    ziel: "/artikel/",
-    hinweis: "Direktvergleiche",
-  },
-  {
-    frage: "Ich weiß noch nicht, worauf es ankommt",
-    ziel: "/anbieter/",
-    hinweis: "Die Anbieter im Überblick",
-  },
-];
-
-// Der frühere dritte Einstieg ("Wie kommen diese Empfehlungen zustande?")
-// führte auf /methodik/ und passte hier nicht: Wer auf der Startseite steht,
-// sucht ein Produkt, nicht unsere Arbeitsweise. Die Methodik bleibt über die
-// Kopfzeile erreichbar, wo sie hingehört.
+// Die beiden Kacheln "Ich will vergleichen" / "Ich weiß noch nicht, worauf
+// es ankommt" sind der Entscheidungshilfe gewichen: Sie beantwortet dieselbe
+// Frage, aber konkret statt allgemein. Als schlichte Textzeile bleiben beide
+// Wege erhalten, für Leser, die lieber selbst stöbern.
 //
-// Der Platz gehört der meistgestellten Frage der Nische — "reicht Windows
-// Defender?" (PLAN.md, Artikel 11). Der Einstieg kommt zurück, sobald der
-// Artikel steht; bis dahin lieber zwei echte Wege als drei mit einem
-// Blindgänger.
+// Der frühere dritte Einstieg ("Wie kommen diese Empfehlungen zustande?")
+// ist ersatzlos weg: Wer auf der Startseite steht, sucht ein Produkt, nicht
+// unsere Arbeitsweise. Die Methodik bleibt über die Kopfzeile erreichbar.
 
 const schema = [
   {
@@ -74,31 +61,11 @@ const schema = [
   </section>
 
   <section class="shell block">
-    <h2 class="sr-only">Einstiege</h2>
-    <ul class="einstiege">
-      {
-        einstiege.map((e) => (
-          <li>
-            <a href={e.ziel}>
-              <span class="frage">{e.frage}</span>
-              <span class="hinweis">
-                {e.hinweis}
-                <svg viewBox="0 0 16 16" width="13" height="13" aria-hidden="true">
-                  <path
-                    d="M3 8h9M8.5 4.5 12 8l-3.5 3.5"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.6"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </span>
-            </a>
-          </li>
-        ))
-      }
-    </ul>
+    <Entscheidungshilfe />
+    <p class="stoebern">
+      Lieber selbst stöbern: <a href="/artikel/">alle Vergleiche</a> oder
+      <a href="/anbieter/">die Anbieter im Überblick</a>.
+    </p>
   </section>
 
   <section class="shell block">
@@ -250,53 +217,10 @@ const schema = [
     white-space: nowrap;
   }
 
-  /* Einstiege: drei Wege in den passenden Inhalt, keine Partnerlinks. */
-  /* Volle Spaltenzahl oder eine — nie dazwischen, sonst bleibt eine Zelle
-     leer und die Rasterfarbe scheint als grauer Block durch. */
-  .einstiege {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    max-width: none;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1px;
-    background: var(--rule);
-    border: 1px solid var(--rule);
-    border-radius: var(--radius);
-    overflow: hidden;
-  }
-  @media (min-width: 44rem) {
-    .einstiege {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  .einstiege a {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 1rem;
-    height: 100%;
-    background: var(--surface);
-    padding: 1.2rem 1.3rem 1.15rem;
-    text-decoration: none;
-    color: inherit;
-  }
-  .einstiege a:hover {
-    background: var(--surface-alt);
-  }
-  .frage {
-    font-size: 1rem;
-    color: var(--ink);
-  }
-  .einstiege .hinweis {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
-    font-family: Archivo, sans-serif;
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--accent);
+  .stoebern {
+    margin: 1rem 0 0;
+    font-size: 0.9rem;
+    color: var(--ink-soft);
   }
 
   .raster {
