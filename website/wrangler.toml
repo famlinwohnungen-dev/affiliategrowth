@@ -33,3 +33,14 @@ compatibility_flags = ["nodejs_compat"]
 binding = "DB"
 database_name = "schutzlotse-feedback"
 database_id = "8b2d15ef-e450-4316-889c-0f65b9d644dc"
+
+# Sitzungsspeicher des Astro-Cloudflare-Adapters.
+#
+# Diese Seite nutzt keine Sitzungen — der Adapter richtet den Speicher aber
+# von sich aus ein. Standardmäßig legt er den KV-Namensraum beim Deploy selbst
+# an, was fehlschlägt, sobald er schon existiert (Fehler 10014, etwa nach einem
+# zuvor abgebrochenen Deploy). Ist das Binding hier ausdrücklich deklariert,
+# verwendet der Adapter diesen Eintrag und provisioniert nichts mehr.
+[[kv_namespaces]]
+binding = "SESSION"
+id = "8cd40c31ee2445c298cb4d2fcc7f8896"
