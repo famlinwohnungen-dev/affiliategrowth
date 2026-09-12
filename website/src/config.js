@@ -36,6 +36,22 @@ export const SITE = {
 export const PUBLISHER_ID = "3083037";
 
 /**
+ * Cloudflare Web Analytics.
+ *
+ * Cookielos — es wird nichts auf dem Endgerät gespeichert, deshalb ist keine
+ * Einwilligung und kein Banner nötig (§ 25 Abs. 2 TDDDG).
+ *
+ * Token aus dem Cloudflare-Dashboard: Web Analytics → Seite hinzufügen →
+ * "Manual setup". Solange hier null steht, wird kein Beacon eingebunden.
+ *
+ * Wichtig: Der Beacon muss auch auf den /go/-Weiterleitungsseiten liegen,
+ * sonst tauchen Affiliate-Klicks in der Statistik gar nicht auf.
+ */
+// Der Beacon-Token steht im ausgelieferten HTML jeder Seite und ist kein
+// Geheimnis: Er erlaubt nur das Melden von Aufrufen, keinen Kontozugriff.
+export const CF_ANALYTICS_TOKEN = "e2f2c8159f8b4461a7a7f0fb2aa200cf"; // öffentlich: Beacon
+
+/**
  * `kurz`, `land` und `staerke` speisen die Anbieterkarten auf der Startseite.
  * Bewusst nur belegbare Fakten — keine erfundenen Testnoten oder Bewertungen.
  */

@@ -26,17 +26,23 @@
   const knopf = document.querySelector<HTMLButtonElement>("[data-back-to-top]");
 
   if (knopf) {
-    const SCHWELLE = 600;
+    // Schwelle relativ zur Bildschirmhöhe statt fester Pixelwert: 600 px sind
+    // auf einem Telefon ein ganzer Bildschirm, auf einem großen Monitor nicht
+    // einmal die Hälfte. Etwa eine Bildschirmhöhe ist auf jedem Gerät der
+    // Punkt, ab dem der Weg nach oben spürbar wird.
+    const schwelle = () => Math.max(350, window.innerHeight * 0.8);
 
     // Kein requestAnimationFrame: In Hintergrund-Tabs feuert es nicht, und für
     // einen Zahlenvergleich lohnt die Drosselung ohnehin nicht. Geschrieben
     // wird nur bei echtem Zustandswechsel — kein Layout-Thrashing beim Scrollen.
     const pruefen = () => {
-      const zeigen = window.scrollY >= SCHWELLE;
+      const zeigen = window.scrollY >= schwelle();
       if (zeigen === knopf.hidden) knopf.hidden = !zeigen;
     };
 
     window.addEventListener("scroll", pruefen, { passive: true });
+    // Drehen des Geräts ändert die Bildschirmhöhe und damit die Schwelle.
+    window.addEventListener("resize", pruefen, { passive: true });
 
     // Beim Laden mitten auf der Seite (Anker, Zurück-Navigation) sofort prüfen.
     pruefen();

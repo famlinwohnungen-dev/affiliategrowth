@@ -29,7 +29,9 @@ export const KATEGORIEN = [
     beschreibung:
       "Hilft uns zu verstehen, welche Vergleiche gelesen werden. Wird erst gesetzt, wenn du zustimmst.",
     immer: false,
-    // Auf true setzen, sobald Analytics eingebaut wird.
+    // Auf true setzen, sobald ein Dienst eingebaut wird, der Informationen auf
+    // dem Endgerät speichert. Cloudflare Web Analytics tut das nicht — deshalb
+    // bleibt es hier aus und die Seite braucht kein Banner.
     aktiv: false,
   },
 ];

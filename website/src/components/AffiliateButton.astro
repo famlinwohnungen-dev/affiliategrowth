@@ -14,7 +14,12 @@ if (!m) throw new Error(`AffiliateButton: unknown merchant "${merchant}"`);
 
 // Links route through /go/ so tracking URLs live in one place and clicks stay
 // measurable. rel="sponsored nofollow" is required by Google for paid links.
-const href = `/go/${merchant}/`;
+//
+// `?from=` hängt die Quellseite an. Damit steht in der Statistik nicht nur
+// "jemand hat auf Bitdefender geklickt", sondern aus welchem Artikel heraus —
+// die einzige Zahl, die verrät, welcher Text tatsächlich Geld verdient.
+const quelle = Astro.url.pathname.replace(/^\/|\/$/g, "") || "startseite";
+const href = `/go/${merchant}/?from=${encodeURIComponent(quelle)}`;
 ---
 
 {/*

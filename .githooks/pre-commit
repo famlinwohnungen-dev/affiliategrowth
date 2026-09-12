@@ -26,7 +26,10 @@ added="$(git diff --cached -U0 --diff-filter=ACM \
 [ -z "$added" ] && exit 0
 
 # Werte, die eindeutig Platzhalter sind, nie als Fund melden.
-PLATZHALTER='(^$|YOUR_|<[^>]*>|\{\{|\$\{|xxx+|changeme|placeholder|beispiel|example|dein |deine |os\.getenv|process\.env|getenv\(|\.\.\.)'
+# Platzhalter und ausdrücklich als öffentlich gekennzeichnete Werte nie melden.
+# "öffentlich:" muss bewusst in dieselbe Zeile geschrieben werden — ein pauschales
+# --no-verify wird damit unnötig, die Ausnahme bleibt aber sichtbar im Diff.
+PLATZHALTER='(^$|YOUR_|<[^>]*>|\{\{|\$\{|xxx+|changeme|placeholder|beispiel|example|dein |deine |os\.getenv|process\.env|getenv\(|\.\.\.|öffentlich:)'
 
 treffer=""
 

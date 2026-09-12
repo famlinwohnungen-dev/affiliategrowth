@@ -40,9 +40,16 @@ verlangt.
 
 ## Vor dem Livegang
 
-- [ ] **Domain registrieren** und `SITE.url` in `src/config.js` sowie die
-      Sitemap-Zeile in `public/robots.txt` anpassen. `schutzlotse.de` ist nur
-      ein Platzhalter und nicht auf Verfügbarkeit geprüft.
+- [ ] **Domain registrieren.** `schutzlotse.de` ist nur ein Platzhalter und
+      nicht auf Verfügbarkeit geprüft. Danach in dieser Reihenfolge:
+  - [ ] `SITE.url` in `src/config.js` setzen (Canonical-URLs, Sitemap, OG-Tags)
+  - [ ] Domain im Cloudflare-Projekt verbinden
+  - [ ] **Neuen Web-Analytics-Token holen.** Der Token hängt am Hostnamen; der
+        für `*.workers.dev` sammelt danach nichts mehr. Neue Seite im
+        Cloudflare-Dashboard anlegen und `CF_ANALYTICS_TOKEN` ersetzen — die
+        Markierung `// öffentlich: Beacon` in der Zeile stehen lassen, sonst
+        blockiert der Pre-Commit-Hook.
+  - [ ] Erst zum Schluss `SITE.indexable = true`
 - [x] ~~Google Fonts lokal einbinden.~~ Erledigt: Schriften liegen in
       `public/fonts/`, eingebunden über `src/styles/fonts.css`. Keine Anfragen
       mehr an Google.

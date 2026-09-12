@@ -1,5 +1,5 @@
 ---
-import { SITE } from "../config.js";
+import { SITE, CF_ANALYTICS_TOKEN } from "../config.js";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import FloatingActions from "../components/FloatingActions.astro";
@@ -78,5 +78,19 @@ const fullTitle = title === SITE.name ? title : `${title} | ${SITE.name}`;
     <Footer />
     <FloatingActions />
     <CookieBanner />
+    {/*
+      Als rohes HTML ausgeben statt als JSX-Attribut: Sonst escapt Astro die
+      Anführungszeichen im JSON zu &quot; — Browser lösen das zwar wieder auf,
+      aber die Form weicht dann von Cloudflares dokumentiertem Snippet ab.
+      Bei der einen Sache, die zuverlässig funktionieren muss, ist das die
+      Unsicherheit nicht wert.
+    */}
+    {
+      CF_ANALYTICS_TOKEN && (
+        <Fragment
+          set:html={`<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"${CF_ANALYTICS_TOKEN}"}'></script>`}
+        />
+      )
+    }
   </body>
 </html>
