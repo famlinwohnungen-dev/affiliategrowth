@@ -53,54 +53,46 @@ verlangt.
 - [ ] **Awin-Programme beantragen**: ESET DACH (`15751`), Bitdefender DE (`11660`).
 - [ ] **Google Search Console** einrichten und Sitemap einreichen.
 
-## Deployment — Cloudflare Pages
+## Deployment — Cloudflare Workers (Static Assets)
 
-Kostenloser Account genügt (keine Kreditkarte).
+Deployt automatisch bei jedem Push auf `main`, über die GitHub-Integration.
+Es liegen keine Cloudflare-Zugangsdaten mehr lokal.
 
-**Laufender Deploy** (Projekt besteht bereits):
+### Erforderliche Dashboard-Einstellung
+
+Cloudflare legt bei einer neuen Git-Verbindung ein **Workers**-Projekt an (das
+frühere Pages ist im Auslaufen). Unter Workers & Pages → `affiliategrowth` →
+Settings → Build muss gesetzt sein:
+
+| Feld | Wert |
+|---|---|
+| Root directory | `website` |
+| Build command | `npm run build` |
+| Deploy command | `npx wrangler deploy` |
+
+**Root directory ist der entscheidende Punkt.** Ohne ihn baut Cloudflare im
+Wurzelverzeichnis des Repos, wo kein Node-Projekt liegt — daran ist der erste
+Build gescheitert.
+
+### Manueller Deploy (optional)
+
+Nur nötig, wenn ohne Commit deployt werden soll. Vorher einmalig per OAuth
+anmelden — kein API-Token, keine IP-Freigabe:
 
 ```bash
+npx wrangler login
 npm run deploy
 ```
 
-Das baut und lädt hoch. Zugangsdaten kommen aus `.env`
-(`CLOUDFLARE_ACCOUNT_ID`, `CLOUDFLARE_API_TOKEN`) — vorher exportieren:
+### Warum kein Pages mehr
 
-```bash
-set -a && . ./.env && set +a && npm run deploy
-```
+Cloudflare migriert Pages zu Workers. Ein Pages-Projekt, das per
+Direct-Upload angelegt wurde, lässt sich nachträglich **nicht** mit Git
+verbinden — der Deployment-Typ ist bei der Erstellung fest. Deshalb ist das
+alte Projekt gelöscht und durch ein Workers-Projekt ersetzt worden.
 
-**Alternative: Git-Integration** im Cloudflare-Dashboard → Workers & Pages →
-Create → Pages → Repo verbinden. Build-Befehl `npm run build`, Output `dist`,
-Root-Verzeichnis `website`. Dann deployt jeder Push automatisch und `.env`
-wird nicht gebraucht.
-
-### Projekt neu anlegen
-
-`wrangler pages project create` funktioniert ab wrangler 4.x **nicht** mit
-einer Pages-Konfiguration — es erwartet einen Worker-Entrypoint. Projekt
-stattdessen über die REST-API anlegen:
-
-```bash
-curl -X POST "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/pages/projects" \
-  -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
-  -H "Content-Type: application/json" \
-  --data '{"name":"schutzlotse","production_branch":"main"}'
-```
-
-Wrangler ist bewusst auf `4.131.1` festgenagelt: Cloudflare migriert Pages
-schrittweise zu Workers, ein Minor-Update kann den Deploy brechen.
-
-### API-Token
-
-Der Token braucht die Berechtigung **Cloudflare Pages: Edit** auf Account-
-Ebene. Fehlermeldungen und ihre Ursache:
-
-| Fehler | Ursache |
-|---|---|
-| `Cannot use the access token from location: <IP>` (9109) | Token hat eine IP-Beschränkung, die diese IP nicht einschließt |
-| `Authentication error` (10000) | Token fehlt die Pages-Berechtigung |
-| `Invalid API Token` bei `/user/tokens/verify` | Normal bei Account-Token (`cfat_…`) — stattdessen `/accounts/<id>/tokens/verify` nutzen |
+Wrangler ist bewusst auf `4.131.1` festgenagelt: Die Migration läuft, ein
+Minor-Update kann den Deploy brechen.
 
 ### Nach dem ersten Deploy
 

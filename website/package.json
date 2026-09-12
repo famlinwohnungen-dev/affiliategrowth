@@ -7,7 +7,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "check": "astro check",
-    "deploy": "npm run build && wrangler pages deploy --project-name schutzlotse --branch main --commit-dirty=true"
+    "deploy": "npm run build && wrangler deploy"
   },
   "author": "",
   "license": "ISC",

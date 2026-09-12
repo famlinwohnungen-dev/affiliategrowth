@@ -1,18 +1,24 @@
-# Cloudflare Pages — Konfiguration für Deploys von der Kommandozeile.
+# Cloudflare Workers mit statischen Assets.
 #
-# Wird nur von `wrangler pages deploy` gelesen. Wer stattdessen das Git-Repo
-# im Cloudflare-Dashboard verbindet, braucht diese Datei nicht (dort
-# Build-Befehl `npm run build`, Ausgabeverzeichnis `dist`, Root `website`).
+# Hinweis zur Historie: Ursprünglich war das ein Pages-Projekt. Cloudflare
+# migriert Pages zu Workers — neue Git-Verbindungen im Dashboard legen
+# automatisch ein Workers-Projekt an. Diese Konfiguration folgt dem neuen Weg.
 #
-# ACHTUNG `wrangler pages project create`: Dieser Befehl funktioniert ab
-# wrangler 4.x nicht mehr mit einer Pages-Konfiguration — er erwartet einen
-# Worker-Entrypoint und bricht mit "missing worker entrypoint or assets
-# directory" ab. Das Projekt wird stattdessen einmalig über die REST-API
-# angelegt (siehe README). Das Deployen selbst funktioniert mit dieser Datei.
+# Es gibt bewusst KEINEN `main`-Entrypoint: Die Seite ist rein statisch, es
+# läuft kein Worker-Code. Cloudflare liefert dann ausschließlich die Dateien
+# aus `dist/` aus ("assets-only Worker").
+#
+# Im Dashboard muss zusätzlich gesetzt sein (Settings → Build):
+#   Root directory:  website
+#   Build command:   npm run build
+# Ohne das Root-Verzeichnis baut Cloudflare im Repo-Wurzelverzeichnis, wo kein
+# Node-Projekt liegt — genau daran ist der erste Build gescheitert.
 
-name = "schutzlotse"
-pages_build_output_dir = "./dist"
+name = "affiliategrowth"
+compatibility_date = "2026-09-11"
 
-# Rein statische Seite ohne Functions — `compatibility_date` ist hier nicht
-# erforderlich und wird bewusst weggelassen, damit wrangler die Konfiguration
-# nicht als Worker-Projekt interpretiert.
+[assets]
+directory = "./dist"
+
+# `_headers` und `_redirects` in `public/` werden von Workers Static Assets
+# genauso ausgewertet wie zuvor bei Pages.
