@@ -14,6 +14,7 @@
  */
 import { brauchtEinwilligung } from "../consent.js";
 import Rueckmeldung from "./Rueckmeldung.astro";
+import { FEEDBACK_AKTIV } from "../config.js";
 ---
 
 <div class="widget" data-info-widget>
@@ -42,6 +43,7 @@ import Rueckmeldung from "./Rueckmeldung.astro";
       </button>
     </div>
 
+    { FEEDBACK_AKTIV && (
     <div class="feedback">
       <Rueckmeldung
         quelle="widget"
@@ -49,6 +51,7 @@ import Rueckmeldung from "./Rueckmeldung.astro";
         kompakt={true}
       />
     </div>
+    ) }
 
     <nav aria-label="Rechtliches und Hintergrund">
       <a href="/methodik/">

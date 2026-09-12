@@ -22,9 +22,18 @@ compatibility_flags = ["nodejs_compat"]
 # gibt — der Build bricht dann ab, bevor er sie erzeugen kann.
 
 # Leser-Rückmeldungen. D1 ist Cloudflares serverloses SQLite.
-# Einmalig anlegen:  npm run db:create   (danach database_id hier eintragen)
-# Schema einspielen: npm run db:init
-[[d1_databases]]
-binding = "DB"
-database_name = "schutzlotse-feedback"
-database_id = "PLATZHALTER-NACH-npm-run-db:create-EINTRAGEN"
+#
+# BEWUSST AUSKOMMENTIERT: Cloudflare lehnt jeden Deploy ab, solange hier keine
+# gültige `database_id` steht — auch den der übrigen Seite. Ein Platzhalter
+# blockiert also die gesamte Auslieferung.
+#
+# Zum Aktivieren:
+#   1. npm run db:create        → gibt die database_id aus
+#   2. Block unten einkommentieren und die ID eintragen
+#   3. npm run db:init          → Schema einspielen
+#   4. FEEDBACK_AKTIV in src/config.js auf true setzen
+#
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "schutzlotse-feedback"
+# database_id = "HIER-DIE-AUSGEGEBENE-ID"

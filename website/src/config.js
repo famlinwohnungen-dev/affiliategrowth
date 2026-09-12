@@ -35,6 +35,16 @@ export const SITE = {
  * Solange `beigetreten: false`, zeigt /go/<anbieter>/ auf die Händlerseite.
  * Die Links funktionieren also, verdienen aber nichts.
  */
+/**
+ * Leser-Rückmeldungen (D1).
+ *
+ * Erst auf `true` setzen, wenn die D1-Datenbank angelegt und das Binding in
+ * wrangler.toml einkommentiert ist. Solange `false`, werden die Ja/Nein-Knöpfe
+ * gar nicht erst gerendert — besser keine Schaltfläche als eine, die nichts
+ * tut und beim Absenden einen Fehler zeigt.
+ */
+export const FEEDBACK_AKTIV = false;
+
 export const PUBLISHER_ID = "3083037";
 
 /**

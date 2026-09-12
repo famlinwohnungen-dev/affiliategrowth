@@ -13,6 +13,8 @@
  * `frage` ist bewusst je Einsatzort verschieden: "Gab es etwas Konkretes?"
  * bringt brauchbare Antworten, "Feedback?" bringt keine.
  */
+import { FEEDBACK_AKTIV } from "../config.js";
+
 interface Props {
   quelle?: "artikel" | "widget";
   frage?: string;
@@ -26,6 +28,7 @@ const {
 } = Astro.props;
 ---
 
+{ FEEDBACK_AKTIV && (
 <section class="rueckmeldung" class:list={[kompakt && "kompakt"]} data-rueckmeldung data-quelle={quelle}>
   <div class="stufe1" data-stufe1>
     <p class="frage">{frage}</p>
@@ -79,6 +82,7 @@ const {
 
   <p class="fertig" data-fertig hidden>Danke — deine Rückmeldung ist angekommen.</p>
 </section>
+) }
 
 <script>
   document.querySelectorAll<HTMLElement>("[data-rueckmeldung]").forEach((box) => {

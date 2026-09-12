@@ -153,13 +153,28 @@ Zweistufig: ein Klick auf *Ja/Nein* wird sofort gespeichert, erst danach
 erscheint das Textfeld. Wer nichts schreibt, hat trotzdem abgestimmt.
 Erreichbar am Artikelende und über das Info-Widget auf jeder Seite.
 
+Standardmaessig **abgeschaltet** (`FEEDBACK_AKTIV = false` in `src/config.js`).
+Dann werden die Ja/Nein-Knoepfe gar nicht erst gerendert - besser keine
+Schaltflaeche als eine, die beim Absenden einen Fehler zeigt.
+
 ### Einmalige Einrichtung
 
 ```bash
-npm run db:create        # Datenbank anlegen, dann database_id in wrangler.toml eintragen
-npm run db:init          # Schema in die entfernte Datenbank spielen
-npm run db:init:local    # dasselbe lokal, fuer `wrangler dev`
+npm run db:create        # gibt die database_id aus
 ```
+
+Danach in dieser Reihenfolge:
+
+1. In `wrangler.toml` den Block `[[d1_databases]]` einkommentieren und die
+   ausgegebene `database_id` eintragen.
+2. `npm run db:init` - Schema in die entfernte Datenbank spielen.
+3. `npm run db:init:local` - dasselbe lokal, fuer `wrangler dev`.
+4. In `src/config.js` `FEEDBACK_AKTIV = true` setzen.
+
+**Warum das D1-Binding auskommentiert ist:** Cloudflare lehnt jeden Deploy ab,
+solange eine `database_id` fehlt oder ungueltig ist - und zwar den Deploy der
+gesamten Seite, nicht nur der Feedback-Route. Ein Platzhalter blockiert also
+die komplette Auslieferung.
 
 ### Rueckmeldungen lesen
 
