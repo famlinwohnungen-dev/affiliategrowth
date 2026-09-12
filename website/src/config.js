@@ -26,12 +26,14 @@ export const SITE = {
 /**
  * Awin merchants.
  *
- * `trackingUrl` stays null until each programme is approved - Awin only issues
- * tracking links to accepted publishers. Until then /go/<id> falls back to the
- * merchant's own site, so links work and nothing silently 404s.
+ * Nach der Freigabe eines Programms genügt `beigetreten: true` — die
+ * Awin-Trackinglink wird aus `advertiserId` und `PUBLISHER_ID` gebaut. Bewusst
+ * KEIN von Hand eingefügter Link: Eine falsche awinmid oder ein vergessener
+ * Parameter fällt niemandem auf, die Klicks laufen ins Leere oder werden nicht
+ * zugeordnet — und das merkt man erst an ausbleibenden Provisionen.
  *
- * Awin deep link format once approved:
- *   https://www.awin1.com/cread.php?awinmid=<advertiserId>&awinaffid=<publisherId>&ued=<encoded target>
+ * Solange `beigetreten: false`, zeigt /go/<anbieter>/ auf die Händlerseite.
+ * Die Links funktionieren also, verdienen aber nichts.
  */
 export const PUBLISHER_ID = "3083037";
 
@@ -60,7 +62,7 @@ export const MERCHANTS = {
     name: "ESET",
     advertiserId: "15751",
     homepage: "https://www.eset.com/de/",
-    trackingUrl: null,
+    beigetreten: false,
     epc: 0.25,
     primary: true,
     land: "Slowakei",
@@ -71,7 +73,7 @@ export const MERCHANTS = {
     name: "Bitdefender",
     advertiserId: "11660",
     homepage: "https://www.bitdefender.de",
-    trackingUrl: null,
+    beigetreten: false,
     epc: 0.21,
     primary: true,
     land: "Rumänien",
@@ -82,7 +84,7 @@ export const MERCHANTS = {
     name: "G DATA",
     advertiserId: "14693",
     homepage: "https://www.gdata.de/",
-    trackingUrl: null,
+    beigetreten: false,
     epc: 0.03,
     primary: false,
     land: "Deutschland",
@@ -93,7 +95,7 @@ export const MERCHANTS = {
     name: "Kaspersky",
     advertiserId: "14098",
     homepage: "https://www.kaspersky.com/de/",
-    trackingUrl: null,
+    beigetreten: false,
     epc: 0.07,
     primary: false,
     land: "Russland",
@@ -106,8 +108,29 @@ export const MERCHANTS = {
   },
 };
 
+/** Awin-Deeplink nach dem dokumentierten cread.php-Schema. */
+function awinDeeplink(advertiserId, ziel) {
+  const u = new URL("https://www.awin1.com/cread.php");
+  u.searchParams.set("awinmid", advertiserId);
+  u.searchParams.set("awinaffid", PUBLISHER_ID);
+  u.searchParams.set("ued", ziel);
+  return u.toString();
+}
+
+/**
+ * Ziel-URL für /go/<anbieter>/. Vor der Freigabe die Händlerseite, danach der
+ * generierte Trackinglink. `landingUrl` erlaubt es, statt der Startseite eine
+ * bestimmte Produktseite anzusteuern.
+ */
 export function merchantUrl(key) {
   const m = MERCHANTS[key];
-  if (!m) throw new Error(`Unknown merchant: ${key}`);
-  return m.trackingUrl ?? m.homepage;
+  if (!m) throw new Error(`Unbekannter Anbieter: ${key}`);
+
+  const ziel = m.landingUrl ?? m.homepage;
+  if (!m.beigetreten) return ziel;
+
+  if (!m.advertiserId) {
+    throw new Error(`${key}: beigetreten, aber keine advertiserId gesetzt`);
+  }
+  return awinDeeplink(m.advertiserId, ziel);
 }

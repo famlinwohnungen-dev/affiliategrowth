@@ -25,14 +25,31 @@ Für Vergleichstabellen und Affiliate-Buttons die Komponenten importieren, siehe
 Alle ausgehenden Links laufen über `/go/<merchant>/`. Die Ziel-URLs stehen an
 genau einer Stelle: `src/config.js`.
 
-Solange die Awin-Programme nicht freigegeben sind, steht dort `trackingUrl:
-null` und es wird auf die Händler-Website weitergeleitet — die Links
-funktionieren also, verdienen aber nichts. **Nach der Freigabe** dort die
-Awin-Deeplinks eintragen:
+Solange ein Programm nicht freigegeben ist, steht dort `beigetreten: false`
+und es wird auf die Händler-Website weitergeleitet — die Links funktionieren
+also, verdienen aber nichts.
 
+**Nach der Freigabe** genügt ein Wort pro Anbieter:
+
+```js
+beigetreten: true,
 ```
-https://www.awin1.com/cread.php?awinmid=<advertiserId>&awinaffid=3083037&ued=<Ziel-URL>
-```
+
+Der Awin-Trackinglink wird daraus automatisch gebaut, aus `advertiserId` und
+`PUBLISHER_ID`. Bewusst kein von Hand eingefügter Link: Eine falsche `awinmid`
+oder ein vergessener Parameter fällt beim Lesen nicht auf, die Klicks werden
+dann nicht zugeordnet — und das merkt man erst an ausbleibenden Provisionen.
+
+Soll statt der Startseite eine bestimmte Produktseite angesteuert werden, dazu
+`landingUrl` setzen; sie wird als `ued`-Ziel verwendet.
+
+### Kaputte Links fallen beim Build auf
+
+`npm run build` prüft am Ende jeden internen Link gegen die erzeugten Dateien
+(`scripts/check-links.mjs`) und bricht bei einem toten Link ab. Grund: Die
+Affiliate-Links zeigten einmal auf `/go/<anbieter>/` mit Schrägstrich, während
+der Build die Datei ohne Schrägstrich erzeugte — jeder Affiliate-Link lief ins
+Leere, und im Quelltext sah alles korrekt aus.
 
 `/go/` ist per `robots.txt` gesperrt und aus der Sitemap ausgeschlossen; die
 Links tragen `rel="sponsored nofollow"` — beides von Google für bezahlte Links

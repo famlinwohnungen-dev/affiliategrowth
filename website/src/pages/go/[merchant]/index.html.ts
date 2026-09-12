@@ -1,5 +1,5 @@
 import type { APIRoute, GetStaticPaths } from "astro";
-import { MERCHANTS, merchantUrl, CF_ANALYTICS_TOKEN } from "../../config.js";
+import { MERCHANTS, merchantUrl, CF_ANALYTICS_TOKEN } from "../../../config.js";
 
 /**
  * Affiliate-Weiterleitung. Jeder ausgehende Link läuft über /go/<merchant>/,
