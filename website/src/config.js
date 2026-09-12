@@ -43,7 +43,7 @@ export const SITE = {
  * gar nicht erst gerendert — besser keine Schaltfläche als eine, die nichts
  * tut und beim Absenden einen Fehler zeigt.
  */
-export const FEEDBACK_AKTIV = false;
+export const FEEDBACK_AKTIV = true;
 
 export const PUBLISHER_ID = "3083037";
 
