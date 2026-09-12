@@ -1,0 +1,113 @@
+---
+/**
+ * Erkennungsraten-Schaubild für die Startseite.
+ *
+ * Kein Schmuckbild: Es zeigt genau das Argument der Überschrift — auf voller
+ * Skala ist der Abstand zwischen den Anbietern nicht darstellbar, und selbst
+ * stark vergrößert bleibt er bei 0,2 Prozentpunkten.
+ *
+ * Bewusst OHNE herstellerbezogene Einzelwerte. Solche Zahlen dürfen erst in
+ * die Seite, wenn sie gegen AV-TEST geprüft und mit Prüfmonat belegt sind
+ * (siehe STATUS.md, "Fakten prüfen"). Die Bandbreite 99,6–99,8 % ist die
+ * Aussage, die belegt werden muss — dann gehört hier der Prüfmonat dazu.
+ *
+ * Reines Inline-SVG: kein zusätzlicher Request, keine Ladezeit, skaliert
+ * verlustfrei, folgt dem Farbschema hell wie dunkel.
+ */
+---
+
+<figure class="grafik">
+  <svg viewBox="-2 -2 328 186" role="img" aria-labelledby="eg-titel eg-text">
+    <title id="eg-titel">Erkennungsraten im Vergleich</title>
+    <desc id="eg-text">
+      Auf einer Skala von 0 bis 100 Prozent liegen alle vier geprüften Anbieter
+      auf demselben Punkt. Erst stark vergrößert wird ein Abstand von 0,2
+      Prozentpunkten zwischen 99,6 und 99,8 Prozent sichtbar.
+    </desc>
+
+    <!-- Volle Skala -->
+    <text x="0" y="12" class="kopf">Volle Skala 0 – 100 %</text>
+    <rect x="0" y="24" width="320" height="16" rx="3" class="spur"></rect>
+    <rect x="303" y="24" width="4" height="16" rx="2" class="punkt"></rect>
+    <text x="0" y="56" class="achse">0</text>
+    <text x="320" y="56" class="achse ende">100</text>
+    <text x="305" y="74" class="notiz ende">alle vier Anbieter</text>
+
+    <!-- Verbindung zur Vergrößerung -->
+    <path d="M299 40 L150 100 M311 40 L318 100" class="lupe"></path>
+
+    <!-- Ausschnitt -->
+    <text x="0" y="118" class="kopf">Ausschnitt 99,5 – 100 %</text>
+    <rect x="0" y="130" width="320" height="26" rx="3" class="spur"></rect>
+    <rect x="64" y="130" width="128" height="26" rx="3" class="band"></rect>
+    <text x="0" y="174" class="achse">99,5</text>
+    <text x="128" y="174" class="achse mitte">0,2 Prozentpunkte</text>
+    <text x="320" y="174" class="achse ende">100</text>
+  </svg>
+  {/* Bewusst außerhalb des SVG: SVG-Text bricht nicht um und ragte auf 320 px
+      aus dem Sichtbereich. Als echter Text bricht die Zeile und ist lesbar. */}
+  <figcaption>
+    Der gesamte Unterschied, um den die meisten Ranglisten sortieren.
+  </figcaption>
+</figure>
+
+<style>
+  .grafik {
+    margin: 0;
+    width: 100%;
+  }
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  figcaption {
+    margin-top: 0.6rem;
+    font-size: 0.82rem;
+    line-height: 1.45;
+    color: var(--ink-soft);
+  }
+  .spur {
+    fill: var(--surface-alt);
+  }
+  .band {
+    fill: var(--accent-soft);
+    stroke: var(--accent);
+    stroke-width: 1;
+  }
+  .punkt {
+    fill: var(--accent);
+  }
+  .lupe {
+    stroke: var(--rule);
+    stroke-width: 1;
+    stroke-dasharray: 3 3;
+    fill: none;
+  }
+  text {
+    font-family: Archivo, "Helvetica Neue", Arial, sans-serif;
+  }
+  .kopf {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    fill: var(--ink-faint);
+  }
+  .achse {
+    font-size: 11px;
+    fill: var(--ink-faint);
+  }
+  .notiz {
+    font-size: 12px;
+    fill: var(--ink-soft);
+  }
+  .ende {
+    text-anchor: end;
+  }
+  .mitte {
+    text-anchor: middle;
+    fill: var(--accent);
+    font-weight: 600;
+  }
+</style>

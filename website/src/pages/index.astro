@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import ErkennungsGrafik from "../components/ErkennungsGrafik.astro";
 import { SITE } from "../config.js";
 
 const artikel = (await getCollection("artikel", ({ data }) => !data.draft)).sort(
@@ -23,12 +24,17 @@ const einstiege = [
     ziel: "/anbieter/",
     hinweis: "Die Anbieter im Überblick",
   },
-  {
-    frage: "Wie kommen diese Empfehlungen zustande?",
-    ziel: "/methodik/",
-    hinweis: "Methodik und Finanzierung",
-  },
 ];
+
+// Der frühere dritte Einstieg ("Wie kommen diese Empfehlungen zustande?")
+// führte auf /methodik/ und passte hier nicht: Wer auf der Startseite steht,
+// sucht ein Produkt, nicht unsere Arbeitsweise. Die Methodik bleibt über die
+// Kopfzeile erreichbar, wo sie hingehört.
+//
+// Der Platz gehört der meistgestellten Frage der Nische — "reicht Windows
+// Defender?" (PLAN.md, Artikel 11). Der Einstieg kommt zurück, sobald der
+// Artikel steht; bis dahin lieber zwei echte Wege als drei mit einem
+// Blindgänger.
 
 const schema = [
   {
@@ -45,19 +51,25 @@ const schema = [
 <BaseLayout title={SITE.name} description={SITE.description} schema={schema}>
   <section class="hero">
     <div class="shell hero-inner">
-      {/* HAC — siehe ../../content/SCHREIBWEISE.md */}
-      <h1>Alle erkennen fast alles. Trotzdem ist die Wahl nicht egal.</h1>
-      <p class="lead">
-        Zwischen 99,6 % und 99,8 % Erkennung liegt kein Unterschied, den du je
-        bemerken würdest — genau darauf vergleichen aber die meisten Ranglisten.
-      </p>
-      <p class="lead">
-        Es ist wie bei Versicherungen: Der Schutz ähnelt sich bei allen
-        Anbietern, der Unterschied steckt im Kleingedruckten und im Preis nach
-        dem ersten Jahr. Wenn du gerade vor einer Verlängerung stehst oder einen
-        neuen Rechner einrichtest, ist das die Frage, die zählt.
-      </p>
-      <a class="cta" href="/artikel/">Zu den Vergleichen</a>
+      <div class="hero-text">
+        {/* HAC — siehe ../../content/SCHREIBWEISE.md */}
+        <h1>Alle erkennen fast alles. Trotzdem ist die Wahl nicht egal.</h1>
+        <p class="lead">
+          Zwischen 99,6 % und 99,8 % Erkennung liegt kein Unterschied, den du je
+          bemerken würdest — genau darauf vergleichen aber die meisten Ranglisten.
+        </p>
+        <p class="lead">
+          Es ist wie bei Versicherungen: Der Schutz ähnelt sich bei allen
+          Anbietern, der Unterschied steckt im Kleingedruckten und im Preis nach
+          dem ersten Jahr. Wenn du gerade vor einer Verlängerung stehst oder einen
+          neuen Rechner einrichtest, ist das die Frage, die zählt.
+        </p>
+        <a class="cta" href="/artikel/">Zu den Vergleichen</a>
+      </div>
+
+      <div class="hero-bild">
+        <ErkennungsGrafik />
+      </div>
     </div>
   </section>
 
@@ -133,15 +145,58 @@ const schema = [
   }
 
   .hero {
+    --schild: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22M12%201.8%2021%205.6v6.6c0%204.9-3.9%208.5-9%2010-5.1-1.5-9-5.1-9-10V5.6z%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.2%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M12%206.4%2015.1%2013.6%2012%2012.1%208.9%2013.6z%22%20fill%3D%22%23000%22%2F%3E%3Cpath%20d%3D%22M12%2017.4%208.9%2013.6%2012%2015.1%2015.1%2013.6z%22%20fill%3D%22%23000%22%2F%3E%3C%2Fsvg%3E");
+    position: relative;
     background: var(--surface);
     border-bottom: 1px solid var(--rule);
     padding-block: 3.75rem 3.25rem;
+    overflow: hidden;
   }
+  /* Bildmarke als blasses Wasserzeichen statt eines Stockfotos: füllt die
+     Fläche, kostet keinen Request und bleibt die eigene Marke. Rein
+     dekorativ, deshalb als Hintergrund und nicht im Dokument. */
+  .hero::before {
+    content: "";
+    position: absolute;
+    right: -3rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 26rem;
+    height: 26rem;
+    pointer-events: none;
+    opacity: 0.035;
+    background: var(--accent);
+    -webkit-mask: var(--schild) center / contain no-repeat;
+    mask: var(--schild) center / contain no-repeat;
+  }
+  @media (max-width: 52rem) {
+    .hero::before {
+      display: none;
+    }
+  }
+  /* Zweispaltig ab Tablet: links das Argument, rechts das Schaubild dazu.
+     Darunter einspaltig — auf dem Telefon steht die Grafik unter dem Text,
+     nie daneben. */
   .hero-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    gap: 2rem;
+  }
+  @media (min-width: 52rem) {
+    .hero-inner {
+      grid-template-columns: minmax(0, 1.15fr) minmax(17rem, 1fr);
+      gap: 3rem;
+    }
+  }
+  .hero-text {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
+  }
+  .hero-bild {
+    min-width: 0;
   }
   .hero h1 {
     margin: 0;
@@ -196,9 +251,8 @@ const schema = [
   }
 
   /* Einstiege: drei Wege in den passenden Inhalt, keine Partnerlinks. */
-  /* Drei Einstiege: entweder eine Spalte oder drei — nie zwei. Bei zwei
-     Spalten bliebe die vierte Zelle leer und die Rasterfarbe scheint als
-     grauer Block durch. */
+  /* Volle Spaltenzahl oder eine — nie dazwischen, sonst bleibt eine Zelle
+     leer und die Rasterfarbe scheint als grauer Block durch. */
   .einstiege {
     list-style: none;
     padding: 0;
@@ -214,7 +268,7 @@ const schema = [
   }
   @media (min-width: 44rem) {
     .einstiege {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
     }
   }
   .einstiege a {
