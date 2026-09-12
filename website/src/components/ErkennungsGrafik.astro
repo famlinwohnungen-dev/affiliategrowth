@@ -10,42 +10,40 @@
  * Verwendung seiner Ergebnisse nur nach vorheriger schriftlicher Zustimmung,
  * AV-TEST lizenziert seine Siegel gesondert. Solange dafür keine Erlaubnis
  * vorliegt, argumentiert diese Seite qualitativ: Das Schaubild zeigt das
- * Größenverhältnis, nicht die Messwerte. Der Verzicht kostet etwas Autorität
- * und trägt dafür kein Risiko — bewusst so entschieden.
+ * Größenverhältnis, nicht die Messwerte.
  *
- * Reines Inline-SVG: kein zusätzlicher Request, keine Ladezeit, skaliert
- * verlustfrei, folgt dem Farbschema hell wie dunkel.
+ * HTML und CSS statt eines SVG mit Beschriftung — und zwar aus einem
+ * gemessenen Grund: In einem SVG skaliert die Schrift mit der Breite des
+ * Elements mit. Bei 320 px kam die Beschriftung auf 9,1 px an, deutlich
+ * unter der 12-px-Grenze aus UI-REGELN.md. Als HTML-Text bleibt jede
+ * Beschriftung bei ihrer rem-Größe, egal wie schmal das Gerät ist. Nur die
+ * Verbindungslinien sind noch SVG, dort gibt es keine Schrift.
  */
 ---
 
 <figure class="grafik">
-  <svg viewBox="-2 -2 328 186" role="img" aria-labelledby="eg-titel eg-text">
-    <title id="eg-titel">Erkennungsraten im Vergleich</title>
-    <desc id="eg-text">
-      Auf einer Skala von 0 bis 100 Prozent liegen alle vier Anbieter auf
-      demselben Punkt am rechten Ende. Erst stark vergrößert wird überhaupt
-      ein Abstand zwischen ihnen sichtbar.
-    </desc>
+  <p class="sr-only">
+    Auf einer Skala von 0 bis 100 Prozent liegen alle vier Anbieter auf
+    demselben Punkt am rechten Ende. Erst stark vergrößert wird überhaupt ein
+    Abstand zwischen ihnen sichtbar.
+  </p>
 
-    <!-- Volle Skala -->
-    <text x="0" y="12" class="kopf">Volle Skala 0 – 100 %</text>
-    <rect x="0" y="24" width="320" height="16" rx="3" class="spur"></rect>
-    <rect x="303" y="24" width="4" height="16" rx="2" class="punkt"></rect>
-    <text x="0" y="56" class="achse">0</text>
-    <text x="320" y="56" class="achse ende">100</text>
-    <text x="305" y="74" class="notiz ende">alle vier Anbieter</text>
+  <div aria-hidden="true">
+    <p class="kopf">Volle Skala 0 – 100 %</p>
+    <div class="spur"><span class="punkt"></span></div>
+    <p class="achse"><span>0</span><span>100</span></p>
+    <p class="notiz rechts">alle vier Anbieter</p>
 
-    <!-- Verbindung zur Vergrößerung -->
-    <path d="M299 40 L150 100 M311 40 L318 100" class="lupe"></path>
+    <svg class="lupe" viewBox="0 0 100 20" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M93 0 L44 20 M97 0 L100 20" fill="none" stroke="currentColor"
+        stroke-width="0.4" stroke-dasharray="1.2 1.2" vector-effect="non-scaling-stroke"></path>
+    </svg>
 
-    <!-- Ausschnitt -->
-    <text x="0" y="118" class="kopf">Derselbe Bereich, stark vergrößert</text>
-    <rect x="0" y="130" width="320" height="26" rx="3" class="spur"></rect>
-    <rect x="64" y="130" width="128" height="26" rx="3" class="band"></rect>
-    <text x="128" y="174" class="achse mitte">der gesamte Abstand</text>
-  </svg>
-  {/* Bewusst außerhalb des SVG: SVG-Text bricht nicht um und ragte auf 320 px
-      aus dem Sichtbereich. Als echter Text bricht die Zeile und ist lesbar. */}
+    <p class="kopf">Derselbe Bereich, stark vergrößert</p>
+    <div class="spur"><span class="band"></span></div>
+    <p class="notiz mitte">der gesamte Abstand</p>
+  </div>
+
   <figcaption>
     So groß ist der Unterschied, um den die meisten Ranglisten sortieren.
   </figcaption>
@@ -56,58 +54,91 @@
     margin: 0;
     width: 100%;
   }
-  svg {
-    display: block;
-    width: 100%;
-    height: auto;
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
   }
-  figcaption {
-    margin-top: 0.6rem;
-    font-size: 0.82rem;
-    line-height: 1.45;
-    color: var(--ink-soft);
-  }
-  .spur {
-    fill: var(--surface-alt);
-  }
-  .band {
-    fill: var(--accent-soft);
-    stroke: var(--accent);
-    stroke-width: 1;
-  }
-  .punkt {
-    fill: var(--accent);
-  }
-  .lupe {
-    stroke: var(--rule);
-    stroke-width: 1;
-    stroke-dasharray: 3 3;
-    fill: none;
-  }
-  text {
-    font-family: Archivo, "Helvetica Neue", Arial, sans-serif;
-  }
+
   .kopf {
-    font-size: 11px;
+    margin: 0 0 0.5rem;
+    font-family: Archivo, sans-serif;
+    font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    fill: var(--ink-faint);
+    color: var(--ink-faint);
   }
+
+  /* Die Spuren sind Blöcke, keine Grafik: Sie behalten ihre Höhe unabhängig
+     von der Breite, und nichts an ihnen skaliert mit. */
+  .spur {
+    position: relative;
+    height: 1.15rem;
+    border-radius: 3px;
+    background: var(--surface-alt);
+  }
+  .punkt {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 3.5%;
+    width: 4px;
+    border-radius: 2px;
+    background: var(--accent);
+  }
+  .band {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 20%;
+    right: 40%;
+    border-radius: 3px;
+    background: var(--accent-soft);
+    border: 1px solid var(--accent);
+  }
+
   .achse {
-    font-size: 11px;
-    fill: var(--ink-faint);
+    display: flex;
+    justify-content: space-between;
+    margin: 0.35rem 0 0;
+    font-family: Archivo, sans-serif;
+    font-size: 0.75rem;
+    color: var(--ink-faint);
   }
   .notiz {
-    font-size: 12px;
-    fill: var(--ink-soft);
+    margin: 0.3rem 0 0;
+    font-family: Archivo, sans-serif;
+    font-size: 0.78rem;
+    color: var(--ink-soft);
   }
-  .ende {
-    text-anchor: end;
+  .rechts {
+    text-align: right;
   }
   .mitte {
-    text-anchor: middle;
-    fill: var(--accent);
+    /* Mittig unter dem Band, nicht unter der Spur. */
+    margin-left: 20%;
+    margin-right: 40%;
+    text-align: center;
+    color: var(--accent);
     font-weight: 600;
+  }
+
+  .lupe {
+    display: block;
+    width: 100%;
+    height: 1.6rem;
+    margin: 0.5rem 0 0.9rem;
+    color: var(--rule);
+  }
+
+  figcaption {
+    margin-top: 1rem;
+    font-size: 0.82rem;
+    line-height: 1.45;
+    color: var(--ink-soft);
   }
 </style>

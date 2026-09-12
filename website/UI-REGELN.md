@@ -27,6 +27,12 @@ align-items: center`, nicht über eine feste Zeilenhöhe.
 Marker. Was auf dem 27-Zoll-Bildschirm noch elegant wirkt, ist auf einem
 Telefon in der Bahn nicht mehr lesbar.
 
+**Beschriftung gehört nicht in ein SVG.** In einem SVG mit `viewBox` skaliert
+die Schrift mit der Elementbreite: `font-size: 11px` kommt in einer 272 px
+breiten Spalte als 9,1 px an. Zeichne im SVG nur Formen und Linien, setze
+jede Beschriftung als HTML-Text daneben oder darunter. Der Nebeneffekt ist
+angenehm: HTML-Text bricht um, ist markierbar und durchsuchbar.
+
 ### 3. Die Seite scrollt nie waagerecht
 
 Breite Inhalte — Tabellen, Codeblöcke, Diagramme — scrollen **in ihrem eigenen
@@ -64,18 +70,30 @@ der Konsole laufen lassen — bei **320, 375 und 768 px**.
         && getComputedStyle(el.parentElement || el).overflowX !== 'auto')
       p.push('RAGT HERAUS: ' + el.tagName.toLowerCase());
   });
-  document.querySelectorAll('a,button,input,textarea,summary').forEach(el => {
+  document.querySelectorAll('a,button,input,textarea,summary,label').forEach(el => {
     if (el.closest('.honigtopf')) return;
     if (el.tagName === 'A' && el.closest('p,li,td')) return;   // Fließtextlinks
+    if (el.tagName === 'INPUT' && el.type === 'radio') return; // getarnt hinter dem label
     const r = el.getBoundingClientRect();
     if (!r.width || !r.height) return;
     if (r.height < 40) p.push('ZU KLEIN ' + Math.round(r.width) + 'x' + Math.round(r.height)
       + ': ' + el.textContent.trim().slice(0, 24));
   });
-  document.querySelectorAll('p,li,td,th,span,label,button,a').forEach(el => {
+  document.querySelectorAll('p,li,td,th,span,label,button,a,figcaption,legend,dt,dd,summary').forEach(el => {
     if (!el.textContent.trim() || el.closest('.sr-only')) return;
     const fs = parseFloat(getComputedStyle(el).fontSize);
     if (fs && fs < 11.5) p.push('SCHRIFT ' + fs.toFixed(1) + 'px: ' + el.textContent.trim().slice(0, 24));
+  });
+  // SVG-Text skaliert mit der Elementbreite — die gerenderte Groesse zaehlt,
+  // nicht die im Stylesheet notierte.
+  document.querySelectorAll('svg').forEach(svg => {
+    const r = svg.getBoundingClientRect(), vb = svg.viewBox.baseVal;
+    const k = vb && vb.width ? r.width / vb.width : 1;
+    svg.querySelectorAll('text,tspan').forEach(t => {
+      if (!t.textContent.trim()) return;
+      const eff = parseFloat(getComputedStyle(t).fontSize) * k;
+      if (eff < 11.5) p.push('SVG-SCHRIFT ' + eff.toFixed(1) + 'px: ' + t.textContent.trim().slice(0, 24));
+    });
   });
   return [...new Set(p)];
 })();
@@ -86,6 +104,14 @@ Leeres Ergebnis auf allen drei Breiten = bestanden.
 **320 px nicht überspringen.** Es ist die schmalste realistische Breite
 (iPhone SE der ersten Generationen, Android-Geräte im Einstiegssegment) und
 bricht zuverlässig Dinge, die bei 375 px noch passen.
+
+**Interaktive Bauteile im Endzustand prüfen, nicht nur im Ausgangszustand.**
+Ein Ergebnisblock, der erst nach drei Klicks erscheint, wird sonst nie
+gemessen. Erst durchklicken, dann das Skript laufen lassen.
+
+Bei größeren Änderungen zusätzlich: 360 px (verbreitetste Android-Breite),
+390 und 414 px sowie einmal quer (667 × 375). Querformat ist der Fall, in
+dem zweispaltige Bereiche zu früh umbrechen.
 
 ---
 
@@ -105,3 +131,16 @@ Alles davon sah auf dem Schreibtisch tadellos aus:
 
 Sieben Befunde in einem Durchgang, keiner davon am Schreibtisch sichtbar.
 Genau deshalb wird gemessen statt geschaut.
+
+## Nachtrag: der Fund, den das Skript selbst verpasst hat
+
+Das Startseiten-Schaubild war ein SVG mit eingebauter Beschriftung. Bei
+320 px kam sie mit **9,1 px** an — das Skript meldete nichts, weil es nur
+HTML-Elemente abfragte. Behoben in zwei Schritten: Das Schaubild besteht
+jetzt aus HTML und CSS mit reinem Linien-SVG, und das Skript misst
+SVG-Text mit.
+
+Die Lehre steht über der Tabelle: Ein Prüfskript belegt nur, was es abfragt.
+Wenn ein neues Bauteil eine Darstellungsform mitbringt, die das Skript nicht
+kennt, gehört die Prüfung erweitert — sonst ist ein leeres Ergebnis kein
+Freispruch, sondern eine Lücke.
