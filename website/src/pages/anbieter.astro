@@ -1,0 +1,173 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import AffiliateButton from "../components/AffiliateButton.astro";
+import { SITE, MERCHANTS } from "../config.js";
+
+/**
+ * Anbieterübersicht. Hier stehen Affiliate-Links bewusst — anders als auf der
+ * Startseite, denn jeder Link folgt hier auf einen erklärenden Text. Genau das
+ * unterscheidet eine Inhaltsseite von einer reinen Linksammlung.
+ *
+ * PRÜFEN vor Livegang: Die Beschreibungen enthalten keine Testwerte, aber die
+ * Aussagen zu Architektur und Ausrichtung gegen die Herstellerseiten abgleichen.
+ */
+const anbieter = [
+  {
+    key: "eset",
+    lang: [
+      "ESET stammt aus Bratislava und ist einer der wenigen großen Anbieter, die konsequent auf einen schlanken lokalen Client setzen. Wer in die Einstellungen geht, findet dort mehr Schalter als bei der Konkurrenz — inklusive Optionen, die andere Hersteller bewusst wegabstrahieren.",
+      "Das macht ESET zur naheliegenden Wahl für technisch versierte Nutzer und für kleinere Unternehmen, in denen jemand die Konfiguration tatsächlich betreut. Für Einsteiger, die nach der Installation nie wieder hinsehen wollen, ist der Funktionsumfang eher Ballast.",
+    ],
+  },
+  {
+    key: "bitdefender",
+    lang: [
+      "Bitdefender kommt aus Bukarest und verfolgt die entgegengesetzte Philosophie: möglichst wenige Entscheidungen für den Nutzer. Der sogenannte Autopilot trifft Einstellungen selbst und meldet sich nur, wenn wirklich etwas zu tun ist.",
+      "Ein Großteil der Analyse läuft in der Cloud, was den Rechner entlastet — aber eine funktionierende Internetverbindung voraussetzt. Offline greift ein reduzierter lokaler Schutz. Für die meisten Privatnutzer ist das der bequemste Kompromiss.",
+    ],
+  },
+  {
+    key: "gdata",
+    lang: [
+      "G DATA sitzt in Bochum und entwickelt dort auch. Für alle, denen Datenverarbeitung innerhalb Deutschlands wichtig ist — etwa weil die Software beruflich eingesetzt wird und der Verarbeitungsort dokumentiert werden muss — ist das ein Argument, das kein ausländischer Anbieter liefern kann.",
+      "Technisch setzt G DATA traditionell auf zwei parallele Scan-Engines. Das ist gründlich, kostet aber mehr Rechenleistung als cloudgestützte Ansätze. Auf älteren Geräten kann das spürbar werden.",
+    ],
+  },
+  {
+    key: "kaspersky",
+    lang: [
+      "Kaspersky gilt technisch seit Jahren als stark, ist in Deutschland aber ein Sonderfall: Das Bundesamt für Sicherheit in der Informationstechnik (BSI) warnte im März 2022 vor dem Einsatz der Software. Die Begründung war nicht ein konkreter technischer Mangel, sondern das Risiko, dass ein russischer Hersteller zu Handlungen gegen eigene Kunden gezwungen werden könnte.",
+      "Diese Warnung ist bis heute der entscheidende Punkt für deutsche Nutzer — insbesondere im beruflichen Umfeld und in Behörden. Wir führen Kaspersky in Vergleichen weiter auf, weil Leser danach suchen. Empfehlen können wir das Produkt für den deutschen Markt nicht.",
+    ],
+    keinLink: true,
+  },
+];
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Virenschutz-Anbieter im Überblick",
+    description:
+      "ESET, Bitdefender, G DATA und Kaspersky: Herkunft, technischer Ansatz und für wen sich welcher Anbieter eignet.",
+    inLanguage: SITE.language,
+  },
+];
+---
+
+<BaseLayout
+  title="Die Anbieter im Überblick"
+  description="ESET, Bitdefender, G DATA und Kaspersky: Herkunft, technischer Ansatz und für wen sich welcher Anbieter eignet — inklusive der BSI-Warnung zu Kaspersky."
+  schema={schema}
+>
+  <div class="shell seite">
+    <header>
+      <p class="eyebrow">Anbieter</p>
+      <h1>Die Anbieter im Überblick</h1>
+      <p class="lead">
+        Vier Hersteller mit eigenem Angebot für den deutschen Markt — was sie
+        unterscheidet und für wen sich welcher eignet.
+      </p>
+    </header>
+
+    <p class="notiz">
+      Norton, Avira, McAfee und Avast fehlen hier. Sie unterhalten in
+      Deutschland kein Partnerprogramm, über das sich diese Seite finanzieren
+      ließe. Das ist eine Einschränkung der Auswahl, und wir halten es für
+      redlicher, sie zu nennen, als sie zu verschweigen.
+    </p>
+
+    {
+      anbieter.map(({ key, lang, keinLink }) => {
+        const m = MERCHANTS[key as keyof typeof MERCHANTS];
+        return (
+          <section class="anbieter">
+            <h2>
+              {m.name}
+              <span class="land">{m.land}</span>
+            </h2>
+            {m.hinweis && <p class="warnung">{m.hinweis}</p>}
+            {lang.map((absatz) => (
+              <p>{absatz}</p>
+            ))}
+            {!keinLink && (
+              <p class="aktion">
+                <AffiliateButton
+                  merchant={key}
+                  variant={m.primary ? "primary" : "quiet"}
+                  label={`${m.name} ansehen`}
+                />
+              </p>
+            )}
+          </section>
+        );
+      })
+    }
+
+    <p class="weiter">
+      Wie diese Einschätzungen entstehen und wie sich die Seite finanziert,
+      steht auf der Seite <a href="/methodik/">Methodik</a>. Die konkreten
+      Gegenüberstellungen findest du unter <a href="/artikel/">Vergleiche</a>.
+    </p>
+  </div>
+</BaseLayout>
+
+<style>
+  .seite {
+    padding-block: 3rem 1rem;
+  }
+  .lead {
+    font-size: 1.13rem;
+    color: var(--ink-soft);
+    max-width: 56ch;
+  }
+  .notiz {
+    background: var(--surface-alt);
+    border-radius: var(--radius);
+    padding: 1rem 1.2rem;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    margin: 1.75rem 0 0;
+  }
+  .anbieter {
+    border-top: 1px solid var(--rule);
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+  }
+  .anbieter h2 {
+    display: flex;
+    align-items: baseline;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+    margin-top: 0;
+  }
+  .land {
+    font-family: Archivo, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+  }
+  .warnung {
+    background: var(--warn-soft);
+    border-left: 3px solid var(--warn);
+    border-radius: 2px;
+    padding: 0.6rem 0.9rem;
+    font-family: Archivo, sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--warn);
+    max-width: var(--measure);
+  }
+  .aktion {
+    margin-top: 1.25rem;
+  }
+  .weiter {
+    border-top: 1px solid var(--rule);
+    margin-top: 2.75rem;
+    padding-top: 1.5rem;
+    font-size: 0.93rem;
+    color: var(--ink-soft);
+  }
+</style>

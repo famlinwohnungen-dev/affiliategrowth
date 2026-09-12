@@ -1,0 +1,192 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { SITE } from "../config.js";
+
+const schritte = [
+  {
+    titel: "Anforderung klären",
+    text: "Ein Rechner oder fünf? Nur Windows oder gemischt mit Mac und Android? Privat oder im Betrieb? Diese drei Fragen schließen die meisten Produkte bereits aus — noch bevor irgendein Testergebnis eine Rolle spielt.",
+  },
+  {
+    titel: "Zwei Kandidaten gegenüberstellen",
+    text: "Ein Direktvergleich zeigt Unterschiede, eine Rangliste aus zwanzig Produkten verdeckt sie. Deshalb steht hier immer ein Paar im Mittelpunkt statt einer Bestenliste, in der Platz 3 und Platz 7 sich in nichts unterscheiden.",
+  },
+  {
+    titel: "Empfehlung mit Geltungsbereich",
+    text: "Jede Empfehlung nennt, für wen sie gilt und für wen nicht. Ein Produkt, das für alle das beste ist, gibt es nicht — und wer das behauptet, hat entweder nicht genau hingesehen oder verkauft etwas.",
+  },
+];
+
+const schema = [
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    name: "Methodik und Finanzierung",
+    description:
+      "Wie die Vergleiche auf dieser Seite entstehen, worauf sie sich stützen und wie sich die Seite finanziert.",
+    inLanguage: SITE.language,
+  },
+];
+---
+
+<BaseLayout
+  title="Methodik und Finanzierung"
+  description="Wie die Vergleiche auf dieser Seite entstehen, worauf sie sich stützen, welche Grenzen sie haben und wie sich die Seite finanziert."
+  schema={schema}
+>
+  <div class="shell seite">
+    <header>
+      <p class="eyebrow">Methodik</p>
+      <h1>So entstehen die Vergleiche</h1>
+      <p class="lead">
+        Wer eine Kaufempfehlung liest, sollte wissen, worauf sie beruht und
+        womit derjenige sein Geld verdient, der sie ausspricht.
+      </p>
+    </header>
+
+    <h2>Warum keine Erkennungsraten im Mittelpunkt stehen</h2>
+    <p>
+      Die Erkennungsraten der etablierten Anbieter liegen in den unabhängigen
+      Tests von <a href="https://www.av-test.org/de/" rel="noopener">AV-TEST</a>
+      und
+      <a href="https://www.av-comparatives.org/" rel="noopener">AV-Comparatives</a>
+      so dicht beieinander, dass sie als Entscheidungskriterium praktisch
+      ausfallen. Zwischen 99,6 % und 99,8 % Erkennung liegt kein Unterschied,
+      den ein Privatnutzer je bemerken würde.
+    </p>
+    <p>
+      Entscheidend sind die Dinge, die im Alltag tatsächlich auffallen:
+      Systemlast auf älteren Geräten, Zahl der abgedeckten Geräte, ob
+      Zusatzfunktionen wirklich genutzt werden — und was beim Verlängern
+      passiert, wo die meisten Anbieter deutlich teurer werden als im ersten
+      Jahr.
+    </p>
+
+    <h2>Drei Schritte</h2>
+    <ol class="schritte">
+      {
+        schritte.map((s, i) => (
+          <li>
+            <span class="nummer">{String(i + 1).padStart(2, "0")}</span>
+            <h3>{s.titel}</h3>
+            <p>{s.text}</p>
+          </li>
+        ))
+      }
+    </ol>
+
+    <h2>Worauf sich die Angaben stützen</h2>
+    <p>
+      Angaben zu Funktionsumfang, Geräteanzahl und Ausstattung stammen von den
+      Produktseiten der Hersteller und werden bei jeder Aktualisierung eines
+      Artikels erneut geprüft. Aussagen zu Schutzwirkung und Systemlast stützen
+      sich auf die veröffentlichten Testreihen von AV-TEST und AV-Comparatives.
+    </p>
+    <p>
+      Preise werden bewusst nicht genannt. Sie ändern sich häufiger, als
+      Artikel aktualisiert werden können — ein veralteter Preis ist schlechter
+      als gar keiner.
+    </p>
+
+    <h2>Grenzen</h2>
+    <p>
+      Diese Seite betreibt kein eigenes Testlabor. Für aussagekräftige
+      Malware-Erkennungstests braucht es kontrollierte Umgebungen und
+      tagesaktuelle Schadsoftware-Sammlungen — genau das leisten AV-TEST und
+      AV-Comparatives seit Jahren. Ihre Ergebnisse hier nachzustellen wäre
+      unseriös.
+    </p>
+    <p>
+      Der Beitrag dieser Seite liegt woanders: die vorhandenen Daten
+      einzuordnen, sie auf konkrete Nutzungssituationen zu übersetzen und
+      offenzulegen, wo ein Produkt nicht passt.
+    </p>
+
+    <h2>Wie sich diese Seite finanziert</h2>
+    <p>
+      Über Affiliate-Links. Kauft jemand nach einem Klick auf einen solchen
+      Link ein Produkt, erhalten wir eine Provision vom Anbieter. Für dich
+      ändert sich der Preis dadurch nicht.
+    </p>
+    <p>
+      Zwei Konsequenzen daraus, die offen benannt gehören:
+    </p>
+    <ul>
+      <li>
+        <strong>Die Auswahl ist eingeschränkt.</strong> Es werden nur Anbieter
+        besprochen, die in Deutschland ein Partnerprogramm unterhalten. Norton,
+        Avira, McAfee und Avast fehlen deshalb — nicht, weil sie schlecht
+        wären.
+      </li>
+      <li>
+        <strong>Es besteht ein wirtschaftlicher Anreiz.</strong> Er wird nicht
+        dadurch aufgehoben, dass man ihn erwähnt. Was dagegen hilft:
+        Empfehlungen mit Geltungsbereich statt pauschaler Bestnoten, und
+        Produkte auch dann kritisch einzuordnen, wenn sie Provision bringen.
+        Die BSI-Warnung zu Kaspersky steht auf dieser Seite an prominenter
+        Stelle, obwohl eine Empfehlung dort Geld einbringen würde.
+      </li>
+    </ul>
+
+    <p class="weiter">
+      Die Anbieter im Einzelnen findest du unter
+      <a href="/anbieter/">Anbieter</a>, die konkreten Gegenüberstellungen
+      unter <a href="/artikel/">Vergleiche</a>.
+    </p>
+  </div>
+</BaseLayout>
+
+<style>
+  .seite {
+    padding-block: 3rem 1rem;
+  }
+  .lead {
+    font-size: 1.13rem;
+    color: var(--ink-soft);
+    max-width: 56ch;
+  }
+  .schritte {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0;
+    max-width: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1.75rem;
+  }
+  .schritte li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    border-top: 2px solid var(--accent);
+    padding-top: 0.85rem;
+  }
+  .nummer {
+    font-family: Archivo, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+  }
+  .schritte h3 {
+    margin: 0;
+    font-size: 1rem;
+  }
+  .schritte p {
+    margin: 0;
+    font-size: 0.91rem;
+    color: var(--ink-soft);
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+  .weiter {
+    border-top: 1px solid var(--rule);
+    margin-top: 2.75rem;
+    padding-top: 1.5rem;
+    font-size: 0.93rem;
+    color: var(--ink-soft);
+  }
+</style>
