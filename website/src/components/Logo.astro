@@ -1,0 +1,54 @@
+---
+/**
+ * Wortmarke + Bildmarke. Schild = Schutz, Kompassnadel = Lotse (Orientierung).
+ * Reines SVG, keine Bilddatei — skaliert verlustfrei und lädt ohne Request.
+ */
+interface Props {
+  size?: number;
+  wordmark?: boolean;
+}
+const { size = 28, wordmark = true } = Astro.props;
+---
+
+<span class="logo" style={`--mark: ${size}px`}>
+  <svg
+    class="mark"
+    viewBox="0 0 24 24"
+    width={size}
+    height={size}
+    role="img"
+    aria-label="Schutzlotse"
+  >
+    <path
+      d="M12 1.8 21 5.6v6.6c0 4.9-3.9 8.5-9 10-5.1-1.5-9-5.1-9-10V5.6z"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.6"
+      stroke-linejoin="round"
+    ></path>
+    <path d="M12 6.4 15.1 13.6 12 12.1 8.9 13.6z" fill="currentColor"></path>
+    <path d="M12 17.4 8.9 13.6 12 15.1 15.1 13.6z" fill="currentColor" opacity="0.42"></path>
+  </svg>
+  {wordmark && <span class="wort">Schutzlotse</span>}
+</span>
+
+<style>
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--accent);
+    line-height: 1;
+  }
+  .mark {
+    flex: none;
+    display: block;
+  }
+  .wort {
+    font-family: Archivo, "Helvetica Neue", Arial, sans-serif;
+    font-weight: 700;
+    font-size: calc(var(--mark) * 0.62);
+    letter-spacing: -0.025em;
+    color: var(--ink);
+  }
+</style>

@@ -35,6 +35,10 @@ export const SITE = {
  */
 export const PUBLISHER_ID = "3083037";
 
+/**
+ * `kurz`, `land` und `staerke` speisen die Anbieterkarten auf der Startseite.
+ * Bewusst nur belegbare Fakten — keine erfundenen Testnoten oder Bewertungen.
+ */
 export const MERCHANTS = {
   eset: {
     name: "ESET",
@@ -43,6 +47,9 @@ export const MERCHANTS = {
     trackingUrl: null,
     epc: 0.25,
     primary: true,
+    land: "Slowakei",
+    kurz: "Schlanker Client mit vielen Einstellmöglichkeiten.",
+    staerke: "Für Nutzer, die Kontrolle über Details wollen",
   },
   bitdefender: {
     name: "Bitdefender",
@@ -51,14 +58,9 @@ export const MERCHANTS = {
     trackingUrl: null,
     epc: 0.21,
     primary: true,
-  },
-  kaspersky: {
-    name: "Kaspersky",
-    advertiserId: "14098",
-    homepage: "https://www.kaspersky.com/de/",
-    trackingUrl: null,
-    epc: 0.07,
-    primary: false,
+    land: "Rumänien",
+    kurz: "Cloudgestützte Analyse, stark automatisiert.",
+    staerke: "Für alle, die sich nicht damit beschäftigen wollen",
   },
   gdata: {
     name: "G DATA",
@@ -67,6 +69,24 @@ export const MERCHANTS = {
     trackingUrl: null,
     epc: 0.03,
     primary: false,
+    land: "Deutschland",
+    kurz: "Deutscher Anbieter mit Sitz und Entwicklung in Bochum.",
+    staerke: "Wenn Datenverarbeitung in Deutschland zählt",
+  },
+  kaspersky: {
+    name: "Kaspersky",
+    advertiserId: "14098",
+    homepage: "https://www.kaspersky.com/de/",
+    trackingUrl: null,
+    epc: 0.07,
+    primary: false,
+    land: "Russland",
+    kurz: "Technisch stark, politisch umstritten.",
+    staerke: "Nur mit Blick auf die BSI-Warnung zu bewerten",
+    // Das BSI warnte im März 2022 vor dem Einsatz von Kaspersky-Software.
+    // Für deutsche Leser ist das der entscheidende Punkt — er gehört auf jede
+    // Seite, die Kaspersky erwähnt, nicht ins Kleingedruckte.
+    hinweis: "BSI-Warnung seit März 2022",
   },
 };
 

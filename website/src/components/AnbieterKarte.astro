@@ -1,0 +1,126 @@
+---
+import { MERCHANTS } from "../config.js";
+import AffiliateButton from "./AffiliateButton.astro";
+
+interface Props {
+  merchant: string;
+}
+const { merchant } = Astro.props;
+const m = MERCHANTS[merchant as keyof typeof MERCHANTS];
+if (!m) throw new Error(`AnbieterKarte: unbekannter Anbieter "${merchant}"`);
+
+// Initialen als Platzhalter-Signet — Herstellerlogos sind markenrechtlich
+// geschützt und dürfen nicht ohne Freigabe eingebunden werden.
+const signet = m.name.replace(/[^A-Za-z]/g, "").slice(0, 2).toUpperCase();
+---
+
+<article class="karte">
+  <header>
+    <span class="signet" aria-hidden="true">{signet}</span>
+    <div class="titel">
+      <h3>{m.name}</h3>
+      <p class="land">{m.land}</p>
+    </div>
+  </header>
+
+  <p class="kurz">{m.kurz}</p>
+
+  {m.hinweis && <p class="hinweis">{m.hinweis}</p>}
+
+  <p class="staerke"><span>Passt wenn:</span> {m.staerke}</p>
+
+  <footer>
+    <AffiliateButton
+      merchant={merchant}
+      variant={m.primary ? "primary" : "quiet"}
+      label="Zum Anbieter"
+    />
+  </footer>
+</article>
+
+<style>
+  .karte {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.3rem 1.3rem;
+    height: 100%;
+  }
+
+  header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .signet {
+    flex: none;
+    width: 2.6rem;
+    height: 2.6rem;
+    display: grid;
+    place-items: center;
+    border-radius: var(--radius);
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-family: Archivo, sans-serif;
+    font-weight: 700;
+    font-size: 0.88rem;
+    letter-spacing: 0.02em;
+  }
+
+  .titel h3 {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.2;
+  }
+  .land {
+    margin: 0.1rem 0 0;
+    font-family: Archivo, sans-serif;
+    font-size: 0.75rem;
+    color: var(--ink-faint);
+  }
+
+  .kurz {
+    margin: 0;
+    font-size: 0.94rem;
+    color: var(--ink-soft);
+    /* Karten in einer Reihe sollen gleich hoch bleiben. */
+    flex: 1;
+  }
+
+  .hinweis {
+    margin: 0;
+    font-family: Archivo, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--warn);
+    background: var(--warn-soft);
+    border-radius: 2px;
+    padding: 0.35rem 0.55rem;
+  }
+
+  .staerke {
+    margin: 0;
+    font-size: 0.86rem;
+    color: var(--ink-soft);
+    border-top: 1px solid var(--rule);
+    padding-top: 0.75rem;
+  }
+  .staerke span {
+    font-family: Archivo, sans-serif;
+    font-weight: 600;
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    display: block;
+    margin-bottom: 0.15rem;
+  }
+
+  footer {
+    margin-top: 0.15rem;
+  }
+</style>

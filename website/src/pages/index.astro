@@ -1,11 +1,36 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { SITE } from "../config.js";
+import AnbieterKarte from "../components/AnbieterKarte.astro";
+import { SITE, MERCHANTS } from "../config.js";
 
-const artikel = (await getCollection("artikel", ({ data }) => !data.draft))
-  .sort((a, b) => b.data.published.valueOf() - a.data.published.valueOf())
-  .slice(0, 6);
+const artikel = (await getCollection("artikel", ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.published.valueOf() - a.data.published.valueOf(),
+);
+
+// Kennzahlen aus den echten Daten ableiten, nicht behaupten. Eine
+// Vergleichsseite, die mit erfundenen Zahlen wirbt, verspielt genau das
+// Vertrauen, von dem sie lebt.
+const kennzahlen = [
+  { wert: String(Object.keys(MERCHANTS).length), label: "Anbieter im Vergleich" },
+  { wert: String(artikel.length), label: artikel.length === 1 ? "Vergleich online" : "Vergleiche online" },
+  { wert: "0 €", label: "Mehrkosten für dich" },
+];
+
+const schritte = [
+  {
+    titel: "Anforderung klären",
+    text: "Ein Rechner oder fünf? Windows oder gemischt? Privat oder im Betrieb? Diese drei Fragen schließen die meisten Produkte schon aus.",
+  },
+  {
+    titel: "Direkt vergleichen",
+    text: "Zwei Kandidaten nebeneinander statt einer Rangliste aus zwanzig. Vergleiche zeigen Unterschiede, Ranglisten verstecken sie.",
+  },
+  {
+    titel: "Bewusst entscheiden",
+    text: "Jede Empfehlung nennt, für wen sie gilt und für wen nicht. Ein Produkt, das für alle passt, gibt es nicht.",
+  },
+];
 
 const schema = [
   {
@@ -20,84 +45,301 @@ const schema = [
 ---
 
 <BaseLayout title={SITE.name} description={SITE.description} schema={schema}>
-  <section class="shell hero">
-    <p class="eyebrow">{SITE.tagline}</p>
-    <h1>Welcher Virenschutz lohnt sich wirklich?</h1>
-    <p class="lead">
-      Direkte Vergleiche von ESET, Bitdefender, Kaspersky und G DATA — mit Fokus
-      auf das, was im Alltag zählt: Schutzwirkung, Systemlast, Preis pro Gerät
-      und was beim Verlängern passiert.
-    </p>
+  <section class="hero">
+    <div class="shell hero-inner">
+      <h1>Welcher Virenschutz lohnt sich wirklich?</h1>
+      <p class="lead">
+        Direkte Vergleiche statt Ranglisten — mit Blick auf das, was im Alltag
+        zählt: Systemlast, Preis pro Gerät, Funktionsumfang und was beim
+        Verlängern passiert.
+      </p>
+      <a class="cta" href="#anbieter">Anbieter vergleichen</a>
+    </div>
+
+    <div class="shell">
+      <dl class="kennzahlen">
+        {
+          kennzahlen.map((k) => (
+            <div>
+              <dt>{k.wert}</dt>
+              <dd>{k.label}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </div>
   </section>
 
-  <section class="shell">
-    <h2>Aktuelle Vergleiche</h2>
+  <section class="shell block" id="anbieter">
+    <header class="block-kopf">
+      <div>
+        <p class="eyebrow">Anbieter</p>
+        <h2>Vier Anbieter mit deutschem Angebot</h2>
+      </div>
+      <p class="block-text">
+        Norton, Avira und McAfee fehlen bewusst: Sie bieten in Deutschland kein
+        Partnerprogramm an, über das dieser Vergleich finanziert werden könnte.
+        Diese Seite nennt das lieber, als so zu tun, als wäre die Auswahl
+        vollständig.
+      </p>
+    </header>
+
+    <div class="raster">
+      {Object.keys(MERCHANTS).map((key) => <AnbieterKarte merchant={key} />)}
+    </div>
+  </section>
+
+  <section class="shell block">
+    <header class="block-kopf">
+      <div>
+        <p class="eyebrow">Methode</p>
+        <h2>So entstehen die Vergleiche</h2>
+      </div>
+    </header>
+
+    <ol class="schritte">
+      {
+        schritte.map((s, i) => (
+          <li>
+            <span class="nummer">{String(i + 1).padStart(2, "0")}</span>
+            <h3>{s.titel}</h3>
+            <p>{s.text}</p>
+          </li>
+        ))
+      }
+    </ol>
+  </section>
+
+  <section class="shell block">
+    <header class="block-kopf">
+      <div>
+        <p class="eyebrow">Vergleiche</p>
+        <h2>Aktuelle Artikel</h2>
+      </div>
+      {artikel.length > 0 && <a class="mehr" href="/artikel/">Alle ansehen</a>}
+    </header>
+
     {
       artikel.length === 0 ? (
         <p class="leer">
-          Noch keine Artikel veröffentlicht. Lege den ersten unter{" "}
-          <code>src/content/artikel/</code> an.
+          Noch kein Artikel veröffentlicht. Der erste entsteht unter{" "}
+          <code>src/content/artikel/</code>.
         </p>
       ) : (
-        <ul class="karten">
-          {artikel.map((a) => (
-            <li>
-              <a href={`/artikel/${a.id}/`}>
-                <h3>{a.data.title}</h3>
-                <p>{a.data.description}</p>
-              </a>
-            </li>
+        <div class="raster">
+          {artikel.slice(0, 6).map((a) => (
+            <a class="artikel-karte" href={`/artikel/${a.id}/`}>
+              <span class="art">
+                {a.data.type === "vergleich"
+                  ? "Vergleich"
+                  : a.data.type === "test"
+                    ? "Test"
+                    : "Ratgeber"}
+              </span>
+              <h3>{a.data.title}</h3>
+              <p>{a.data.description}</p>
+            </a>
           ))}
-        </ul>
+        </div>
       )
     }
   </section>
 </BaseLayout>
 
 <style>
+  /* ── Hero ───────────────────────────────────────────────── */
   .hero {
-    padding-block: 4rem 1rem;
+    background: var(--surface);
+    border-bottom: 1px solid var(--rule);
+    padding-block: 3.5rem 0;
+  }
+  .hero-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .hero h1 {
+    margin: 0;
+    max-width: 18ch;
   }
   .lead {
-    font-size: 1.16rem;
+    font-size: 1.14rem;
     color: var(--ink-soft);
-    max-width: 56ch;
+    max-width: 54ch;
+    margin: 0;
   }
-  .karten {
-    list-style: none;
-    padding: 0;
-    margin: 1.25rem 0 0;
+  .cta {
+    display: inline-block;
+    margin-top: 0.35rem;
+    background: var(--accent);
+    color: #fff;
+    font-family: Archivo, sans-serif;
+    font-weight: 600;
+    font-size: 0.94rem;
+    text-decoration: none;
+    padding: 0.7rem 1.35rem;
+    border-radius: var(--radius);
+    transition: background-color 0.15s ease;
+  }
+  .cta:hover {
+    background: var(--accent-hover);
+    color: #fff;
+  }
+
+  /* Kennzahlenband — GetApp-Muster, aber mit belegbaren Zahlen. */
+  .kennzahlen {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
     gap: 1px;
+    margin: 3rem 0 0;
     background: var(--rule);
     border: 1px solid var(--rule);
-    border-radius: var(--radius);
+    border-bottom: none;
+    border-radius: var(--radius) var(--radius) 0 0;
     overflow: hidden;
-    max-width: none;
   }
-  .karten a {
-    display: block;
-    height: 100%;
+  .kennzahlen > div {
+    background: var(--ground);
+    padding: 1.15rem 1.3rem 1.25rem;
+  }
+  .kennzahlen dt {
+    font-family: Archivo, sans-serif;
+    font-size: 1.85rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+    font-variant-numeric: tabular-nums;
+    color: var(--accent);
+    line-height: 1.05;
+  }
+  .kennzahlen dd {
+    margin: 0.2rem 0 0;
+    font-family: Archivo, sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.03em;
+    color: var(--ink-faint);
+  }
+
+  /* ── Blöcke ─────────────────────────────────────────────── */
+  .block {
+    padding-block: 3.25rem 0;
+  }
+  .block-kopf {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+  .block-kopf h2 {
+    margin: 0;
+  }
+  /* Entweder komfortabel neben der Überschrift oder ganz in die nächste
+     Zeile — nie zu einer schmalen, flatternden Spalte gequetscht. */
+  .block-text {
+    margin: 0;
+    font-size: 0.92rem;
+    color: var(--ink-soft);
+    flex: 1 1 24rem;
+    max-width: 46ch;
+  }
+  .block-kopf > div {
+    flex: 1 1 18rem;
+  }
+  .mehr {
+    font-family: Archivo, sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  /* Ein Raster für Anbieter- und Artikelkarten — gleiche Kanten überall. */
+  .raster {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15.5rem, 1fr));
+    gap: 1rem;
+  }
+
+  .artikel-karte {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
     background: var(--surface);
-    padding: 1.3rem 1.4rem;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.3rem 1.3rem;
     text-decoration: none;
     color: inherit;
+    transition: border-color 0.15s ease;
   }
-  .karten a:hover {
-    background: var(--surface-alt);
+  .artikel-karte:hover {
+    border-color: var(--accent);
   }
-  .karten h3 {
-    margin: 0 0 0.35rem;
-    font-size: 1.02rem;
+  .art {
+    font-family: Archivo, sans-serif;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
     color: var(--accent);
   }
-  .karten p {
+  .artikel-karte h3 {
+    margin: 0;
+    font-size: 1.02rem;
+    line-height: 1.3;
+  }
+  .artikel-karte p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--ink-soft);
+  }
+
+  /* ── Methode ────────────────────────────────────────────── */
+  .schritte {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(15.5rem, 1fr));
+    gap: 1.75rem;
+  }
+  .schritte li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    border-top: 2px solid var(--accent);
+    padding-top: 0.85rem;
+  }
+  .nummer {
+    font-family: Archivo, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+  }
+  .schritte h3 {
+    margin: 0;
+    font-size: 1rem;
+  }
+  .schritte p {
     margin: 0;
     font-size: 0.91rem;
     color: var(--ink-soft);
   }
+
   .leer {
     color: var(--ink-faint);
+  }
+
+  @media (max-width: 34rem) {
+    .hero {
+      padding-block: 2.5rem 0;
+    }
+    .kennzahlen {
+      margin-top: 2.25rem;
+    }
   }
 </style>

@@ -1,11 +1,14 @@
 ---
-import { SITE } from "../config.js";
+import Logo from "./Logo.astro";
 ---
 
 <header class="site-header">
   <div class="shell bar">
-    <a href="/" class="brand ui">{SITE.name}</a>
+    <a href="/" class="brand" aria-label="Zur Startseite">
+      <Logo size={26} />
+    </a>
     <nav aria-label="Hauptnavigation">
+      <a href="/#anbieter">Anbieter</a>
       <a href="/artikel/">Vergleiche</a>
     </nav>
   </div>
@@ -15,26 +18,27 @@ import { SITE } from "../config.js";
   .site-header {
     border-bottom: 1px solid var(--rule);
     background: var(--surface);
+    position: sticky;
+    top: 0;
+    z-index: 10;
   }
   .bar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1.5rem;
-    padding-block: 1rem;
+    padding-block: 0.9rem;
   }
   .brand {
-    font-weight: 700;
-    font-size: 1.05rem;
-    color: var(--ink);
     text-decoration: none;
-    letter-spacing: -0.02em;
+    display: inline-flex;
   }
   nav {
     display: flex;
-    gap: 1.25rem;
+    gap: 1.5rem;
     font-family: Archivo, sans-serif;
     font-size: 0.9rem;
+    font-weight: 500;
   }
   nav a {
     text-decoration: none;
