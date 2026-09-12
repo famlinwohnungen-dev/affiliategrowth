@@ -1,0 +1,57 @@
+# Prueft die Website bei jedem Push. Faellt etwas durch, ist es sichtbar,
+# bevor jemand es auf dem Telefon findet.
+#
+# Bewusst NICHT als Deploy-Gate: Cloudflare baut und veroeffentlicht direkt
+# aus GitHub, unabhaengig von diesem Lauf. Ein roter Haken heisst also
+# "nachbessern", nicht "nicht ausgeliefert".
+name: Website
+
+on:
+  push:
+    branches: [main]
+    paths: ["website/**", ".github/workflows/website.yml"]
+  pull_request:
+    paths: ["website/**", ".github/workflows/website.yml"]
+  workflow_dispatch:
+
+defaults:
+  run:
+    working-directory: website
+
+jobs:
+  pruefen:
+    name: Bauen und testen
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: website/package-lock.json
+
+      - name: Abhaengigkeiten
+        run: npm ci
+
+      # Baut und laesst danach check-links.mjs laufen (postbuild). Bricht ab,
+      # sobald ein interner Link ins Leere zeigt — die Klasse von Fehler, die
+      # einmal saemtliche Affiliate-Links unbrauchbar gemacht hat.
+      - name: Bauen und interne Links pruefen
+        run: npm run build
+
+      - name: Browser holen
+        run: npx playwright install --with-deps chromium
+
+      - name: Tests
+        run: npx playwright test
+
+      - name: Bericht sichern
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-bericht
+          path: website/playwright-report/
+          retention-days: 14

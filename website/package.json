@@ -13,7 +13,10 @@
     "db:init": "wrangler d1 execute schutzlotse-feedback --remote --file=db/schema.sql",
     "db:init:local": "wrangler d1 execute schutzlotse-feedback --local --file=db/schema.sql",
     "db:lesen": "wrangler d1 execute schutzlotse-feedback --remote --command=\"SELECT erstellt_am, seite, bewertung, quelle, substr(coalesce(nachricht,''),1,120) AS nachricht, email FROM feedback ORDER BY erstellt_am DESC LIMIT 50\"",
-    "db:zaehlen": "wrangler d1 execute schutzlotse-feedback --remote --command=\"SELECT seite, bewertung, count(*) AS anzahl FROM feedback WHERE bewertung IS NOT NULL GROUP BY seite, bewertung ORDER BY anzahl DESC\""
+    "db:zaehlen": "wrangler d1 execute schutzlotse-feedback --remote --command=\"SELECT seite, bewertung, count(*) AS anzahl FROM feedback WHERE bewertung IS NOT NULL GROUP BY seite, bewertung ORDER BY anzahl DESC\"",
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:build": "npm run build && playwright test"
   },
   "author": "",
   "license": "ISC",
@@ -26,6 +29,7 @@
   },
   "private": true,
   "devDependencies": {
+    "@playwright/test": "^1.63.0",
     "wrangler": "4.131.1"
   }
 }

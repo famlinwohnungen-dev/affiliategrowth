@@ -126,6 +126,15 @@ code {
 }
 
 /* Wide content must scroll in its own container, never the page body. */
+/* Lange Woerter und URLs brechen um, statt die Seite breitzuziehen. Anlass:
+   Auf /datenschutz/ verschluckte Astro ein Leerzeichen vor einem Link, aus
+   "Informationen: Datenschutzerklaerung" wurde ein Wort mit 34 Zeichen, und
+   die Seite scrollte bei 320 px waagerecht. Das Leerzeichen ist repariert;
+   diese Regel faengt den naechsten Fall dieser Art ab. */
+body {
+  overflow-wrap: break-word;
+}
+
 .scroller {
   overflow-x: auto;
   border: 1px solid var(--rule);
