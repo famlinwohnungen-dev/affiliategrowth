@@ -90,6 +90,60 @@ test.describe("Vergleichstabelle", () => {
   });
 });
 
+test.describe("Kopfzeile", () => {
+  /**
+   * Vorfall: Auf dem Telefon stand nur noch das Schild, ohne "Schutzlotse".
+   * Ursache war eine Regel aus der Zeit mit drei Navigationseintraegen, die
+   * die Wortmarke unter 26 rem ausblendete. Ein Schild ohne Namen sagt einem
+   * Leser nicht, auf welcher Seite er gelandet ist — und der Name ist das
+   * Einzige, was er sich merken kann.
+   */
+  for (const w of [320, 360, 375, 414, 768]) {
+    test(`der Seitenname steht bei ${w} px in der Kopfzeile`, async ({ page }) => {
+      await page.setViewportSize({ width: w, height: 700 });
+      await page.goto("/");
+      const wort = page.locator(".brand .wort");
+      await expect(wort, "Wortmarke fehlt").toBeVisible();
+      await expect(wort).toHaveText("Schutzlotse");
+    });
+  }
+
+  /**
+   * Das Gegenstueck: Der Name darf nicht auf Kosten der Navigation stehen.
+   * Bei 320 px bleiben zurzeit 21 px Luft zwischen Wortmarke und erstem
+   * Navigationslink. Faellt dieser Test, ist die Kopfzeile zu voll geworden
+   * — dann ist es Zeit fuer ein Klappmenue, nicht dafuer, den Namen wieder
+   * auszublenden.
+   */
+  test("Name und Navigation passen bei 320 px nebeneinander", async ({ page }) => {
+    await page.setViewportSize({ width: 320, height: 700 });
+    await page.goto("/");
+    const lage = await page.evaluate(() => {
+      const bar = document.querySelector(".bar");
+      const brand = document.querySelector(".brand").getBoundingClientRect();
+      const nav = document.querySelector("nav").getBoundingClientRect();
+      return {
+        ueberstand: bar.scrollWidth - bar.clientWidth,
+        luecke: Math.round(nav.left - brand.right),
+        eineZeile: Math.abs(brand.top - nav.top) < 24,
+        navRechts: Math.round(nav.right),
+        vw: innerWidth,
+      };
+    });
+    expect(lage.ueberstand, "Kopfzeile laeuft ueber").toBe(0);
+    expect(lage.luecke, "Wortmarke und Navigation kleben aneinander").toBeGreaterThanOrEqual(8);
+    expect(lage.eineZeile, "Kopfzeile bricht um").toBe(true);
+    expect(lage.navRechts).toBeLessThanOrEqual(lage.vw);
+  });
+
+  test("das Logo fuehrt zurueck zur Startseite", async ({ page }) => {
+    await page.setViewportSize({ width: 320, height: 700 });
+    await page.goto("/artikel/g-data-vs-bitdefender/");
+    await page.locator(".brand").click();
+    await expect(page).toHaveURL(/\/$/);
+  });
+});
+
 /**
  * Vorfall: Das Schaubild war ein SVG mit eingebauter Beschriftung. Bei 320 px
  * kam sie mit 9,1 px an. Die Pruefung steckt in befunde(), dieser Test haelt

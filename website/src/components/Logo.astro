@@ -52,11 +52,9 @@ const { size = 28, wordmark = true } = Astro.props;
     color: var(--ink);
   }
 
-  /* Unter ~420 px konkurriert die Wortmarke mit der Navigation um den Platz.
-     Die Bildmarke allein bleibt als Rücksprung zur Startseite erkennbar. */
-  @media (max-width: 26rem) {
-    .wort {
-      display: none;
-    }
-  }
+  /* Die Wortmarke bleibt auf jeder Breite stehen.
+     Sie war bis 26 rem ausgeblendet, weil sie damals mit drei
+     Navigationseinträgen um den Platz konkurrierte. Seit die Kopfzeile nur
+     noch "Vergleiche" und "Anbieter" trägt, passt beides — und ein Schild
+     ohne Namen sagt einem neuen Leser nicht, auf welcher Seite er ist. */
 </style>

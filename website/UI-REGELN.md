@@ -157,6 +157,24 @@ Wenn ein neues Bauteil eine Darstellungsform mitbringt, die das Skript nicht
 kennt, gehört die Prüfung erweitert — sonst ist ein leeres Ergebnis kein
 Freispruch, sondern eine Lücke.
 
+## Nachtrag 3: der Seitenname war auf dem Telefon verschwunden
+
+Die Wortmarke war unter 26 rem ausgeblendet — eine Regel aus der Zeit, als
+die Kopfzeile drei Navigationseinträge trug. Nach dem Ausbau auf zwei war
+sie überflüssig, blieb aber stehen. Auf dem Telefon stand nur noch das
+Schild.
+
+Gemessen: Bei 320 px passen Wortmarke und beide Links nebeneinander, mit
+21 px Luft. Ein Klappmenü brauchte es also nicht — und für zwei Einträge
+wäre es ein Rückschritt: ein Tipp mehr, und die Navigation ist unsichtbar.
+
+**Die Regel daraus:** Ein Klappmenü ist die Antwort auf zu viele Einträge,
+nicht auf zu wenig Platz. Erst messen, ob es wirklich eng ist. Und wenn
+etwas weichen muss, nie der Seitenname — er ist das Einzige, was ein Leser
+sich merkt. `tests/mobil.spec.mjs` prüft beides: dass der Name auf jeder
+Breite steht **und** dass die Kopfzeile nicht überläuft. Fällt der zweite
+Test, ist die Kopfzeile zu voll — dann ist das Klappmenü fällig.
+
 ## Nachtrag 2: die Vergleichstabelle, gemeldet von einem echten Telefon
 
 Bei 375 px war die Tabelle 418 px breit in einem 327 px breiten Container.
