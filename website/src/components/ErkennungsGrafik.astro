@@ -4,12 +4,14 @@
  *
  * Kein Schmuckbild: Es zeigt genau das Argument der Überschrift — auf voller
  * Skala ist der Abstand zwischen den Anbietern nicht darstellbar, und selbst
- * stark vergrößert bleibt er bei 0,2 Prozentpunkten.
+ * stark vergrößert bleibt er winzig.
  *
- * Bewusst OHNE herstellerbezogene Einzelwerte. Solche Zahlen dürfen erst in
- * die Seite, wenn sie gegen AV-TEST geprüft und mit Prüfmonat belegt sind
- * (siehe STATUS.md, "Fakten prüfen"). Die Bandbreite 99,6–99,8 % ist die
- * Aussage, die belegt werden muss — dann gehört hier der Prüfmonat dazu.
+ * Bewusst OHNE jede Zahl aus fremden Tests. AV-Comparatives erlaubt die
+ * Verwendung seiner Ergebnisse nur nach vorheriger schriftlicher Zustimmung,
+ * AV-TEST lizenziert seine Siegel gesondert. Solange dafür keine Erlaubnis
+ * vorliegt, argumentiert diese Seite qualitativ: Das Schaubild zeigt das
+ * Größenverhältnis, nicht die Messwerte. Der Verzicht kostet etwas Autorität
+ * und trägt dafür kein Risiko — bewusst so entschieden.
  *
  * Reines Inline-SVG: kein zusätzlicher Request, keine Ladezeit, skaliert
  * verlustfrei, folgt dem Farbschema hell wie dunkel.
@@ -20,9 +22,9 @@
   <svg viewBox="-2 -2 328 186" role="img" aria-labelledby="eg-titel eg-text">
     <title id="eg-titel">Erkennungsraten im Vergleich</title>
     <desc id="eg-text">
-      Auf einer Skala von 0 bis 100 Prozent liegen alle vier geprüften Anbieter
-      auf demselben Punkt. Erst stark vergrößert wird ein Abstand von 0,2
-      Prozentpunkten zwischen 99,6 und 99,8 Prozent sichtbar.
+      Auf einer Skala von 0 bis 100 Prozent liegen alle vier Anbieter auf
+      demselben Punkt am rechten Ende. Erst stark vergrößert wird überhaupt
+      ein Abstand zwischen ihnen sichtbar.
     </desc>
 
     <!-- Volle Skala -->
@@ -37,17 +39,15 @@
     <path d="M299 40 L150 100 M311 40 L318 100" class="lupe"></path>
 
     <!-- Ausschnitt -->
-    <text x="0" y="118" class="kopf">Ausschnitt 99,5 – 100 %</text>
+    <text x="0" y="118" class="kopf">Derselbe Bereich, stark vergrößert</text>
     <rect x="0" y="130" width="320" height="26" rx="3" class="spur"></rect>
     <rect x="64" y="130" width="128" height="26" rx="3" class="band"></rect>
-    <text x="0" y="174" class="achse">99,5</text>
-    <text x="128" y="174" class="achse mitte">0,2 Prozentpunkte</text>
-    <text x="320" y="174" class="achse ende">100</text>
+    <text x="128" y="174" class="achse mitte">der gesamte Abstand</text>
   </svg>
   {/* Bewusst außerhalb des SVG: SVG-Text bricht nicht um und ragte auf 320 px
       aus dem Sichtbereich. Als echter Text bricht die Zeile und ist lesbar. */}
   <figcaption>
-    Der gesamte Unterschied, um den die meisten Ranglisten sortieren.
+    So groß ist der Unterschied, um den die meisten Ranglisten sortieren.
   </figcaption>
 </figure>
 
