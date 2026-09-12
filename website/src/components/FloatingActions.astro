@@ -1,0 +1,47 @@
+---
+import BackToTop from "./BackToTop.astro";
+import InfoWidget from "./InfoWidget.astro";
+
+/**
+ * Gemeinsamer Stapel für alle schwebenden Schaltflächen unten rechts.
+ *
+ * Warum ein Container statt zweier unabhängig positionierter Elemente: Sonst
+ * müsste jede Schaltfläche die Höhe der anderen kennen, und beim Hinzufügen
+ * einer dritten überlappen sie. So bestimmt `gap` den Abstand.
+ *
+ * `--float-size` ist die gemeinsame Kantenlänge. Auf Zeigegeräten 2.6rem, auf
+ * Touch-Geräten 2.75rem — 44 px sind das WCAG-Mindestmaß für Touch-Ziele.
+ */
+---
+
+<div class="stapel">
+  <BackToTop />
+  <InfoWidget />
+</div>
+
+<style>
+  .stapel {
+    --float-size: 2.6rem;
+    position: fixed;
+    right: 1rem;
+    /* Über der iOS-Safari-Adressleiste bleiben. */
+    bottom: max(1rem, env(safe-area-inset-bottom, 0px));
+    z-index: 40;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.55rem;
+  }
+
+  @media (pointer: coarse) {
+    .stapel {
+      --float-size: 2.75rem;
+    }
+  }
+
+  @media print {
+    .stapel {
+      display: none;
+    }
+  }
+</style>

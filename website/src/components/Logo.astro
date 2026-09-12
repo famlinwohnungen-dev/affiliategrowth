@@ -51,4 +51,12 @@ const { size = 28, wordmark = true } = Astro.props;
     letter-spacing: -0.025em;
     color: var(--ink);
   }
+
+  /* Unter ~420 px konkurriert die Wortmarke mit der Navigation um den Platz.
+     Die Bildmarke allein bleibt als Rücksprung zur Startseite erkennbar. */
+  @media (max-width: 26rem) {
+    .wort {
+      display: none;
+    }
+  }
 </style>

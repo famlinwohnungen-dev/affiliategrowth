@@ -2,7 +2,8 @@
 import { SITE } from "../config.js";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import InfoWidget from "../components/InfoWidget.astro";
+import FloatingActions from "../components/FloatingActions.astro";
+import CookieBanner from "../components/CookieBanner.astro";
 import "../styles/fonts.css";
 import "../styles/global.css";
 
@@ -75,6 +76,7 @@ const fullTitle = title === SITE.name ? title : `${title} | ${SITE.name}`;
       <slot />
     </main>
     <Footer />
-    <InfoWidget />
+    <FloatingActions />
+    <CookieBanner />
   </body>
 </html>

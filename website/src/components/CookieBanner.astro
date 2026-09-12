@@ -1,0 +1,236 @@
+---
+import { KATEGORIEN, optionaleKategorien, brauchtEinwilligung, SPEICHER_SCHLUESSEL } from "../consent.js";
+
+/**
+ * Einwilligungsdialog. Rendert nur, wenn in consent.js mindestens eine
+ * einwilligungspflichtige Kategorie aktiv ist — sonst gibt die Komponente
+ * nichts aus und die Seite bleibt bannerfrei.
+ *
+ * Anforderungen, die hier bewusst erfüllt sind:
+ *  - Ablehnen ist genauso leicht wie Zustimmen (gleichwertige Schaltflächen,
+ *    kein "Dark Pattern" mit hervorgehobenem Akzeptieren-Knopf).
+ *  - Keine Vorauswahl optionaler Kategorien.
+ *  - Widerruf jederzeit möglich (Eintrag im Info-Widget öffnet den Dialog neu).
+ *  - Kein Skript wird vor der Entscheidung geladen.
+ */
+const anzeigen = brauchtEinwilligung;
+---
+
+{
+  anzeigen && (
+    <div class="banner" data-cookie-banner hidden>
+      <div class="box" role="dialog" aria-modal="false" aria-labelledby="cookie-titel">
+        <h2 id="cookie-titel">Datenschutz-Einstellungen</h2>
+        <p class="text">
+          Wir verwenden nur, was du erlaubst. Notwendige Speicherung hält deine
+          Auswahl fest, alles Weitere ist freiwillig und standardmäßig aus.
+        </p>
+
+        <ul class="kategorien">
+          {KATEGORIEN.filter((k) => k.immer || k.aktiv).map((k) => (
+            <li>
+              <label>
+                <input
+                  type="checkbox"
+                  value={k.id}
+                  checked={k.immer}
+                  disabled={k.immer}
+                  data-kategorie
+                />
+                <span>
+                  <span class="name">
+                    {k.name}
+                    {k.immer && <em>immer aktiv</em>}
+                  </span>
+                  <span class="besch">{k.beschreibung}</span>
+                </span>
+              </label>
+            </li>
+          ))}
+        </ul>
+
+        <div class="knoepfe">
+          <button type="button" data-consent="alle">Alle akzeptieren</button>
+          <button type="button" data-consent="auswahl">Auswahl speichern</button>
+          <button type="button" data-consent="keine">Nur notwendige</button>
+        </div>
+
+        <p class="links">
+          <a href="/datenschutz/">Datenschutzerklärung</a>
+          <a href="/impressum/">Impressum</a>
+        </p>
+      </div>
+    </div>
+  )
+}
+
+{
+  anzeigen && (
+    <script define:vars={{ SPEICHER_SCHLUESSEL, optionale: optionaleKategorien.map((k) => k.id) }}>
+      (() => {
+        const banner = document.querySelector("[data-cookie-banner]");
+        if (!banner) return;
+
+        const lesen = () => {
+          try {
+            return JSON.parse(localStorage.getItem(SPEICHER_SCHLUESSEL) || "null");
+          } catch {
+            return null;
+          }
+        };
+
+        const schreiben = (erlaubt) => {
+          try {
+            localStorage.setItem(
+              SPEICHER_SCHLUESSEL,
+              JSON.stringify({ erlaubt, stand: new Date().toISOString() }),
+            );
+          } catch {
+            /* Privater Modus o. Ä. — dann gilt die Auswahl nur für diese Sitzung. */
+          }
+          window.dispatchEvent(new CustomEvent("einwilligung", { detail: { erlaubt } }));
+        };
+
+        const oeffnen = () => (banner.hidden = false);
+        const schliessen = () => (banner.hidden = true);
+
+        // Erst nach einer Entscheidung verschwindet das Banner dauerhaft.
+        if (!lesen()) oeffnen();
+
+        banner.querySelectorAll("[data-consent]").forEach((knopf) => {
+          knopf.addEventListener("click", () => {
+            const art = knopf.getAttribute("data-consent");
+            let erlaubt = [];
+            if (art === "alle") {
+              erlaubt = optionale;
+            } else if (art === "auswahl") {
+              erlaubt = [...banner.querySelectorAll("[data-kategorie]")]
+                .filter((c) => c.checked && !c.disabled)
+                .map((c) => c.value);
+            }
+            schreiben(erlaubt);
+            schliessen();
+          });
+        });
+
+        // Widerruf: vom Info-Widget aus wieder öffnen.
+        document.addEventListener("click", (e) => {
+          const ziel = e.target.closest("[data-cookie-open]");
+          if (!ziel) return;
+          e.preventDefault();
+          const stand = lesen();
+          banner.querySelectorAll("[data-kategorie]").forEach((c) => {
+            if (!c.disabled) c.checked = !!stand?.erlaubt?.includes(c.value);
+          });
+          oeffnen();
+        });
+      })();
+    </script>
+  )
+}
+
+<style>
+  .banner {
+    position: fixed;
+    inset: auto 0 0 0;
+    z-index: 60;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background: color-mix(in srgb, var(--ink) 12%, transparent);
+  }
+  .box {
+    width: min(34rem, 100%);
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08), 0 24px 48px -24px rgba(0, 0, 0, 0.5);
+    padding: 1.25rem 1.35rem 1.35rem;
+  }
+  h2 {
+    margin: 0 0 0.4rem;
+    font-size: 1.02rem;
+  }
+  .text {
+    margin: 0 0 0.9rem;
+    font-size: 0.89rem;
+    color: var(--ink-soft);
+    max-width: none;
+  }
+
+  .kategorien {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.1rem;
+    max-width: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  label {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.6rem;
+    align-items: start;
+    cursor: pointer;
+  }
+  input {
+    margin-top: 0.2rem;
+    accent-color: var(--accent);
+  }
+  input:disabled {
+    cursor: default;
+  }
+  .name {
+    display: block;
+    font-family: Archivo, sans-serif;
+    font-size: 0.87rem;
+    font-weight: 600;
+  }
+  .name em {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.72rem;
+    color: var(--ink-faint);
+    margin-left: 0.4rem;
+  }
+  .besch {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    line-height: 1.45;
+  }
+
+  /* Gleichwertige Schaltflächen: Ablehnen darf nicht schwerer fallen als
+     Zustimmen — sonst ist die Einwilligung nicht freiwillig. */
+  .knoepfe {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .knoepfe button {
+    flex: 1 1 9rem;
+    font-family: Archivo, sans-serif;
+    font-size: 0.86rem;
+    font-weight: 600;
+    padding: 0.6rem 0.9rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--accent);
+    background: var(--surface);
+    color: var(--accent);
+    cursor: pointer;
+  }
+  .knoepfe button:hover {
+    background: var(--accent-soft);
+  }
+
+  .links {
+    display: flex;
+    gap: 1rem;
+    margin: 0.9rem 0 0;
+    font-size: 0.79rem;
+  }
+  .links a {
+    color: var(--ink-faint);
+  }
+</style>

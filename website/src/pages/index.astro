@@ -187,18 +187,26 @@ const schema = [
   }
 
   /* Einstiege: drei Wege in den passenden Inhalt, keine Partnerlinks. */
+  /* Drei Einstiege: entweder eine Spalte oder drei — nie zwei. Bei zwei
+     Spalten bliebe die vierte Zelle leer und die Rasterfarbe scheint als
+     grauer Block durch. */
   .einstiege {
     list-style: none;
     padding: 0;
     margin: 0;
     max-width: none;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15.5rem, 1fr));
+    grid-template-columns: 1fr;
     gap: 1px;
     background: var(--rule);
     border: 1px solid var(--rule);
     border-radius: var(--radius);
     overflow: hidden;
+  }
+  @media (min-width: 44rem) {
+    .einstiege {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
   .einstiege a {
     display: flex;

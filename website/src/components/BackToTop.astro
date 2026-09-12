@@ -1,0 +1,87 @@
+---
+/**
+ * "Nach oben" — erscheint erst, wenn genug gescrollt wurde.
+ *
+ * Kein IntersectionObserver auf einem Sentinel: Diese Komponente sitzt in
+ * einem `position: fixed` Container, ein Sentinel darin verlässt den
+ * Sichtbereich nie und der Beobachter feuert entsprechend nie. Stattdessen
+ * ein passiver Scroll-Listener, der pro Frame höchstens einmal auswertet.
+ */
+---
+
+<button type="button" class="hoch" data-back-to-top hidden>
+  <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+    <path
+      d="M12 19V6M6 11.5 12 5.5l6 6"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="1.9"
+      stroke-linecap="round"
+      stroke-linejoin="round"></path>
+  </svg>
+  <span class="sr-only">Zurück nach oben</span>
+</button>
+
+<script>
+  const knopf = document.querySelector<HTMLButtonElement>("[data-back-to-top]");
+
+  if (knopf) {
+    const SCHWELLE = 600;
+
+    // Kein requestAnimationFrame: In Hintergrund-Tabs feuert es nicht, und für
+    // einen Zahlenvergleich lohnt die Drosselung ohnehin nicht. Geschrieben
+    // wird nur bei echtem Zustandswechsel — kein Layout-Thrashing beim Scrollen.
+    const pruefen = () => {
+      const zeigen = window.scrollY >= SCHWELLE;
+      if (zeigen === knopf.hidden) knopf.hidden = !zeigen;
+    };
+
+    window.addEventListener("scroll", pruefen, { passive: true });
+
+    // Beim Laden mitten auf der Seite (Anker, Zurück-Navigation) sofort prüfen.
+    pruefen();
+
+    knopf.addEventListener("click", () => {
+      const ruhig = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      window.scrollTo({ top: 0, behavior: ruhig ? "auto" : "smooth" });
+      // Fokus mitnehmen, sonst springt die Tastaturnavigation nicht zurück.
+      document.querySelector<HTMLElement>("header a")?.focus({ preventScroll: true });
+    });
+  }
+</script>
+
+<style>
+  .hoch {
+    width: var(--float-size);
+    height: var(--float-size);
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    border: 1px solid var(--rule);
+    background: var(--surface);
+    color: var(--ink-soft);
+    cursor: pointer;
+    box-shadow:
+      0 1px 2px rgba(0, 0, 0, 0.07),
+      0 8px 20px -12px rgba(0, 0, 0, 0.4);
+    transition:
+      color 0.15s ease,
+      border-color 0.15s ease;
+  }
+  .hoch:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+  .hoch[hidden] {
+    display: none;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+</style>

@@ -12,6 +12,7 @@
  * § 5a Abs. 4 UWG. Deshalb bleibt das Sternchen am Link und seine Auflösung
  * als Kurzzeile im Fußbereich stehen.
  */
+import { brauchtEinwilligung } from "../consent.js";
 ---
 
 <div class="widget" data-info-widget>
@@ -55,10 +56,19 @@
       </a>
     </nav>
 
+    {
+      brauchtEinwilligung && (
+        <button type="button" class="cookie-knopf" data-cookie-open>
+          Cookie-Einstellungen ändern
+        </button>
+      )
+    }
+
     <p class="cookies">
-      <strong>Cookies:</strong> Diese Seite setzt keine Tracking- oder
-      Analyse-Cookies und bindet keine externen Schriften oder Skripte ein.
-      Deshalb gibt es hier auch keinen Cookie-Banner.
+      <strong>Cookies:</strong>{" "}
+      {brauchtEinwilligung
+        ? "Optionale Dienste werden erst nach deiner Zustimmung geladen. Deine Auswahl kannst du jederzeit oben ändern."
+        : "Diese Seite setzt keine Tracking- oder Analyse-Cookies und bindet keine externen Schriften oder Skripte ein. Deshalb gibt es hier auch keinen Cookie-Banner."}
     </p>
   </div>
 </div>
@@ -97,20 +107,17 @@
 </script>
 
 <style>
+  /* Positionierung kommt vom umgebenden Stapel (FloatingActions). */
   .widget {
-    position: fixed;
-    right: 1.15rem;
-    bottom: 1.15rem;
-    z-index: 40;
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    gap: 0.6rem;
   }
 
   .knopf {
-    width: 2.6rem;
-    height: 2.6rem;
+    width: var(--float-size);
+    height: var(--float-size);
     display: grid;
     place-items: center;
     border-radius: 50%;
@@ -130,8 +137,12 @@
   }
 
   .panel {
-    width: min(21rem, calc(100vw - 2.3rem));
-    order: -1;
+    position: absolute;
+    right: 0;
+    bottom: calc(var(--float-size) + 0.55rem);
+    width: min(21rem, calc(100vw - 2rem));
+    max-height: min(28rem, calc(100vh - 6rem));
+    overflow-y: auto;
     background: var(--surface);
     border: 1px solid var(--rule);
     border-radius: var(--radius);
@@ -197,6 +208,23 @@
     line-height: 1.35;
   }
 
+  .cookie-knopf {
+    width: 100%;
+    margin-top: 0.6rem;
+    font-family: Archivo, sans-serif;
+    font-size: 0.83rem;
+    font-weight: 600;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--ink);
+    cursor: pointer;
+  }
+  .cookie-knopf:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+  }
   .cookies {
     margin: 0.8rem 0 0;
     font-size: 0.79rem;
@@ -217,9 +245,4 @@
     white-space: nowrap;
   }
 
-  @media print {
-    .widget {
-      display: none;
-    }
-  }
 </style>
