@@ -13,6 +13,7 @@
  * als Kurzzeile im Fußbereich stehen.
  */
 import { brauchtEinwilligung } from "../consent.js";
+import Rueckmeldung from "./Rueckmeldung.astro";
 ---
 
 <div class="widget" data-info-widget>
@@ -39,6 +40,14 @@ import { brauchtEinwilligung } from "../consent.js";
           <path d="M4 4l8 8M12 4l-8 8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"></path>
         </svg>
       </button>
+    </div>
+
+    <div class="feedback">
+      <Rueckmeldung
+        quelle="widget"
+        frage="Findest du hier, was du suchst?"
+        kompakt={true}
+      />
     </div>
 
     <nav aria-label="Rechtliches und Hintergrund">
@@ -174,6 +183,11 @@ import { brauchtEinwilligung } from "../consent.js";
     color: var(--ink);
   }
 
+  .feedback {
+    padding-bottom: 0.9rem;
+    margin-bottom: 0.9rem;
+    border-bottom: 1px solid var(--rule);
+  }
   nav {
     display: flex;
     flex-direction: column;

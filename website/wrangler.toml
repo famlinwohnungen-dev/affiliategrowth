@@ -1,24 +1,30 @@
-# Cloudflare Workers mit statischen Assets.
+# Cloudflare Workers — Konfiguration für Build und Deploy.
 #
-# Hinweis zur Historie: Ursprünglich war das ein Pages-Projekt. Cloudflare
-# migriert Pages zu Workers — neue Git-Verbindungen im Dashboard legen
-# automatisch ein Workers-Projekt an. Diese Konfiguration folgt dem neuen Weg.
+# Hinweis zur Historie: Ursprünglich ein Pages-Projekt. Cloudflare migriert
+# Pages zu Workers; neue Git-Verbindungen legen automatisch ein Workers-Projekt
+# an. Diese Konfiguration folgt dem neuen Weg.
 #
-# Es gibt bewusst KEINEN `main`-Entrypoint: Die Seite ist rein statisch, es
-# läuft kein Worker-Code. Cloudflare liefert dann ausschließlich die Dateien
-# aus `dist/` aus ("assets-only Worker").
+# `wrangler pages project create` funktioniert ab wrangler 4.x NICHT mehr mit
+# einer Pages-Konfiguration. Das Projekt wird über die REST-API angelegt,
+# siehe README.
 #
 # Im Dashboard muss zusätzlich gesetzt sein (Settings → Build):
 #   Root directory:  website
 #   Build command:   npm run build
-# Ohne das Root-Verzeichnis baut Cloudflare im Repo-Wurzelverzeichnis, wo kein
-# Node-Projekt liegt — genau daran ist der erste Build gescheitert.
 
-name = "affiliategrowth"
+name = "schutzlotse"
 compatibility_date = "2026-09-11"
+compatibility_flags = ["nodejs_compat"]
 
-[assets]
-directory = "./dist"
+# `main` und `[assets]` stehen hier bewusst NICHT: Der Astro-Cloudflare-Adapter
+# erzeugt den Worker-Einstiegspunkt selbst. Ein von Hand gesetztes `main` würde
+# beim Build auf eine Datei zeigen, die es zu diesem Zeitpunkt noch gar nicht
+# gibt — der Build bricht dann ab, bevor er sie erzeugen kann.
 
-# `_headers` und `_redirects` in `public/` werden von Workers Static Assets
-# genauso ausgewertet wie zuvor bei Pages.
+# Leser-Rückmeldungen. D1 ist Cloudflares serverloses SQLite.
+# Einmalig anlegen:  npm run db:create   (danach database_id hier eintragen)
+# Schema einspielen: npm run db:init
+[[d1_databases]]
+binding = "DB"
+database_name = "schutzlotse-feedback"
+database_id = "PLATZHALTER-NACH-npm-run-db:create-EINTRAGEN"

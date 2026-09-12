@@ -1,6 +1,8 @@
 ---
 import { getCollection, render } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import TeilenLeiste from "../../components/TeilenLeiste.astro";
+import Rueckmeldung from "../../components/Rueckmeldung.astro";
 import { SITE } from "../../config.js";
 
 export async function getStaticPaths() {
@@ -80,6 +82,7 @@ const datum = new Intl.DateTimeFormat("de-DE", {
           datetime={(d.updated ?? d.published).toISOString()}>{datum}</time
         >
       </p>
+      <TeilenLeiste titel={d.title} pfad={Astro.url.pathname} kompakt={true} />
     </header>
 
     <div class="inhalt">
@@ -99,6 +102,12 @@ const datum = new Intl.DateTimeFormat("de-DE", {
         </section>
       )
     }
+    <footer class="artikel-fuss">
+      <Rueckmeldung quelle="artikel" frage="War dieser Vergleich hilfreich?" />
+
+      <p class="weitersagen">Hat dir der Vergleich geholfen? Dann gib ihn weiter.</p>
+      <TeilenLeiste titel={d.title} pfad={Astro.url.pathname} />
+    </footer>
   </article>
 </BaseLayout>
 
@@ -117,6 +126,16 @@ const datum = new Intl.DateTimeFormat("de-DE", {
     border-top: 1px solid var(--rule);
     padding-top: 0.9rem;
     margin-top: 1.5rem;
+    margin-bottom: 0.4rem;
+  }
+  .artikel-fuss {
+    margin-top: 3rem;
+  }
+  .weitersagen {
+    margin-top: 2.25rem;
+    font-size: 0.93rem;
+    color: var(--ink-soft);
+    margin-bottom: 0.5rem;
   }
   .faq {
     margin-top: 3rem;

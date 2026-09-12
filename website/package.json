@@ -8,12 +8,18 @@
     "preview": "astro preview",
     "check": "astro check",
     "deploy": "npm run build && wrangler deploy",
-    "postbuild": "node scripts/check-links.mjs"
+    "postbuild": "node scripts/check-links.mjs",
+    "db:create": "wrangler d1 create schutzlotse-feedback",
+    "db:init": "wrangler d1 execute schutzlotse-feedback --remote --file=db/schema.sql",
+    "db:init:local": "wrangler d1 execute schutzlotse-feedback --local --file=db/schema.sql",
+    "db:lesen": "wrangler d1 execute schutzlotse-feedback --remote --command=\"SELECT erstellt_am, seite, bewertung, quelle, substr(coalesce(nachricht,''),1,120) AS nachricht, email FROM feedback ORDER BY erstellt_am DESC LIMIT 50\"",
+    "db:zaehlen": "wrangler d1 execute schutzlotse-feedback --remote --command=\"SELECT seite, bewertung, count(*) AS anzahl FROM feedback WHERE bewertung IS NOT NULL GROUP BY seite, bewertung ORDER BY anzahl DESC\""
   },
   "author": "",
   "license": "ISC",
   "type": "module",
   "dependencies": {
+    "@astrojs/cloudflare": "^14.3.1",
     "@astrojs/mdx": "^8.0.1",
     "@astrojs/sitemap": "^3.7.4",
     "astro": "^7.3.2"

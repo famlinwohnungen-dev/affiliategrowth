@@ -1,0 +1,313 @@
+---
+/**
+ * Zweistufige Rückmeldung.
+ *
+ * Stufe 1 ist ein einziger Klick — das schaffen auch Leser, die niemals ein
+ * Formular ausfüllen würden. Die Bewertung ist damit bereits gespeichert.
+ *
+ * Stufe 2 erscheint erst danach und fragt nach dem Warum. Genau in dem
+ * Moment, in dem jemand gerade geurteilt hat, ist die Bereitschaft am größten,
+ * es kurz zu begründen. Ein Formular, das von Anfang an dasteht, wird
+ * überblättert.
+ *
+ * `frage` ist bewusst je Einsatzort verschieden: "Gab es etwas Konkretes?"
+ * bringt brauchbare Antworten, "Feedback?" bringt keine.
+ */
+interface Props {
+  quelle?: "artikel" | "widget";
+  frage?: string;
+  kompakt?: boolean;
+}
+
+const {
+  quelle = "artikel",
+  frage = "War dieser Vergleich hilfreich?",
+  kompakt = false,
+} = Astro.props;
+---
+
+<section class="rueckmeldung" class:list={[kompakt && "kompakt"]} data-rueckmeldung data-quelle={quelle}>
+  <div class="stufe1" data-stufe1>
+    <p class="frage">{frage}</p>
+    <div class="wahl">
+      <button type="button" class="stimme" data-bewertung="gut">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M7 10.5v9H4.5a1 1 0 0 1-1-1v-7a1 1 0 0 1 1-1zm3.4-7.2 3.3 5.2h5.1a2 2 0 0 1 2 2.3l-1 6.4a2 2 0 0 1-2 1.7H9.5a1 1 0 0 1-1-1v-8.4z"
+            fill="currentColor"></path>
+        </svg>
+        <span>Ja</span>
+      </button>
+      <button type="button" class="stimme" data-bewertung="schlecht">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path
+            d="M17 13.5v-9h2.5a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1zm-3.4 7.2-3.3-5.2H5.2a2 2 0 0 1-2-2.3l1-6.4a2 2 0 0 1 2-1.7h8.3a1 1 0 0 1 1 1v8.4z"
+            fill="currentColor"></path>
+        </svg>
+        <span>Nein</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="stufe2" data-stufe2 hidden>
+    <p class="danke" data-danke></p>
+
+    <label class="feld">
+      <span data-detailfrage>Was hat gefehlt?</span>
+      <textarea
+        data-nachricht
+        rows="3"
+        maxlength="2000"
+        placeholder="Welche Software fehlt dir hier? Was war unklar?"></textarea>
+    </label>
+
+    <label class="feld">
+      <span>E-Mail <em>optional, nur für eine Rückfrage</em></span>
+      <input type="email" data-email maxlength="200" autocomplete="email" />
+    </label>
+
+    {/* Honeypot: für Menschen unsichtbar, für Bots verlockend. */}
+    <div class="honigtopf" aria-hidden="true">
+      <label>Website<input type="text" data-honeypot tabindex="-1" autocomplete="off" /></label>
+    </div>
+
+    <div class="aktionen">
+      <button type="button" class="senden" data-senden>Absenden</button>
+      <span class="hinweis">Bitte keine sensiblen Daten senden.</span>
+    </div>
+  </div>
+
+  <p class="fertig" data-fertig hidden>Danke — deine Rückmeldung ist angekommen.</p>
+</section>
+
+<script>
+  document.querySelectorAll<HTMLElement>("[data-rueckmeldung]").forEach((box) => {
+    const quelle = box.dataset.quelle ?? "artikel";
+    const stufe1 = box.querySelector<HTMLElement>("[data-stufe1]");
+    const stufe2 = box.querySelector<HTMLElement>("[data-stufe2]");
+    const fertig = box.querySelector<HTMLElement>("[data-fertig]");
+    const danke = box.querySelector<HTMLElement>("[data-danke]");
+    const detailfrage = box.querySelector<HTMLElement>("[data-detailfrage]");
+    const nachricht = box.querySelector<HTMLTextAreaElement>("[data-nachricht]");
+    const email = box.querySelector<HTMLInputElement>("[data-email]");
+    const honeypot = box.querySelector<HTMLInputElement>("[data-honeypot]");
+    const senden = box.querySelector<HTMLButtonElement>("[data-senden]");
+
+    let bewertung: string | null = null;
+
+    const absenden = async (nutzlast: Record<string, unknown>) => {
+      try {
+        const antwort = await fetch("/api/feedback", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ ...nutzlast, seite: location.pathname, quelle }),
+        });
+        return antwort.ok;
+      } catch {
+        return false;
+      }
+    };
+
+    box.querySelectorAll<HTMLButtonElement>("[data-bewertung]").forEach((knopf) => {
+      knopf.addEventListener("click", async () => {
+        bewertung = knopf.dataset.bewertung ?? null;
+
+        // Stufe 1 zählt sofort — auch wenn Stufe 2 nie ausgefüllt wird.
+        void absenden({ bewertung });
+
+        if (danke) {
+          danke.textContent =
+            bewertung === "gut" ? "Freut uns. Magst du kurz sagen, was geholfen hat?" : "Danke für die Ehrlichkeit.";
+        }
+        if (detailfrage) {
+          detailfrage.textContent = bewertung === "gut" ? "Was war hilfreich?" : "Was hat gefehlt?";
+        }
+        if (stufe1) stufe1.hidden = true;
+        if (stufe2) stufe2.hidden = false;
+        nachricht?.focus();
+      });
+    });
+
+    senden?.addEventListener("click", async () => {
+      const text = nachricht?.value.trim() ?? "";
+      if (!text) {
+        // Nichts geschrieben — die Bewertung ist bereits gespeichert.
+        if (stufe2) stufe2.hidden = true;
+        if (fertig) fertig.hidden = false;
+        return;
+      }
+      senden.disabled = true;
+      senden.textContent = "Wird gesendet …";
+      const ok = await absenden({
+        bewertung,
+        nachricht: text,
+        email: email?.value.trim() ?? "",
+        website: honeypot?.value ?? "",
+      });
+      if (stufe2) stufe2.hidden = true;
+      if (fertig) {
+        fertig.hidden = false;
+        fertig.textContent = ok
+          ? "Danke — deine Rückmeldung ist angekommen."
+          : "Das hat leider nicht geklappt. Versuch es später noch einmal.";
+      }
+    });
+  });
+</script>
+
+<style>
+  .rueckmeldung {
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    background: var(--surface);
+    padding: 1.1rem 1.25rem 1.2rem;
+  }
+  .kompakt {
+    border: none;
+    background: none;
+    padding: 0;
+  }
+
+  .frage {
+    margin: 0 0 0.7rem;
+    font-family: Archivo, sans-serif;
+    font-size: 0.97rem;
+    font-weight: 600;
+    max-width: none;
+  }
+
+  .wahl {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .stimme {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    min-height: 2.75rem;
+    padding: 0 1.1rem;
+    font-family: Archivo, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--ink);
+    cursor: pointer;
+    transition:
+      border-color 0.15s ease,
+      color 0.15s ease,
+      background-color 0.15s ease;
+  }
+  .stimme:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: var(--accent-soft);
+  }
+  .stimme svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .stufe2 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .stufe2[hidden] {
+    display: none;
+  }
+  .danke {
+    margin: 0;
+    font-family: Archivo, sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    max-width: none;
+  }
+
+  .feld {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+  }
+  .feld em {
+    font-style: normal;
+    color: var(--ink-faint);
+  }
+  textarea,
+  input[type="email"] {
+    width: 100%;
+    font: inherit;
+    font-size: 0.92rem;
+    color: var(--ink);
+    background: var(--ground);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    padding: 0.55rem 0.7rem;
+    resize: vertical;
+  }
+  textarea:focus,
+  input[type="email"]:focus {
+    outline: 2px solid var(--accent);
+    outline-offset: 1px;
+  }
+
+  /* Nicht display:none — manche Bots füllen nur sichtbar gerenderte Felder
+     nicht aus, erkennen aber display:none. So bleibt es für sie plausibel. */
+  .honigtopf {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  .aktionen {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+  .senden {
+    min-height: 2.75rem;
+    padding: 0 1.2rem;
+    font-family: Archivo, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: none;
+    border-radius: var(--radius);
+    background: var(--accent);
+    color: #fff;
+    cursor: pointer;
+  }
+  .senden:hover {
+    background: var(--accent-hover);
+  }
+  .senden:disabled {
+    opacity: 0.6;
+    cursor: default;
+  }
+  .hinweis {
+    font-size: 0.78rem;
+    color: var(--ink-faint);
+  }
+
+  .fertig {
+    margin: 0;
+    font-size: 0.93rem;
+    color: var(--accent);
+    max-width: none;
+  }
+  .fertig[hidden] {
+    display: none;
+  }
+
+  @media print {
+    .rueckmeldung {
+      display: none;
+    }
+  }
+</style>

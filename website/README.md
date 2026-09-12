@@ -146,3 +146,40 @@ Drittlandübermittlung; dann den Abschnitt „Hosting" in
 
 Die 18 geplanten Artikel mit Ziel-Keywords und Reihenfolge stehen in
 `../content/PLAN.md`.
+
+## Leser-Rückmeldungen (D1)
+
+Zweistufig: ein Klick auf *Ja/Nein* wird sofort gespeichert, erst danach
+erscheint das Textfeld. Wer nichts schreibt, hat trotzdem abgestimmt.
+Erreichbar am Artikelende und über das Info-Widget auf jeder Seite.
+
+### Einmalige Einrichtung
+
+```bash
+npm run db:create        # Datenbank anlegen, dann database_id in wrangler.toml eintragen
+npm run db:init          # Schema in die entfernte Datenbank spielen
+npm run db:init:local    # dasselbe lokal, fuer `wrangler dev`
+```
+
+### Rueckmeldungen lesen
+
+```bash
+npm run db:lesen         # die letzten 50 Eintraege
+npm run db:zaehlen       # Ja/Nein je Seite
+```
+
+### Warum keine IP-Adressen gespeichert werden
+
+Gegen Spam wirken Honeypot, Laengengrenzen und Cloudflares Bot-Schutz, nicht
+das Protokollieren von Besuchern. Reicht das nicht, ist Turnstile der naechste
+Schritt. Die Datenschutzerklaerung sagt zu, dass keine IP gespeichert wird -
+diese Zusage darf nicht stillschweigend gebrochen werden.
+
+### Loeschfrist
+
+Zwoelf Monate, wie in der Datenschutzerklaerung zugesagt:
+
+```bash
+npx wrangler d1 execute schutzlotse-feedback --remote \
+  --command="DELETE FROM feedback WHERE erstellt_am < datetime('now','-12 months')"
+```
