@@ -1,0 +1,225 @@
+---
+/**
+ * Schwebender Info-Zugang unten rechts.
+ *
+ * Zweck: Rechtliches und Hintergrund jederzeit erreichbar machen, ohne den
+ * Lesefluss zu stören. § 5 DDG verlangt, dass das Impressum "leicht erkennbar,
+ * unmittelbar erreichbar und ständig verfügbar" ist — ein mitscrollender
+ * Button erfüllt das besser als ein Link im Fußbereich.
+ *
+ * Was hier NICHT hineingehört: die Werbekennzeichnung selbst. Ein Hinweis, der
+ * erst nach einem Klick sichtbar wird, gilt nicht als erkennbar im Sinne des
+ * § 5a Abs. 4 UWG. Deshalb bleibt das Sternchen am Link und seine Auflösung
+ * als Kurzzeile im Fußbereich stehen.
+ */
+---
+
+<div class="widget" data-info-widget>
+  <button
+    type="button"
+    class="knopf"
+    aria-expanded="false"
+    aria-controls="info-panel"
+    data-info-toggle
+  >
+    <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true">
+      <circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.7"></circle>
+      <path d="M12 10.6v6" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"></path>
+      <circle cx="12" cy="7.6" r="1.15" fill="currentColor"></circle>
+    </svg>
+    <span class="sr-only">Informationen zu dieser Seite</span>
+  </button>
+
+  <div class="panel" id="info-panel" hidden data-info-panel>
+    <div class="kopf">
+      <h2>Über diese Seite</h2>
+      <button type="button" class="schliessen" aria-label="Schließen" data-info-close>
+        <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true">
+          <path d="M4 4l8 8M12 4l-8 8" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"></path>
+        </svg>
+      </button>
+    </div>
+
+    <nav aria-label="Rechtliches und Hintergrund">
+      <a href="/methodik/">
+        <span class="titel">Methodik &amp; Finanzierung</span>
+        <span class="unter">Wie die Vergleiche entstehen und wie sich die Seite trägt</span>
+      </a>
+      <a href="/datenschutz/">
+        <span class="titel">Datenschutz</span>
+        <span class="unter">Welche Daten verarbeitet werden</span>
+      </a>
+      <a href="/impressum/">
+        <span class="titel">Impressum</span>
+        <span class="unter">Anbieterkennzeichnung nach § 5 DDG</span>
+      </a>
+    </nav>
+
+    <p class="cookies">
+      <strong>Cookies:</strong> Diese Seite setzt keine Tracking- oder
+      Analyse-Cookies und bindet keine externen Schriften oder Skripte ein.
+      Deshalb gibt es hier auch keinen Cookie-Banner.
+    </p>
+  </div>
+</div>
+
+<script>
+  // Kein Framework nötig: ein Panel, drei Ereignisse.
+  document.querySelectorAll<HTMLElement>("[data-info-widget]").forEach((widget) => {
+    const toggle = widget.querySelector<HTMLButtonElement>("[data-info-toggle]");
+    const panel = widget.querySelector<HTMLElement>("[data-info-panel]");
+    const close = widget.querySelector<HTMLButtonElement>("[data-info-close]");
+    if (!toggle || !panel) return;
+
+    const setOpen = (open: boolean) => {
+      panel.hidden = !open;
+      toggle.setAttribute("aria-expanded", String(open));
+      widget.classList.toggle("offen", open);
+    };
+
+    toggle.addEventListener("click", () => setOpen(panel.hidden));
+    close?.addEventListener("click", () => {
+      setOpen(false);
+      toggle.focus();
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && !panel.hidden) {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!panel.hidden && !widget.contains(e.target as Node)) setOpen(false);
+    });
+  });
+</script>
+
+<style>
+  .widget {
+    position: fixed;
+    right: 1.15rem;
+    bottom: 1.15rem;
+    z-index: 40;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.6rem;
+  }
+
+  .knopf {
+    width: 2.6rem;
+    height: 2.6rem;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    border: 1px solid var(--rule);
+    background: var(--surface);
+    color: var(--ink-soft);
+    cursor: pointer;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07), 0 8px 20px -12px rgba(0, 0, 0, 0.4);
+    transition:
+      color 0.15s ease,
+      border-color 0.15s ease;
+  }
+  .knopf:hover,
+  .widget.offen .knopf {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .panel {
+    width: min(21rem, calc(100vw - 2.3rem));
+    order: -1;
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06), 0 18px 40px -20px rgba(0, 0, 0, 0.45);
+    padding: 1rem 1.1rem 1.1rem;
+  }
+
+  .kopf {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.6rem;
+  }
+  .kopf h2 {
+    margin: 0;
+    font-size: 0.95rem;
+  }
+  .schliessen {
+    border: none;
+    background: none;
+    color: var(--ink-faint);
+    cursor: pointer;
+    padding: 0.2rem;
+    display: grid;
+    place-items: center;
+  }
+  .schliessen:hover {
+    color: var(--ink);
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  nav a {
+    display: block;
+    background: var(--surface);
+    padding: 0.6rem 0.75rem;
+    text-decoration: none;
+    color: inherit;
+  }
+  nav a:hover {
+    background: var(--surface-alt);
+  }
+  .titel {
+    display: block;
+    font-family: Archivo, sans-serif;
+    font-size: 0.87rem;
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .unter {
+    display: block;
+    font-size: 0.79rem;
+    color: var(--ink-faint);
+    margin-top: 0.1rem;
+    line-height: 1.35;
+  }
+
+  .cookies {
+    margin: 0.8rem 0 0;
+    font-size: 0.79rem;
+    line-height: 1.45;
+    color: var(--ink-soft);
+    max-width: none;
+  }
+  .cookies strong {
+    color: var(--ink);
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  @media print {
+    .widget {
+      display: none;
+    }
+  }
+</style>

@@ -17,8 +17,14 @@ if (!m) throw new Error(`AffiliateButton: unknown merchant "${merchant}"`);
 const href = `/go/${merchant}/`;
 ---
 
+{/*
+  Das Sternchen ist die Werbekennzeichnung direkt am Link. Rechtlich sicherer
+  als ein Hinweis nur im Footer und deutlich unaufdringlicher als ein Absatz.
+  Aufgelöst wird es im Footer.
+*/}
 <a class:list={["aff", variant]} href={href} rel="sponsored nofollow noopener" target="_blank">
-  <span>{label ?? `Zu ${m.name}`}</span>
+  <span>{label ?? `Zu ${m.name}`}<span class="stern" aria-hidden="true">*</span></span>
+  <span class="sr-only">(Affiliate-Link)</span>
   <svg aria-hidden="true" viewBox="0 0 16 16" width="13" height="13">
     <path
       d="M5 3h8v8M13 3L3.5 12.5"
@@ -42,6 +48,19 @@ const href = `/go/${merchant}/`;
     border-radius: var(--radius);
     padding: 0.6rem 1rem;
     transition: background-color 0.15s ease;
+  }
+  .stern {
+    opacity: 0.65;
+    margin-left: 0.12em;
+    font-weight: 500;
+  }
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
   }
   .primary {
     background: var(--accent);
