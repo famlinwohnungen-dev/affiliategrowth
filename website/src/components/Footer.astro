@@ -14,6 +14,12 @@ const jahr = new Date().getFullYear();
     <p class="stern-hinweis">
       * Affiliate-Link — wir erhalten eine Provision, für dich ohne Mehrkosten.
     </p>
+    <nav class="rechtliches" aria-label="Rechtliches">
+      <a href="/impressum/">Impressum</a>
+      <a href="/datenschutz/">Datenschutz</a>
+      <a href="/methodik/">Methodik</a>
+    </nav>
+
     <p class="copy">© {jahr} {SITE.name}</p>
   </div>
 </footer>
@@ -39,5 +45,34 @@ const jahr = new Date().getFullYear();
     margin: 0;
     font-size: 0.79rem;
     color: var(--ink-faint);
+  }
+
+  /*
+   * Impressum und Datenschutz gehoeren sichtbar auf jede Seite. In die
+   * Kopfzeile passen sie nicht: Mit vier Eintraegen ragte "Datenschutz" auf
+   * einem 320-px-Telefon 45 px aus dem Bild. Hier ist Platz, und es ist die
+   * Stelle, an der deutsche Leser danach suchen. Das Info-Widget behaelt die
+   * Links zusaetzlich — § 5 DDG verlangt "staendig verfuegbar", und ein
+   * mitscrollender Knopf erfuellt das auch am Anfang einer langen Seite.
+   */
+  .rechtliches {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1.25rem;
+    order: -1;
+    flex-basis: 100%;
+  }
+  .rechtliches a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 2.75rem;
+    font-family: Archivo, sans-serif;
+    font-size: 0.84rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--ink-soft);
+  }
+  .rechtliches a:hover {
+    color: var(--accent);
   }
 </style>

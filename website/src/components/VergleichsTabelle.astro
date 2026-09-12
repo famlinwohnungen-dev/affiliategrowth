@@ -106,4 +106,102 @@ const zelle = (v: string | boolean) =>
     text-align: right;
     padding-block: 1rem;
   }
+
+  /*
+   * Auf dem Telefon wird die Tabelle gestapelt statt geschoben.
+   *
+   * Gemessener Anlass: Bei 375 px war die Tabelle 418 px breit in einem
+   * 327 px breiten Container. 91 px lagen ausserhalb — ausgerechnet die
+   * Empfehlungsspalte. Ein .scroller ist erlaubt, aber niemand sieht ihm an,
+   * dass da noch etwas kommt, und mit dem Daumen quer zu schieben, waehrend
+   * die Seite senkrecht scrollt, geht regelmaessig schief.
+   *
+   * Der Gegenueberstellung wird dabei nicht geopfert: Die beiden Produkte
+   * stehen weiter nebeneinander, nur das Merkmal wandert als Zeile darueber.
+   * Bei zwei Spalten passt das auch auf 320 px.
+   */
+  @media (max-width: 34rem) {
+    .scroller {
+      overflow-x: visible;
+    }
+    table,
+    thead,
+    tbody,
+    tr,
+    th,
+    td {
+      display: block;
+    }
+    /* Kopfzeile bleibt stehen, sonst weiss man nach drei Merkmalen nicht
+       mehr, welche Spalte welches Produkt ist. */
+    thead tr {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      background: var(--surface);
+      border-bottom: 1px solid var(--rule);
+    }
+    thead th {
+      border-bottom: 0;
+      white-space: normal;
+    }
+    /* "Merkmal" ist als Ueberschrift ueberfluessig, sobald das Merkmal in
+       einer eigenen Zeile darueber steht. */
+    thead th:first-child {
+      display: none;
+    }
+
+    tbody tr {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-bottom: 1px solid var(--rule);
+    }
+    tbody tr:last-child {
+      border-bottom: 0;
+    }
+    th[scope="row"] {
+      grid-column: 1 / -1;
+      border-bottom: 0;
+      padding-bottom: 0.15rem;
+      font-family: Archivo, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+    tbody td {
+      border-bottom: 0;
+      padding-top: 0.15rem;
+    }
+    /* Zahlen linksbuendig: Rechtsbuendig ergibt nur Sinn, wenn Werte
+       uebereinander stehen — hier stehen sie nebeneinander. */
+    td.num {
+      text-align: left;
+    }
+
+    /* Die beiden Schaltflaechen untereinander und ueber die volle Breite:
+       zwei Knoepfe nebeneinander waeren auf 320 px je rund 140 px breit.
+       Selektor bewusst `tbody tr.cta-zeile`: Astro haengt an jeden Selektor
+       ein [data-astro-cid-…], damit steht `tbody tr` bei (0,2,2) und wuerde
+       ein blosses `.cta-zeile` bei (0,2,0) schlagen. */
+    tbody tr.cta-zeile {
+      display: block;
+      padding-top: 0.4rem;
+    }
+    tbody tr.cta-zeile th[scope="row"] {
+      display: none;
+    }
+    tbody tr.cta-zeile td {
+      text-align: left;
+      padding-block: 0.3rem;
+    }
+    tbody tr.cta-zeile td :global(a) {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+  }
 </style>

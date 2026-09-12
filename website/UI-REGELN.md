@@ -39,6 +39,18 @@ Breite Inhalte — Tabellen, Codeblöcke, Diagramme — scrollen **in ihrem eige
 Container** (`.scroller` mit `overflow-x: auto`), niemals der `body`. Eine
 waagerecht verschiebbare Seite fühlt sich kaputt an.
 
+**Ein `.scroller` ist die Notlösung, nicht die Lösung.** Er verhindert, dass
+die Seite kaputtgeht — er macht den Inhalt nicht lesbar. Niemand sieht einem
+Container an, dass rechts noch etwas kommt, und quer zu wischen, während die
+Seite senkrecht scrollt, geht auf dem Telefon regelmäßig daneben.
+
+Für **Vergleichstabellen gilt deshalb: stapeln statt schieben.** Unter 34 rem
+wird das Merkmal zur Zeile über den Werten, die Produkte bleiben nebeneinander
+(siehe `VergleichsTabelle.astro`). Der Prüfwert dafür ist
+`scroller.scrollWidth - scroller.clientWidth` — er muss **0** sein. Das Skript
+unten nimmt `.scroller` von der Überstands-Prüfung aus, misst also genau das
+nicht.
+
 ### 4. Nichts ragt aus dem Sichtbereich
 
 Kein Element darf über den rechten Rand hinausstehen. Häufigste Ursachen:
@@ -144,3 +156,21 @@ Die Lehre steht über der Tabelle: Ein Prüfskript belegt nur, was es abfragt.
 Wenn ein neues Bauteil eine Darstellungsform mitbringt, die das Skript nicht
 kennt, gehört die Prüfung erweitert — sonst ist ein leeres Ergebnis kein
 Freispruch, sondern eine Lücke.
+
+## Nachtrag 2: die Vergleichstabelle, gemeldet von einem echten Telefon
+
+Bei 375 px war die Tabelle 418 px breit in einem 327 px breiten Container.
+**91 px lagen ausserhalb — darunter die Empfehlungsspalte.** Das Skript
+schwieg, weil `.scroller` von der Überstands-Prüfung ausgenommen ist: Der
+Zustand war regelkonform und trotzdem unbrauchbar.
+
+Gefunden hat das kein Skript, sondern Song auf seinem Telefon. Zwei Dinge
+folgen daraus: Regel 3 sagt jetzt, dass ein `.scroller` keine Lösung ist,
+und der versteckte Überstand wird als Zahl geprüft
+(`scrollWidth - clientWidth === 0`) statt per Ausnahme übergangen.
+
+Beim Beheben kam eine zweite Falle dazu: `tbody tr { display: grid }` schlug
+`.cta-zeile { display: block }`, weil Astro an **jeden** Selektor ein
+`[data-astro-cid-…]` hängt — aus (0,0,2) und (0,1,0) werden (0,2,2) und
+(0,2,0). In Astro-Komponenten deshalb nicht nach Klassenspezifität schätzen,
+sondern messen.
